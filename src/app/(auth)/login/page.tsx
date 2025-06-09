@@ -20,8 +20,8 @@ import EyesOff from "@/assets/eye-off.svg";
 import { Loader2 } from "lucide-react";
 import { GrFormCheckmark } from "@/lib/icons";
 import { AiOutlineClose } from "@/lib/icons";
-import RequestError from "@/assets/ErroDeResposta.svg";
-import RoundedIcon from "@/assets/roundedIcon.svg";
+import RequestError from "../../../assets/ErroDeResposta.svg";
+import RoundedIcon from "../../../assets/roundedIcon.svg";
 import YhankoIMG from "@/assets/yhankoIMG.svg";
 //Hook
 import saveCookie from "@/hooks/Hooks/Login/useSetTokenLogin";

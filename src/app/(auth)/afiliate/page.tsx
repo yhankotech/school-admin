@@ -27,7 +27,7 @@ import EyesOff from "@/assets/eye-off.svg";
 import { Loader2 } from "lucide-react";
 import { AiOutlineClose } from "@/lib/icons";
 import RequestError from "@/assets/ErroDeResposta.svg";
-import RoundedIcon from "@/assets/roundedIcon.svg";
+import RoundedIcon from "../../../assets/ErroDeResposta.svg";
 import YhankoIMG from "@/assets/yhankoIMG.svg";
 
 // Definindo o schema de validação com Zod
