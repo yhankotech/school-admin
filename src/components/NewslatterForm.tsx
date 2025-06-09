@@ -22,7 +22,7 @@ export function NewsletterForm() {
         placeholder="Seu email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="border border-[#FF5777] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FF5777] cursor-pointer placeholder:"
+        className="border border-[#FF5777] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FF5777] cursor-pointer placeholder:text-white"
       />
       <button
         type="submit"

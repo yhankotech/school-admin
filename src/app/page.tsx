@@ -12,6 +12,7 @@ import Feedback from "@/components/Costumers";
 import Yhanko from "@/assets/yhankoIMG.svg";
 import Automacao from "@/assets/automacao.jpg";
 import Future from "@/assets/future.jpg";
+import Event from "@/assets/Events.svg";
 
 export default function Home() {
   return (
@@ -93,8 +94,9 @@ export default function Home() {
           <Image src={Dashboard} alt="Funcionalidade 1" className="rounded-xl shadow" />
           <Image src={Teacher} alt="Funcionalidade 2" className="rounded-xl shadow" />
           <Image src={Chat} alt="Funcionalidade 3" className="rounded-xl shadow" />
-          <Image src={Student} alt="Funcionalidade 2" className="rounded-xl shadow" />
-          <Image src={Finance} alt="Funcionalidade 3" className="rounded-xl shadow" />
+          <Image src={Student} alt="Funcionalidade 4" className="rounded-xl shadow" />
+          <Image src={Finance} alt="Funcionalidade 5" className="rounded-xl shadow" />
+          <Image src={Event} alt="Funcionalidade 6" className="rounded-xl shadow" />
         </div>
         </div>
       </section>
