@@ -16,7 +16,7 @@ import { ToastAction } from "@/components/ui/toast";
 import Image from "next/image";
 //imagens e icones
 import Send from "@/assets/send.svg";
-import { AiOutlineClose } from "@/utils/icons";
+import { AiOutlineClose } from "@/lib/icons";
 import RequestError from "@/assets/ErroDeResposta.svg";
 import RoundedIcon from "@/assets/roundedIcon.svg";
 //Hooks

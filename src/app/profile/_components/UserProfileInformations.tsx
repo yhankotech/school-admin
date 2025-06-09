@@ -3,8 +3,8 @@ import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { ImageUploadButton } from "./UploadImage";
 import Image from "next/image";
-//Imagens
-import DownloadIcon from "@/assets/download.svg";
+//Imagens e icones
+import { DownloadIcon } from "@/lib/icons"
 import RedefinirIcon from "@/assets/redifinirPlavraPass.svg";
 //bibliotecas
 import Link from "next/link";
@@ -98,7 +98,7 @@ export function UserProfileInformations(){
                     className="w-[16rem] cursor-pointer h-12 bg-[#327FE4] hover:bg-[#327FE4] mt-7 text-white hover:text-white flex items-center justify-center gap-2 rounded-md font-medium text-sm"
                 >
                     <svg className="w-4 h-4">
-                        <image xlinkHref={DownloadIcon} width="100%" height="100%"/>
+                        <DownloadIcon width="100%" height="100%"/>
                     </svg>
                     Baixar Contrato
                 </a>

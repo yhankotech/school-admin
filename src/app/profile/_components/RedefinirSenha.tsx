@@ -14,7 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 import { ToastAction } from "@/components/ui/toast";
 import { useState, useEffect } from "react";
 //Imagens e icones
-import { AiOutlineClose } from "@/utils/icons";
+import { AiOutlineClose } from "@/lib/icons";
 import RequestError from "@/assets/ErroDeResposta.svg";
 import EyesOpened from "@/assets/eye-open.svg";
 import EyesOff from "@/assets/eye-off.svg";

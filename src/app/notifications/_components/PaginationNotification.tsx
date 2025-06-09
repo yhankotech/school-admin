@@ -1,5 +1,5 @@
 import { PaginationProps } from "@/types/interfaces";
-import { ChevronLeft, ChevronRight } from "@/utils/icons";
+import { ChevronLeft, ChevronRight } from "@/lib/icons";
 import { Button } from "@/components/ui/button";
 
 

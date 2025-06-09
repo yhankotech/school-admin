@@ -10,8 +10,8 @@ import EyesOff from "@/assets/eye-off.svg";
 import { Loader2 } from "lucide-react";
 import RequestError from "@/assets/ErroDeResposta.svg";
 import RoundedIcon from "@/assets/roundedIcon.svg";
-import { AiOutlineClose } from "@/utils/icons";
-import YhankoIMG from "@/assets/yhankoIMG.png";
+import { AiOutlineClose } from "@/lib/icons";
+import YhankoIMG from "@/assets/yhankoIMG.svg";
 //Configuração
 import Link from 'next/link'
 import { useState } from "react";
@@ -234,12 +234,12 @@ export default function TargetPassword() {
               onClick={goTo}
                 //type="submit" 
                 disabled={isLoading}  
-                className="bg-[#327FE4] hover:bg-[#1D5298] text-[#ffffff] w-full rounded-[6px] h-12 lg:h-14 2xl:mt-6 mb-6 shadow-none">
+                className="bg-[#327FE4] hover:bg-[#1D5298] hover:cursor-pointer text-[#ffffff] w-full rounded-[6px] h-12 lg:h-14 2xl:mt-6 mb-6 shadow-none">
                   {isLoading ? <Loader2  className="animate-spin" /> : "Redefinir senha padrão"}
               </Button>
 
             <Link href="/dashboard">
-              <Button className="bg-[#E2E5F1] hover:bg-[#F08F3E] text-[#717F96] hover:text-white w-full h-12 lg:h-14 mt-4 rounded-md  shadow-none">
+              <Button className="bg-[#E2E5F1] hover:bg-[#F08F3E] text-[#717F96] hover:text-white hover:cursor-pointer w-full h-12 lg:h-14 mt-4 rounded-md  shadow-none">
                   Mais tarde
               </Button>
             </Link>

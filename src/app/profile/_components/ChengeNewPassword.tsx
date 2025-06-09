@@ -17,7 +17,7 @@ import { ToastAction } from "@/components/ui/toast";
 //import getCookie from "@/hooks/Hooks/Login/useGetTokenLogin";
 import { useState, useEffect } from "react";
 //Imagens e icones
-import { AiOutlineClose } from "@/utils/icons";
+import { AiOutlineClose } from "@/lib/icons";
 import RequestError from "@/assets/ErroDeResposta.svg";
 import RoundedIcon from "@/assets/roundedIcon.svg";
 import EyesOpened from "@/assets/eye-open.svg";

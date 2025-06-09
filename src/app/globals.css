@@ -119,6 +119,59 @@
     @apply bg-background text-foreground;
   }
 }
+.default-layout {
+	@apply flex items-center lg:px-32 lg:py-12 max-lg:px-9 max-lg:py-10 gap-8 lg:justify-between max-lg:justify-center min-h-[80vh] max-lg:min-h-[70vh] text-white max-w-7xl mx-auto;
+}
+
+.default-layout-vertical {
+	@apply flex flex-col items-center max-lg:py-10 gap-8 justify-center min-h-[80vh] max-lg:min-h-[70vh] text-white max-w-7xl mx-auto;
+}
+
+/* Custom styles for the numbered sections */
+.section-number {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #e5e7eb;
+  line-height: 1;
+  margin-left: 12px;
+}
+        
+.section-line {
+  width: 2px;
+  background-color: #e5e7eb;
+  margin-left: 1.5rem;
+}
+
+ /* Gradiente personalizado para o efeito de luz */
+.gradient-background {
+  background: radial-gradient(ellipse at center top, 
+  rgba(139, 69, 19, 0.3) 0%,
+  rgba(75, 0, 130, 0.4) 30%,
+  rgba(27, 25, 31, 0.6) 60%,
+  rgba(27, 25, 31, 1));
+}
+        
+/* Efeito de luz adicional */
+.light-effect {
+  background: radial-gradient(circle at 50% 20%, 
+  rgba(255, 255, 255, 0.1) 0%,
+  rgba(255, 255, 255, 0.05) 30%,
+  transparent 70%);
+}
+        
+  /* Animação sutil para o efeito de luz */
+  .animated-light {
+  animation: pulse-light 4s ease-in-out infinite alternate;
+}
+        
+@keyframes pulse-light {
+  0% {
+    opacity: 0.8;
+    }
+  100% {
+    opacity: 1;
+  }
+}
 
 .pageNotfound{
   position: absolute;
@@ -131,7 +184,7 @@
 .active{
   background-color: #FFF9F3;
   font-weight: 600;
-  color: #F08F3E;
+  color: #4D44B5;
 }
 
 .dashboarBottonStyle{

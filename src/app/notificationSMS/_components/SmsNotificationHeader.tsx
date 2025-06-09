@@ -1,6 +1,6 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Search } from "@/utils/icons";
+import { Search } from "@/lib/icons";
 import { MessageConfigurater } from "./MessageConfigurater";
 import { RemetenteName } from "./RemetenteName";
 
