@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Image from 'next/image'
 //imagens e icones
-import Logo from "@/assets/yhankoIMG.png";
+import Logo from "@/assets/yhankoIMG.svg";
 import { Loader2 } from "lucide-react";
 import RequestError from "@/assets/ErroDeResposta.svg";
-import { AiOutlineClose } from "@/utils/icons";
+import { AiOutlineClose } from "@/lib/icons";
 //Hooks
 import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -179,19 +179,18 @@ export default function ResetPassword() {
                           onClick={goTo} 
                           //type="submit" 
                           disabled={isLoading} 
-                          className={`bg-[#327FE4] shadow-none hover:bg-[#1D5298] text-white w-full mb-10 h-12 lg:h-14 rounded-md 2xl:mt-9 xl:mt-4 ${
+                          className={`bg-[#327FE4] shadow-none hover:bg-[#1D5298] hover:cursor-pointer text-white w-full mb-10 h-12 lg:h-14 rounded-md 2xl:mt-9 xl:mt-4 ${
                             isLoading ? "cursor-not-allowed" : ""
                           }`}>
                           {isLoading ? <Loader2 className="animate-spin" /> : "Enviar"}
                         </Button>
 
                         <Link href="/login">
-                          <Button className="bg-white hover:bg-[#E2E5F1] shadow-none text-[#717F96] w-full h-12 lg:h-14 rounded-md border-[1.5px] border-[#E2E5F1] 2xl:mt-2 xl:mt-1 mb-6">
+                          <Button className="bg-white hover:bg-[#E2E5F1] hover:cursor-pointer shadow-none text-[#717F96] w-full h-12 lg:h-14 rounded-md border-[1.5px] border-[#E2E5F1] 2xl:mt-2 xl:mt-1 mb-6">
                           Voltar
                           </Button>
                         </Link>
                       </div>
-
                 </form>
             </section>
         </main>

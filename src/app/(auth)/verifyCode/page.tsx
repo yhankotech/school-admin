@@ -16,9 +16,9 @@ import { useRouter } from 'next/navigation'
 import { AxiosError } from "axios";
 //imagens e icones
 import { Loader2 } from "lucide-react";
-import { AiOutlineClose } from "@/utils/icons";
+import { AiOutlineClose } from "@/lib/icons";
 import RequestError from "@/assets/ErroDeResposta.svg";
-import YhankoIMG from "@/assets/yhankoIMG.png";
+import YhankoIMG from "@/assets/yhankoIMG.svg";
 //Hooks
 import { useEntityStore } from "@/hooks/useEntityStore";
 
@@ -121,7 +121,7 @@ export default function VerifyCode() {
             onClick={goTo} 
               //type="submit" 
               disabled={isLoading} 
-              className="bg-[#327FE4] hover:bg-[#1D5298] text-[#ffffff] w-full rounded-[6px] h-12 lg:h-14 shadow-none mt-12">
+              className="bg-[#327FE4] hover:bg-[#1D5298] hover:cursor-pointer text-[#ffffff] w-full rounded-[6px] h-12 lg:h-14 shadow-none mt-12">
                 {isLoading ? <Loader2  className="animate-spin" /> : "Validar"}
             </Button>
         </form>

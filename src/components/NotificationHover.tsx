@@ -3,7 +3,7 @@
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Button } from "@/components/ui/button";
 //icones e imagens
-import { Bell } from "@/utils/icons";
+import { Bell } from "@/lib/icons";
 //Bibliotecas
 import Link from "next/link";
 import { format } from 'date-fns';

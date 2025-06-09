@@ -15,7 +15,7 @@ import { z } from "zod";
 //API
 import axiosInstance from "@/service/api";
 //Imagens e icones
-import { AiOutlineClose } from "@/utils/icons";
+import { AiOutlineClose } from "@/lib/icons";
 import RequestError from "@/assets/ErroDeResposta.svg";
 import RoundedIcon from "@/assets/roundedIcon.svg";
 import { AxiosError } from "axios";

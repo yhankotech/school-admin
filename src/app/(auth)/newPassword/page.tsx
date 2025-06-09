@@ -15,12 +15,12 @@ import { useToast } from "@/hooks/use-toast";
 import { ToastAction } from "@/components/ui/toast";
 import { isStrongPassword } from "@/utils/regex";
 //Imagens e icones
-import { AiOutlineClose } from "@/utils/icons";
-import RequestError from "@/assets/ErroDeResposta.svg";
+import { AiOutlineClose } from "@/lib/icons";
+import RequestError from "../../../assets/ErroDeResposta.svg";
 import EyesOpened from "@/assets/eye-open.svg";
 import EyesOff from "@/assets/eye-off.svg";
 import { Loader2 } from "lucide-react";
-import YhankoIMG from "@/assets/yhankoIMG.png";
+import YhankoIMG from "@/assets/yhankoIMG.svg";
 //Hooks
 import { useEntityStore } from "@/hooks/useEntityStore";
 import { useState } from "react";
@@ -181,7 +181,7 @@ export default function NewPassword() {
               onClick={goTo} 
               //type="submit"
               disabled={isLoading} 
-              className="bg-[#327FE4]  hover:bg-[#1D5298] text-[#ffffff] w-full rounded-[6px] h-12 lg:h-14 mt-12 shadow-none">
+              className="bg-[#327FE4]  hover:bg-[#1D5298] hover:cursor-pointer text-[#ffffff] w-full rounded-[6px] h-12 lg:h-14 mt-12 shadow-none">
               {isLoading ? <Loader2  className="animate-spin" /> : "Redefinir"}
             </Button>
         </form>

@@ -1,5 +1,5 @@
 "use client";
-import { IoIosAlert } from "@/utils/icons";
+import { IoIosAlert } from "@/lib/icons";
 import { useSidebarStore } from "@/hooks/useSidebar";
 
 export default function Unauthorized () {

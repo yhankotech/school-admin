@@ -13,7 +13,7 @@ import Image from "next/image";
 import ReadMessage from "@/assets/reaAllMessage.svg";
 import UnreadMessage from "@/assets/unreadMessage.svg";
 import MessageIsRead from "@/assets/messageIsRead.svg";
-import { AiOutlineClose } from "@/utils/icons";
+import { AiOutlineClose } from "@/lib/icons";
 import RequestError from "@/assets/ErroDeResposta.svg";
 //API
 import axiosInstance from "@/service/api";

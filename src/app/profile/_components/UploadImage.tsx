@@ -5,7 +5,7 @@ import axiosInstance from "@/service/api";
 import UploadUserPhoto from "@/assets/getPicture.svg";
 import RoundedIcon from "@/assets/roundedIcon.svg";
 import RequestError from "@/assets/ErroDeResposta.svg";
-import { AiOutlineClose } from "@/utils/icons";
+import { AiOutlineClose } from "@/lib/icons";
 //Hooks
 //import getCookie from "@/hooks/Hooks/Login/useGetTokenLogin";
 import { useToast } from "@/hooks/use-toast";

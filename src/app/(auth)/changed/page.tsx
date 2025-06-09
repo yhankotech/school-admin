@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from "next/link";
 //Images and icons
 import PasswordKey from "@/assets/password.svg";
-import YhankoIMG from "@/assets/yhankoIMG.png";
+import YhankoIMG from "@/assets/yhankoIMG.svg";
 
 export default function PasswordChangedPage() {
   return (
@@ -30,7 +30,7 @@ export default function PasswordChangedPage() {
           </div>
 
           <Link href="login" className="2xl:w-[28rem] lg:w-[28rem] xl:w-[28rem] md:w-[28rem] w-full">
-            <Button className="bg-[#327FE4] shadow-none hover:bg-[#1D5298] text-white w-full h-12 lg:h-14 rounded-md mt-8">
+            <Button className="bg-[#327FE4] shadow-none hover:bg-[#1D5298] hover:cursor-pointer text-white w-full h-12 lg:h-14 rounded-md mt-8">
               Login
             </Button>
           </Link>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { ToastAction } from "@/components/ui/toast";
-import { AiOutlineClose } from "../utils/icons";
+import { AiOutlineClose } from "../lib/icons";
 import RoundedIcon from "@/assets/roundedIcon.svg";
 import { CloseDialogGlobal } from "@/types/interfaces";
 

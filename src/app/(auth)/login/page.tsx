@@ -18,11 +18,11 @@ import Link from "next/link";
 import EyesOpened from "@/assets/eye-open.svg";
 import EyesOff from "@/assets/eye-off.svg";
 import { Loader2 } from "lucide-react";
-import { GrFormCheckmark } from "@/utils/icons";
-import { AiOutlineClose } from "@/utils/icons";
-import RequestError from "@/assets/ErroDeResposta.svg";
-import RoundedIcon from "@/assets/roundedIcon.svg";
-import YhankoIMG from "@/assets/yhankoIMG.png";
+import { GrFormCheckmark } from "@/lib/icons";
+import { AiOutlineClose } from "@/lib/icons";
+import RequestError from "../../../assets/ErroDeResposta.svg";
+import RoundedIcon from "../../../assets/roundedIcon.svg";
+import YhankoIMG from "@/assets/yhankoIMG.svg";
 //Hook
 import saveCookie from "@/hooks/Hooks/Login/useSetTokenLogin";
 import {useEntityStore} from "@/hooks/useEntityStore";
@@ -127,7 +127,8 @@ const toggleCheck = () => {
   
   return (
     <main className="flex w-screen 2xl:h-screen xl:h-[130vh] bg-[#FFFFFF]">
-      <div className="w-[55vw] h-screen">
+       <div className="hidden lg:block lg:w-[45vw] 2xl:h-screen xl:h-[130vh] backgroundGradient"></div>
+      <div className="w-[55vw] h-screen flex flex-col justify-center">
           <div className="flex flex-col justify-center items-center mt-12 md:mt-20 sm:mt-8 lg:mt-40 xl:mt-5 2xl:mt-14 lg:h-[100vh] 2xl:h-[70vh] w-[55vw]">
           <div className="flex flex-col w-[40rem] h-60 space-y-6 2xl:space-y-16 justify-center items-center xl:-mt-28">
             <div className="flex justify-center items-center space-x-3">
@@ -136,7 +137,7 @@ const toggleCheck = () => {
             </div>
           
             <div className="text-center">
-              <h1 className="text-[#1D5298] font-semibold text-lg lg:text-xl mb-3">Login de Gestor</h1>
+              <h1 className="text-[#1D5298] font-semibold text-lg lg:text-xl mb-3">Director Geral</h1>
               <span className="text-[#717F96] text-sm lg:text-base">
                 Seja bem-vindo a melhor gestão escolar!<br/>
                 A melhor gestão para a tua instituição de ensino
@@ -220,20 +221,19 @@ const toggleCheck = () => {
               <Button
                 onClick={goTo}
                 //type="submit"
-                className="bg-[#327FE4] shadow-none hover:bg-[#1D5298] text-white w-full h-12 lg:h-14 mb-10 rounded-md">
+                className="bg-[#327FE4] shadow-none hover:bg-[#1D5298] hover:cursor-pointer text-white w-full h-12 lg:h-14 mb-10 rounded-md">
                 {isLoading ? <Loader2  className="animate-spin" /> : "Entrar"}
               </Button>
             
               <Link href="/afiliate">
-                <Button className="bg-[#E2E5F1] hover:bg-[#F08F3E] text-[#717F96] hover:text-white w-full h-12 lg:h-14 rounded-md shadow-none">
-                  Entrar como Afiliado
+                <Button className="bg-[#E2E5F1] hover:bg-[#F08F3E] text-[#717F96] hover:text-white hover:cursor-pointer w-full h-12 lg:h-14 rounded-md shadow-none">
+                  Entrar como Secretário/a
                 </Button>
               </Link>
             </div>
           </form>
         </div>
       </div>
-      <div className="hidden lg:block lg:w-[45vw] 2xl:h-screen xl:h-[130vh] backgroundGradient"></div>
     </main>
   );
 }
