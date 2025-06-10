@@ -127,6 +127,41 @@
 	@apply flex flex-col items-center max-lg:py-10 gap-8 justify-center min-h-[80vh] max-lg:min-h-[70vh] text-white max-w-7xl mx-auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Efeito de linha animada para os links */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+        
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #FF5777, #ff8a9b);
+  transition: width 0.3s ease;
+}
+        
+.nav-link:hover::before {
+  width: 100%;
+}
+        
+.nav-link:hover {
+text-shadow: 0 0 8px rgba(255, 87, 119, 0.6);
+}        
+/* Animação de entrada escalonada */
+.nav-item-1 { animation-delay: 0.1s; }
+.nav-item-2 { animation-delay: 0.2s; }
+.nav-item-3 { animation-delay: 0.3s; }
+.nav-item-4 { animation-delay: 0.4s; }
+.nav-item-5 { animation-delay: 0.5s; }
+
 /* Custom styles for the numbered sections */
 .section-number {
   font-size: 3rem;

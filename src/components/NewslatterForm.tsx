@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { Button } from './ui/button'
 
 export function NewsletterForm() {
   const [email, setEmail] = useState('')
@@ -24,12 +25,12 @@ export function NewsletterForm() {
         onChange={(e) => setEmail(e.target.value)}
         className="border border-[#FF5777] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FF5777] cursor-pointer placeholder:text-white"
       />
-      <button
+      <Button
         type="submit"
-        className="bg-[#FF5777] text-white px-4 py-2 cursor-pointer rounded hover:bg-[#FF5777]"
+        className="bg-[#FF5777] text-white py-5 cursor-pointer rounded hover:bg-[#FF5777]"
       >
         Inscrever-se
-      </button>
+      </Button>
     </form>
   )
 }
