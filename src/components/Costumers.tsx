@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Navigation } from "swiper/modules"
 import FeedbackCard, { FeedbackCardProps } from "./FeedbackCard"
 import SwiperNavigationButtons from "./SwiperNavigationButtons";
-import person1 from "@/assets/loginImg.svg";
+import person1 from "../assets/loginImg.svg";
 
 const Feedback: React.FC = () => {
 	const feedbackInfo: FeedbackCardProps[] = [

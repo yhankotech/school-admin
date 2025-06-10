@@ -42,8 +42,8 @@ export default function FAQAccordion() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-6 text-center">Perguntas Frequentes</h2>
+    <div className="max-w-3xl mx-auto">
+      <h2 className="text-2xl font-bold mb-6 text-center text-white">Perguntas Frequentes</h2>
       <div className="space-y-4">
         {faqs.map((faq, index) => (
           <div
@@ -52,17 +52,17 @@ export default function FAQAccordion() {
           >
             <button
               onClick={() => toggle(index)}
-              className="w-full flex items-center justify-between px-6 py-4 text-left text-lg font-medium bg-white hover:bg-gray-100 transition"
+              className="w-full flex items-center justify-between px-6 py-4 text-left text-lg font-medium  transition text-white"
             >
               {faq.question}
               <ChevronDown
-                className={`transition-transform duration-300 ${
+                className={`transition-transform duration-300 text-white ${
                   openIndex === index ? "rotate-180" : ""
                 }`}
               />
             </button>
             {openIndex === index && (
-              <div className="px-6 pb-4 text-gray-600 bg-gray-50">
+              <div className="px-6 pb-4 text-white">
                 {faq.answer}
               </div>
             )}

@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import Image from 'next/image';
 import Link from "next/link";
 //Images and icons
-import PasswordKey from "@/assets/password.svg";
-import YhankoIMG from "@/assets/yhankoIMG.svg";
+import PasswordKey from "../../../assets/password.svg";
+import YhankoIMG from "../../../assets/yhankoIMG.svg";
 
 export default function PasswordChangedPage() {
   return (

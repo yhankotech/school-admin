@@ -5,13 +5,13 @@ import { Input } from "@/components/ui/input";
 import { isStrongPassword } from "@/utils/regex";
 import Image from 'next/image'
 //imagens e icons
-import EyesOpened from "@/assets/eye-open.svg";
-import EyesOff from "@/assets/eye-off.svg"; 
+import EyesOpened from "../../../assets/eye-open.svg";
+import EyesOff from "../../../assets/eye-off.svg"; 
 import { Loader2 } from "lucide-react";
-import RequestError from "@/assets/ErroDeResposta.svg";
-import RoundedIcon from "@/assets/roundedIcon.svg";
+import RequestError from "../../../assets/ErroDeResposta.svg";
+import RoundedIcon from "../../../assets/roundedIcon.svg";
 import { AiOutlineClose } from "@/lib/icons";
-import YhankoIMG from "@/assets/yhankoIMG.svg";
+import YhankoIMG from "../../../assets/yhankoIMG.svg";
 //Configuração
 import Link from 'next/link'
 import { useState } from "react";

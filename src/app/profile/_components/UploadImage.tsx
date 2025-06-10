@@ -2,9 +2,9 @@ import React from "react";
 //configurações
 import axiosInstance from "@/service/api";
 //Imagens e icones
-import UploadUserPhoto from "@/assets/getPicture.svg";
-import RoundedIcon from "@/assets/roundedIcon.svg";
-import RequestError from "@/assets/ErroDeResposta.svg";
+import UploadUserPhoto from "../../../assets/getPicture.svg";
+import RoundedIcon from "../../../assets/roundedIcon.svg";
+import RequestError from "../../../assets/ErroDeResposta.svg";
 import { AiOutlineClose } from "@/lib/icons";
 //Hooks
 //import getCookie from "@/hooks/Hooks/Login/useGetTokenLogin";

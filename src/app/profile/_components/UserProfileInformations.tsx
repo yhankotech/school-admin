@@ -5,7 +5,7 @@ import { ImageUploadButton } from "./UploadImage";
 import Image from "next/image";
 //Imagens e icones
 import { DownloadIcon } from "@/lib/icons"
-import RedefinirIcon from "@/assets/redifinirPlavraPass.svg";
+import RedefinirIcon from "../../../assets/redifinirPlavraPass.svg";
 //bibliotecas
 import Link from "next/link";
 import { format } from "date-fns";

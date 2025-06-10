@@ -16,8 +16,8 @@ import { z } from "zod";
 import axiosInstance from "@/service/api";
 //Imagens e icones
 import { AiOutlineClose } from "@/lib/icons";
-import RequestError from "@/assets/ErroDeResposta.svg";
-import RoundedIcon from "@/assets/roundedIcon.svg";
+import RequestError from "../../../assets/ErroDeResposta.svg";
+import RoundedIcon from "../../../assets/roundedIcon.svg";
 import { AxiosError } from "axios";
 
 // Definindo o schema de validação com Zod

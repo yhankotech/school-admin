@@ -17,10 +17,10 @@ import { isStrongPassword } from "@/utils/regex";
 //Imagens e icones
 import { AiOutlineClose } from "@/lib/icons";
 import RequestError from "../../../assets/ErroDeResposta.svg";
-import EyesOpened from "@/assets/eye-open.svg";
-import EyesOff from "@/assets/eye-off.svg";
+import EyesOpened from "../../../assets/eye-open.svg";
+import EyesOff from "../../../assets/eye-off.svg";
 import { Loader2 } from "lucide-react";
-import YhankoIMG from "@/assets/yhankoIMG.svg";
+import YhankoIMG from "../../../assets/yhankoIMG.svg";
 //Hooks
 import { useEntityStore } from "@/hooks/useEntityStore";
 import { useState } from "react";

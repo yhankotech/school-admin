@@ -1,6 +1,6 @@
 "use client";
 //imagens e icones
-import NoteSMS from "@/assets/notSMSIcon.svg";
+import NoteSMS from "../../../assets/notSMSIcon.svg";
 //Hooks
 import { useSidebarStore } from "@/hooks/useSidebar";
 import { useState, useMemo } from "react";

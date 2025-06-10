@@ -15,11 +15,11 @@ import { ToastAction } from "@/components/ui/toast";
 import { useState, useEffect } from "react";
 //Imagens e icones
 import { AiOutlineClose } from "@/lib/icons";
-import RequestError from "@/assets/ErroDeResposta.svg";
-import EyesOpened from "@/assets/eye-open.svg";
-import EyesOff from "@/assets/eye-off.svg";
+import RequestError from "../../../assets/ErroDeResposta.svg";
+import EyesOpened from "../../../assets/eye-open.svg";
+import EyesOff from "../../../assets/eye-off.svg";
 import { Loader2 } from "lucide-react";
-import RoundedIcon from "@/assets/roundedIcon.svg";
+import RoundedIcon from "../../../assets/roundedIcon.svg";
 //Hook
 //import getCookie from "@/hooks/Hooks/Login/useGetTokenLogin";
 //Tipagens

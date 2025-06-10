@@ -1,5 +1,5 @@
 
-import UserProfielIcon from "@/assets/userProfile.svg";
+import UserProfielIcon from "../../../assets/userProfile.svg";
 import Link from "next/link";
 import Stepper from "./stepp";
 

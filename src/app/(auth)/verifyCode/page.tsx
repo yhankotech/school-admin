@@ -17,8 +17,8 @@ import { AxiosError } from "axios";
 //imagens e icones
 import { Loader2 } from "lucide-react";
 import { AiOutlineClose } from "@/lib/icons";
-import RequestError from "@/assets/ErroDeResposta.svg";
-import YhankoIMG from "@/assets/yhankoIMG.svg";
+import RequestError from "../../../assets/ErroDeResposta.svg";
+import YhankoIMG from "../../../assets/yhankoIMG.svg";
 //Hooks
 import { useEntityStore } from "@/hooks/useEntityStore";
 
