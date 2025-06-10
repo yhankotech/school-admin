@@ -15,10 +15,10 @@ import { useToast } from "@/hooks/use-toast";
 import { ToastAction } from "@/components/ui/toast";
 import Image from "next/image";
 //imagens e icones
-import Send from "@/assets/send.svg";
+import Send from "../../../assets/send.svg";
 import { AiOutlineClose } from "@/lib/icons";
-import RequestError from "@/assets/ErroDeResposta.svg";
-import RoundedIcon from "@/assets/roundedIcon.svg";
+import RequestError from "../../../assets/ErroDeResposta.svg";
+import RoundedIcon from "../../../assets/roundedIcon.svg";
 //Hooks
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";

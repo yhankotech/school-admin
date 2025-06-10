@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/sidebar";
 import Image from 'next/image';
 import { routes } from "@/lib/routes"
-import LogoTipo from "@/assets/yhankoIMG.png";
+import LogoTipo from "../assets/yhankoIMG.png";
 //import getCookie from "@/hooks/Hooks/Login/useGetTokenLogin";
 
 export function AppSidebarMenu() {

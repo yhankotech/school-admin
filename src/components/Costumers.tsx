@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Navigation } from "swiper/modules"
 import FeedbackCard, { FeedbackCardProps } from "./FeedbackCard"
 import SwiperNavigationButtons from "./SwiperNavigationButtons";
-import person1 from "@/assets/loginImg.svg";
+import person1 from "../assets/loginImg.svg";
 
 const Feedback: React.FC = () => {
 	const feedbackInfo: FeedbackCardProps[] = [
@@ -32,7 +32,7 @@ const Feedback: React.FC = () => {
 
 	return (
 		<section className="default-layout-vertical" id="feedback">
-			<h2 className="text-3xl font-semibold mb-6 text-[#FF5777] text-center">Testemunhos</h2>
+			<h2 className="text-3xl font-semibold mb-6 text-white text-center">Testemunhos</h2>
 			<div className="relative w-full flex flex-col">
 				<Swiper
 					modules={[Navigation, Autoplay]}

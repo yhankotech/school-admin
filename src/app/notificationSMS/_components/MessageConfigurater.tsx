@@ -6,7 +6,7 @@ import {
     SheetTrigger,
   } from "@/components/ui/sheet";
   import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-  import SmsNotificationIcon from "@/assets/smsNotificationIcon.svg";
+  import SmsNotificationIcon from "../../../assets/smsNotificationIcon.svg";
   import { useState } from "react";
   import { NotificationsConfiguratiosReferencia } from "./NotificationsConfiguratiosReferencia";
   import { NotificationsConfiguratiosPayment } from "./NotificationsConfigurationPayment";

@@ -22,13 +22,13 @@ import Image from 'next/image'
 import axiosInstance from "@/service/api";
 
 //Icons e imagens
-import EyesOpened from "@/assets/eye-open.svg";
-import EyesOff from "@/assets/eye-off.svg"; 
+import EyesOpened from "../../../assetseye-open.svg";
+import EyesOff from "../../../assets/eye-off.svg"; 
 import { Loader2 } from "lucide-react";
 import { AiOutlineClose } from "@/lib/icons";
-import RequestError from "@/assets/ErroDeResposta.svg";
+import RequestError from "../../../assets/ErroDeResposta.svg";
 import RoundedIcon from "../../../assets/ErroDeResposta.svg";
-import YhankoIMG from "@/assets/yhankoIMG.svg";
+import YhankoIMG from "../../../assets/yhankoIMG.svg";
 
 // Definindo o schema de validação com Zod
 const loginSchema = z.object({

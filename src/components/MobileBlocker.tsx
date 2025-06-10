@@ -2,7 +2,7 @@
 //Hooks
 import { useEffect, useState } from "react";
 //Iamgens
-import Logo from "@/assets/logo.svg";
+import Logo from "../assets/logo.svg";
 //Components
 import Image from "next/image";
 

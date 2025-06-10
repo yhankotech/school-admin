@@ -11,7 +11,7 @@ const SwiperNavigationButtons: React.FC = () => {
 			</button>
 
 			<button className="swiper-button-next px-2 py-1 group hover:bg-[#FF5777]  rounded-md cursor-pointer">
-				<HiOutlineArrowNarrowRight className="text-3xl text-[#FF5777] group-hover:text-black-[#1A202C]" />
+				<HiOutlineArrowNarrowRight className="text-3xl text-[#FF5777] group-hover:text-[#1A202C]" />
 			</button>
 		</div>
 	)

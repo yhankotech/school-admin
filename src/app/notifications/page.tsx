@@ -1,6 +1,6 @@
 "use client";
 //Hooks 
-import NotificationIcon from "@/assets/notificationPageIcon.svg";
+import NotificationIcon from "../../../assets/notificationPageIcon.svg";
 //Componentes 
 import  NotificationsGeral  from "./_components/NotificationsGeral";
 //Bibliotecas

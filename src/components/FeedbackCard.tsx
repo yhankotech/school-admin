@@ -1,4 +1,4 @@
-import quotes from "@/assets/quotes.svg"
+import quotes from "../assets/quotes.svg"
 import Image from "next/image"
 export interface FeedbackCardProps {
 	imgSrc: string

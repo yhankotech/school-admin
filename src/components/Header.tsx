@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 //images e icones
 import { LogOut } from "@/lib/icons";
-import YhankoIMG from "@/assets/yhankoIMG.svg";
+import YhankoIMG from "../assets/yhankoIMG.svg";
 //hooks
 //import getCookie from "@/hooks/Hooks/Login/useGetTokenLogin";
 import { NotificationsHover } from "./NotificationHover";
