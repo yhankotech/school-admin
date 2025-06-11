@@ -299,3 +299,50 @@ text-shadow: 0 0 8px rgba(255, 87, 119, 0.6);
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+        
+.card-hover:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+        
+.popular-badge {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+        
+.discount-badge {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+        
+.bg-gradient-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+        
+.bg-gradient-popular {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border: 2px solid #3b82f6;
+}
+        
+.price-animation {
+  animation: bounceIn 1s ease-out;
+}
+        
+.card-1 { animation-delay: 0.1s; }
+.card-2 { animation-delay: 0.2s; }
+.card-3 { animation-delay: 0.3s; }
+.card-4 { animation-delay: 0.4s; }
+        
+.selected-card {
+  transform: scale(1.05);
+ box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+}
+        
+.savings-highlight {
+ background: linear-gradient(45deg, #fbbf24, #f59e0b);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ background-clip: text;
+}
