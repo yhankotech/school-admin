@@ -22,6 +22,7 @@ import Support from "../assets/chatc.gif";
 import Information from "../assets/consulting.gif";
 import Financial from "@/assets/Finance.gif";
 import Securtitydata from "../assets/securityData.jpg";
+import FAQAccordion from "../components/Faqs";
 
 export default function Home() {
   const router = useRouter();
