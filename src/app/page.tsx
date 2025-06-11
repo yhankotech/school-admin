@@ -84,18 +84,18 @@ export default function Home() {
       </AnimatedSection>
 
       {/* SOBRE O PRODUTO */}
-       <AnimatedSection className="py-16 px-32"  delay={0.3}>
-          <section className=" px-32" id="sobre">
+        <AnimatedSection className="py-16 px-32" delay={0.3}>
+          <section className="px-32" id="sobre">
             <h2 className="text-3xl font-semibold mb-6 text-white">Plataforma</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="flex flex-col gap-4">
               
                 <div className="space-y-12">
                     
-                    <div className="flex items-start">
+                    <div className="flex items-start group">
                         <div className="flex flex-col items-center mr-8">
-                            <span className="section-number">1</span>
-                            <div className="section-line h-32 mt-4"></div>
+                            <span className="section-number transition-all duration-300 group-hover:scale-110">1</span>
+                            <div className="section-line h-32 mt-4 bg-[#FF5777] transition-all duration-300 group-hover:h-40"></div>
                         </div>
                         <div className="flex-1 pt-2">
                           <h2 className="text-2xl font-semibold text-[#FF5777] mb-4">
@@ -107,10 +107,10 @@ export default function Home() {
                         </div>
                     </div>
                     
-                    <div className="flex items-start">
+                    <div className="flex items-start group">
                         <div className="flex flex-col items-center mr-8">
-                            <span className="section-number">2</span>
-                            <div className="section-line h-24 mt-4"></div>
+                            <span className="section-number transition-all duration-300 group-hover:scale-110">2</span>
+                            <div className="section-line h-24 mt-4 bg-[#FF5777] transition-all duration-300 group-hover:h-32"></div>
                         </div>
                         <div className="flex-1 pt-2">
                           <h2 className="text-2xl font-semibold text-[#FF5777] mb-4">
@@ -122,9 +122,9 @@ export default function Home() {
                         </div>
                     </div>
                     
-                    <div className="flex items-start">
+                    <div className="flex items-start group">
                         <div className="flex flex-col items-center mr-8">
-                            <span className="section-number">3</span>
+                            <span className="section-number transition-all duration-300 group-hover:scale-110">3</span>
                         </div>
                         <div className="flex-1 pt-2">
                             <h2 className="text-2xl font-semibold text-[#FF5777] mb-4">
@@ -139,12 +139,12 @@ export default function Home() {
             </div>
               
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6">
-              <Image src={Dashboard} alt="Funcionalidade 1" className="rounded-xl shadow" />
-              <Image src={Teacher} alt="Funcionalidade 2" className="rounded-xl shadow" />
-              <Image src={Chat} alt="Funcionalidade 3" className="rounded-xl shadow" />
-              <Image src={Student} alt="Funcionalidade 4" className="rounded-xl shadow" />
-              <Image src={Finance} alt="Funcionalidade 5" className="rounded-xl shadow" />
-              <Image src={Event} alt="Funcionalidade 6" className="rounded-xl shadow" />
+              <Image src={Dashboard} alt="Funcionalidade 1" className="rounded-xl shadow transition-all duration-300 hover:scale-105 hover:shadow-lg" />
+              <Image src={Teacher} alt="Funcionalidade 2" className="rounded-xl shadow transition-all duration-300 hover:scale-105 hover:shadow-lg" />
+              <Image src={Chat} alt="Funcionalidade 3" className="rounded-xl shadow transition-all duration-300 hover:scale-105 hover:shadow-lg" />
+              <Image src={Student} alt="Funcionalidade 4" className="rounded-xl shadow transition-all duration-300 hover:scale-105 hover:shadow-lg" />
+              <Image src={Finance} alt="Funcionalidade 5" className="rounded-xl shadow transition-all duration-300 hover:scale-105 hover:shadow-lg" />
+              <Image src={Event} alt="Funcionalidade 6" className="rounded-xl shadow transition-all duration-300 hover:scale-105 hover:shadow-lg" />
             </div>
             </div>
           </section>
