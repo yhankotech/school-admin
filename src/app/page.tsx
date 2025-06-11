@@ -24,7 +24,7 @@ import FAQAccordion from "../components/Faqs";
 
 export default function Home() {
   return (
-    <main className="font-sans bg-[#1B191F]">
+    <main className="bg-[#1B191F]">
       {/* HEADER */}
       <header className="flex items-center p-6 shadow-sm bg-transparent backdrop-brightness-50 fixed z-50 w-screen h-14">
         <Image src={Yhanko} alt="yhanko" className="w-10 text-[#FF5777]"/>
@@ -41,6 +41,9 @@ export default function Home() {
                 </li>
                 <li className="nav-item-4 animate-slide-in-left">
                   <a href="#vantagens" className="nav-link hover:text-[#FF5777] transition-all duration-300 transform hover:scale-110 hover:-translate-y-1">Vantagens</a>
+                </li>
+                  <li className="nav-item-4 animate-slide-in-left">
+                  <a href="#plano" className="nav-link hover:text-[#FF5777] transition-all duration-300 transform hover:scale-110 hover:-translate-y-1">Plano</a>
                 </li>
                 <li className="nav-item-5 animate-slide-in-left">
                   <a href="#clientes" className="nav-link hover:text-[#FF5777] transition-all duration-300 transform hover:scale-110 hover:-translate-y-1">Testemunho</a>
@@ -212,6 +215,13 @@ export default function Home() {
               <Image src={Securtitydata} alt="automacao" className="rounded-lg"/>
               </div>
             </div>
+          </section>
+       </AnimatedSection>
+
+        {/* Plano */}
+       <AnimatedSection className="py-16 px-32"  delay={0.10}>
+          <section id="plano">
+            
           </section>
        </AnimatedSection>
 
