@@ -1,5 +1,5 @@
 
-import { Home, List, HandCoins,  MessagesSquare, CalendarDays, UsersThree, Student, SuitcaseSimple, University } from "@/lib/icons";
+import { Home, List, HandCoins,  MessagesSquare, CalendarDays, UsersThree, Student, SuitcaseSimple, University, UserCircle } from "@/lib/icons";
 
 
 export const routes = [
@@ -12,19 +12,19 @@ export const routes = [
   {
     id: 2,
     title: "Estudantes",
-    url: "students",
+    url: "student",
     icon: Student,
   },
   {
     id: 3,
     title: "Area pedagógica",
-    url: "pedagogical-area",
+    url: "pedagogical",
     icon: University,
   },
    {
     id: 4,
     title: "Associação",
-    url: "students-association",
+    url: "association",
     icon: UsersThree,
  },
   {
@@ -56,5 +56,11 @@ export const routes = [
     title: "Atividades",
     url: "activity",
     icon: List,
+ },
+  {
+    id: 10,
+    title: "Perfil",
+    url: "profile",
+    icon: UserCircle,
  },
 ]

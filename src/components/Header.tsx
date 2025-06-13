@@ -57,7 +57,7 @@ export function Header() {
     */
     return (
         <header 
-        className="flex h-[5rem] w-[1688px] items-center bg-[#FFF] justify-end border-b border-[#E5E5E5] fixed top-0 z-50">    
+        className="flex h-[5rem] w-[12rem] items-center bg-[#000] ml-[70rem] border-b border-[#E5E5E5] top-0 z-50">    
             <nav className="flex items-center justify-center space-x- w-[12rem] h-20">
                 <div className="flex space-x-4 max-w-24">
                     <div className="static">

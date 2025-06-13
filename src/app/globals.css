@@ -449,3 +449,86 @@ text-shadow: 0 0 8px rgba(255, 87, 119, 0.6);
     opacity: 1;
   }
 }
+
+.card {
+  background-color: #FFFFFF;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.metric-icon {
+  transition: transform 0.3s ease;
+}
+.metric-card:hover .metric-icon {
+  transform: scale(1.1);
+}
+.metric-card {
+  @apply transition-all duration-300 hover:shadow-lg hover:scale-105;
+}
+
+.chart-container {
+  @apply bg-card rounded-lg p-6 shadow-sm border;
+}
+
+.chat-interface {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.chat-header {
+  background-color: #f0f0f0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.message {
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.sent {
+  background-color: #d1e7dd;
+  align-self: flex-end;
+}
+
+.received {
+  background-color: #fff3cd;
+}
+
+.input-area {
+  display: flex;
+  padding: 10px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-area button {
+  margin-left: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+

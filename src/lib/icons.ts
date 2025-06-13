@@ -28,7 +28,8 @@ import {
   HandCoins,  
   MessagesSquare, 
   CalendarDays,
-  Mail 
+  Mail,
+  UserCircle
 } from "lucide-react";
 import { IoIosAlert } from "react-icons/io";
 import { TbFileText, TbPigOff, TbFileArrowRight } from "react-icons/tb";
@@ -104,5 +105,6 @@ export {
     SuitcaseSimple,
     DownloadIcon,
     UserRoundPenIcon,
-    University
+    University,
+    UserCircle
 }

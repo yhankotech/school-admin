@@ -99,13 +99,13 @@ const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({
         <div className="hidden lg:flex items-center space-x-3 ml-auto">
           <Button
             onClick={goTo} 
-            className="px-6 py-2 bg-transparent text-sm font-medium text-[#FF5777] border border-[#FF5777] rounded-lg hover:bg-[#FF5777] hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#FF5777]/25"
+            className="px-6 py-2 cursor-pointer bg-transparent text-sm font-medium text-[#FF5777] border border-[#FF5777] rounded-lg hover:bg-[#FF5777] hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#FF5777]/25"
           >
             Login
           </Button>
           <Button 
             onClick={goToPayment} 
-            className="px-8 py-2 text-sm font-medium text-white bg-[#FF5777] border border-[#FF5777] rounded-lg hover:bg-[#FF5777]/90 hover:shadow-lg hover:shadow-[#FF5777]/25 transition-all duration-300 transform hover:scale-105"
+            className="px-8 py-2 cursor-pointer text-sm font-medium text-white bg-[#FF5777] border border-[#FF5777] rounded-lg hover:bg-[#FF5777]/90 hover:shadow-lg hover:shadow-[#FF5777]/25 transition-all duration-300 transform hover:scale-105"
           >
             Cadastre-se
           </Button>

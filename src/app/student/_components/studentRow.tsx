@@ -1,0 +1,106 @@
+"use client"
+import { TableCell, TableRow } from "@/components/ui/table";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Phone, Mail, MoreHorizontal } from "lucide-react";
+import { useRouter } from 'next/navigation'
+
+interface Student {
+  id: string;
+  name: string;
+  studentId: string;
+  date: string;
+  parentName: string;
+  city: string;
+  grade: string;
+  gradeColor: string;
+  isSelected: boolean;
+}
+
+interface StudentRowProps {
+  student: Student;
+}
+
+export function StudentRow ({ student }: StudentRowProps) {
+  const getInitials = (name: string) => {
+    return name.split(' ').map(n => n[0]).join('').toUpperCase();
+  };
+
+  const router = useRouter();
+  
+  function goTo(link:string){
+    router.push(link)
+  }
+
+  return (
+    <TableRow className="hover:bg-gray-50 border-b border-gray-100">
+      <TableCell className="px-6 py-4">
+        <Checkbox checked={student.isSelected} />
+      </TableCell>
+      
+      <TableCell className="px-6 py-4">
+        <div className="flex items-center space-x-3 cursor-pointer" onClick={()=>goTo("/students-details")}>
+          <Avatar className="h-10 w-10">
+            <AvatarFallback className="bg-purple-200 text-purple-700 text-sm font-medium">
+              {getInitials(student.name)}
+            </AvatarFallback>
+          </Avatar>
+          <span className="font-medium text-gray-900">{student.name}</span>
+        </div>
+      </TableCell>
+      
+      <TableCell className="px-6 py-4">
+        <span className="text-blue-600 font-medium">{student.studentId}</span>
+      </TableCell>
+      
+      <TableCell className="px-6 py-4">
+        <span className="text-gray-600">{student.date}</span>
+      </TableCell>
+      
+      <TableCell className="px-6 py-4">
+        <span className="text-gray-900">{student.parentName}</span>
+      </TableCell>
+      
+      <TableCell className="px-6 py-4">
+        <span className="text-gray-600">{student.city}</span>
+      </TableCell>
+      
+      <TableCell className="px-6 py-4">
+        <div className="flex items-center space-x-2">
+          <Button variant="ghost" size="icon" className="h-8 w-8 text-gray-400 hover:text-blue-600">
+            <Phone className="h-4 w-4" />
+          </Button>
+          <Button variant="ghost" size="icon" className="h-8 w-8 text-gray-400 hover:text-blue-600">
+            <Mail className="h-4 w-4" />
+          </Button>
+        </div>
+      </TableCell>
+      
+      <TableCell className="px-6 py-4">
+        <Badge 
+          className={`${student.gradeColor} text-white hover:opacity-90 px-3 py-1 text-xs font-medium rounded-full`}
+        >
+          {student.grade}
+        </Badge>
+      </TableCell>
+      
+      <TableCell className="px-6 py-4">
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" size="icon" className="h-8 w-8 text-gray-400 hover:text-gray-600">
+              <MoreHorizontal className="h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="bg-white border border-gray-200 shadow-lg">
+            <DropdownMenuItem className="hover:bg-gray-50">View Details</DropdownMenuItem>
+            <DropdownMenuItem className="hover:bg-gray-50">Edit</DropdownMenuItem>
+            <DropdownMenuItem className="hover:bg-gray-50 text-red-600">Delete</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </TableCell>
+    </TableRow>
+  );
+};
