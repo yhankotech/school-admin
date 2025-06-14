@@ -1,11 +1,11 @@
 "use client"
 
-import {ProfileCard } from "../teachear-deatils/_components/profileCard";
+import {TeacherProfile } from "./_components/teacherProfile";
 import { ScheduleCard } from "../teachear-deatils/_components/sheduleCard";
 
 import React from "react";
 
-const TeacherProfile = () => {
+const TeacherDetails = () => {
 
 return (
     <div className="min-h-screen bg-background p-6">
@@ -13,7 +13,7 @@ return (
         <div className="flex flex-col lg:flex-row gap-6 max-w-6xl mx-auto">
           {/* Profile Section */}
           <div className="flex-1">
-            <ProfileCard />
+            <TeacherProfile />
           </div>
           
           {/* Schedule Section */}
@@ -26,4 +26,4 @@ return (
   )
 };
 
-export default TeacherProfile;
+export default TeacherDetails;

@@ -1,26 +1,27 @@
 "use client"
-import { Button } from "@/components/ui/button";
-import { Search, Bell, Settings, UserPlus } from "lucide-react";
+import { Search, Bell, Settings } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import {StaffGrid} from "./_components/stafGrid";
+//import {MetricCard} from "./MetricCard";
+import {SchoolCalendar} from "./school-calendar";
+import {StudentTable} from "./StudentTable";
+import {MessagesWidget} from "./messageWidget";
+import {SchoolFinance} from "./schoolFinance";
+import { PerformanceChart } from "./PerformanceChart";
+import { RecentStudents } from "./recentStudent";
+import { DashboardMetrics } from "./dashboardMetrics";
 
-
-export default function Staff () {
+export function DashboardLayout () {
   return (
-    <div className="flex h-screen bg-gray-50">
-      
+    <div className="flex h-screen bg-gray-50">  
       {/* Main Content */}
       <div className="flex-1 ml-60">
         {/* Header */}
         <header className="bg-white border-b border-gray-200 px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <h1 className="text-2xl font-semibold text-gray-900">Funcionários</h1>
-              <Button className="bg-[#6366f1] hover:bg-[#5856eb] text-white">
-                <UserPlus className="w-4 h-4 mr-2" />
-                Adicionar Funcionário
-              </Button>
+              <h1 className="text-2xl font-semibold text-gray-900">Dashboard</h1>
             </div>
             
             <div className="flex items-center gap-4">
@@ -28,7 +29,7 @@ export default function Staff () {
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
                 <Input
-                  placeholder="Buscar funcionários..."
+                  placeholder="Search here..."
                   className="pl-10 w-80 bg-gray-50 border-gray-200"
                 />
               </div>
@@ -58,9 +59,31 @@ export default function Staff () {
           </div>
         </header>
 
-        {/* Staff Content */}
-        <main className="p-6">
-          <StaffGrid />
+        {/* Dashboard Content */}
+        <main className="p-6 space-y-6">
+          <DashboardMetrics />
+          {/* Metrics */}
+          <PerformanceChart  />
+          
+          {/* Main Grid */}
+          <div className="grid grid-cols-12 gap-6">
+            {/* Left Column */}
+            <div className="col-span-8 space-y-6">
+              
+              <div className="grid grid-cols-2 gap-6">
+                <SchoolCalendar />
+                <SchoolFinance />
+              </div>
+              
+              <StudentTable />
+            </div>
+            
+            {/* Right Column */}
+            <div className="col-span-4 space-y-6">
+              <RecentStudents />
+              <MessagesWidget />
+            </div>
+          </div>
         </main>
       </div>
     </div>

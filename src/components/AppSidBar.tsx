@@ -1,4 +1,4 @@
-
+"use client"
 //Componente
 import { AppSidebarMenu } from "@/components/AppSidebarMenu";
 //Interface e tipagens

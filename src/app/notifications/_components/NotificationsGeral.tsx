@@ -1,216 +1,318 @@
-"use client";
-//Hooks
-import { useNotificationStore } from "@/hooks/useNotifications";
-import PaginationNotification  from "./PaginationNotification";
-//import { useEffect } from "react";
-//import getCookie from "../../hooks/Hooks/Login/useGetTokenLogin";
-//Componentes
+
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { ToastAction } from "@/components/ui/toast";
-import Image from "next/image";
-//Imagens e icones
-import ReadMessage from "../../../assets/reaAllMessage.svg";
-import UnreadMessage from "../../../assets/unreadMessage.svg";
-import MessageIsRead from "../../../assets/messageIsRead.svg";
-import { AiOutlineClose } from "@/lib/icons";
-import RequestError from "../../../assets/ErroDeResposta.svg";
-//API
-import axiosInstance from "@/service/api";
-//bibliotecas
-import { format } from 'date-fns';
-//import { useQuery } from "@tanstack/react-query";
-//Tipagens e interafces
-import { Notification } from "@/types/types";
+import { Bell, Check, X, CheckCheck, AlertCircle, Info, Calendar } from "lucide-react";
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 
-export default function NotificationsGeral (){
-    
-    const { toast } = useToast();
-    const {
-        notifications,
-        paginatedNotifications,
-        isLoading,
-        error,
-        page,
-        pages,
-        changePage,
-        unreadNotificationsCount,
-        setNotifications,
-    } = useNotificationStore();
+interface Notification {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  isRead: boolean;
+  type: 'info' | 'warning' | 'success' | 'error';
+  priority: 'low' | 'medium' | 'high';
+}
 
-    //const { entidade } = getCookie();
-/*
-    const { data } = useQuery({
-        queryKey: ["notifications", entidade],
-        queryFn: async () => {
-          const response = await axiosInstance.get(`notificacoes/entidade/${entidade}`);
-          return response.data.mensagem;
-        },
-        enabled: !!entidade,
+const mockNotifications: Notification[] = [
+  {
+    id: 1,
+    title: "Nova mensagem do professor",
+    description: "O professor João Silva enviou uma nova atividade para a turma de matemática. Prazo de entrega: 15/06/2025",
+    date: "2025-06-14T10:30:00",
+    isRead: false,
+    type: 'info',
+    priority: 'medium'
+  },
+  {
+    id: 2,
+    title: "Reunião de pais agendada",
+    description: "Reunião de pais e mestres agendada para dia 20/06/2025 às 19h no auditório principal",
+    date: "2025-06-14T09:15:00",
+    isRead: false,
+    type: 'warning',
+    priority: 'high'
+  },
+  {
+    id: 3,
+    title: "Avaliação aprovada",
+    description: "Sua avaliação de História foi aprovada com nota 8.5. Parabéns pelo excelente desempenho!",
+    date: "2025-06-13T16:45:00",
+    isRead: true,
+    type: 'success',
+    priority: 'low'
+  },
+  {
+    id: 4,
+    title: "Prazo de matrícula",
+    description: "Lembrete: O prazo para renovação de matrícula termina em 25/06/2025. Procure a secretaria",
+    date: "2025-06-13T14:20:00",
+    isRead: false,
+    type: 'warning',
+    priority: 'high'
+  },
+  {
+    id: 5,
+    title: "Sistema atualizado",
+    description: "O sistema escolar foi atualizado com novas funcionalidades. Confira as novidades no menu principal",
+    date: "2025-06-12T11:30:00",
+    isRead: true,
+    type: 'info',
+    priority: 'low'
+  },
+  {
+    id: 6,
+    title: "Evento cancelado",
+    description: "O evento esportivo programado para hoje foi cancelado devido às condições climáticas",
+    date: "2025-06-12T08:00:00",
+    isRead: false,
+    type: 'error',
+    priority: 'medium'
+  }
+];
+
+export default function NotificationsGeral() {
+  const { toast } = useToast();
+  const [notifications, setNotifications] = useState<Notification[]>(mockNotifications);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [isLoading, setIsLoading] = useState(true);
+  const itemsPerPage = 4;
+
+  // Simulate loading
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const unreadCount = notifications.filter(n => !n.isRead).length;
+  const totalPages = Math.ceil(notifications.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const paginatedNotifications = notifications.slice(startIndex, startIndex + itemsPerPage);
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleString('pt-BR', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
     });
-      
-    useEffect(() => {
-        if (data) {
-          setNotifications(data);
-        }
-    }, [data, setNotifications]);
-      
-*/
-    async function markAllNotificationsAsRead(){
-        try {
-            await axiosInstance.patch(`notificacoes/entidade//marcar-todas-como-lidas`);
-            
-            setNotifications((notifications: Notification[]) =>
-                notifications.map((notification) => ({
-                    ...notification,
-                    leitura: "lida",
-                }))
-            );            
-        } catch {
-            toast({
-                description: (
-                  <div className="flex items-center gap-4 ">
-                    <div className="rounded-full w-8 h-8 flex justify-center items-center">
-                      <Image src={RequestError} alt="icon"  />
-                    </div>
-                    
-                    <span className="text-[#717F96]">Não foi possível marcar todas como não lida!</span>
-                  </div>
-                ),
-                action: <ToastAction altText="close" className="shadow-none border-none text-[#717F96] hover:bg-transparent"><AiOutlineClose /></ToastAction>,
-                className: "border-l-4 border-l-[#FB3748]",
-            });
-        } 
-    }
-    
-    async function markNotificationsAsRead(id_notficacao_entidade: number){
-        try {
-            await axiosInstance.patch(`notificacoes/entidade//marcar-como-lida/${id_notficacao_entidade}`);
-            
-            // Atualiza o Zustand localmente
-            setNotifications((prevNotifications) =>
-                prevNotifications.map((notification) =>
-                    notification.id_notficacao_entidade === id_notficacao_entidade
-                        ? { ...notification, leitura: "lida" }
-                        : notification
-                )
-            );
-        }  catch {
-            toast({
-                description: (
-                  <div className="flex items-center gap-4 ">
-                    <div className="rounded-full w-8 h-8 flex justify-center items-center">
-                      <Image src={RequestError} alt="icon"  />
-                    </div>
-                    
-                    <span className="text-[#717F96]">Não foi possível marcar como lida!</span>
-                  </div>
-                ),
-                action: <ToastAction altText="close" className="shadow-none border-none text-[#717F96] hover:bg-transparent"><AiOutlineClose /></ToastAction>,
-                className: "border-l-4 border-l-[#FB3748]",
-            });
-        }
-        
-    } 
+  };
 
-    async function markNotificationsAsUnread(id_notficacao_entidade: number){
-        try {
-            await axiosInstance.patch(`notificacoes/entidade//marcar-como-nao-lida/${id_notficacao_entidade}`);
-    
-            // Atualiza o Zustand localmente
-            setNotifications((prevNotifications) =>
-                prevNotifications.map((notification) =>
-                    notification.id_notficacao_entidade === id_notficacao_entidade
-                        ? { ...notification, leitura: "nao_lida" }
-                        : notification
-                )
-            );
-        } catch {
-            toast({
-                description: (
-                  <div className="flex items-center gap-4 ">
-                    <div className="rounded-full w-8 h-8 flex justify-center items-center">
-                      <Image src={RequestError} alt="icon"  />
-                    </div>
-                    
-                    <span className="text-[#717F96]">Não foi possível marcar como não lida!</span>
-                  </div>
-                ),
-                action: <ToastAction altText="close" className="shadow-none border-none text-[#717F96] hover:bg-transparent"><AiOutlineClose /></ToastAction>,
-                className: "border-l-4 border-l-[#FB3748]",
-            });
-        }
-        
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'success': return <CheckCheck className="w-5 h-5 text-green-500" />;
+      case 'warning': return <AlertCircle className="w-5 h-5 text-orange-500" />;
+      case 'error': return <X className="w-5 h-5 text-red-500" />;
+      default: return <Info className="w-5 h-5 text-blue-500" />;
     }
+  };
 
-    return (
-        <div className="p-6 space-y-4 flex flex-col pl-20 pr-20 pt-10">
-            <div className="flex justify-between mb-4">
-                <h1 className="text-xl font-semibold text-[#1D5298]">
-                    Notificações não lidas ({unreadNotificationsCount})
-                </h1>
-                <Button
-                    className="MessageReadButton hover:bg-[rgba(24, 159, 87, 0.15)] cursor-pointer"
-                    onClick={() => markAllNotificationsAsRead()}
-                >
-                    <Image src={ReadMessage} alt="icon" />
-                    Marcar todas como lidas
-                </Button>
-            </div>
-            {isLoading ? (
-                 <div>
-                 <div  className="p-8">
-                   <div className="fixed 2xl:ml-[1150px] xl:ml-[670px] mt-[30rem] w-[14rem] h-[5rem] inset-0 flex items-center justify-center z-50">
-                     <div className="relative w-10 h-10">
-                       <div className="absolute inset-0 rounded-full border-4 border-t-transparent border-[#1D5298] animate-spin"></div>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-            ) : error ? (
-                <p className="text-red-500">{error}</p>
-            ) : notifications.length === 0 ? (
-                <p className="text-gray-500">Nenhuma notificação disponível.</p>
-            ) : (
-                <div className="space-y-4">
-                    {paginatedNotifications.map((notification) => (
-                        <div
-                            key={notification.id_notficacao_entidade}
-                            className={`border-[2px] pr-4 border-[#EDEFF6] flex justify-between border-l-8 rounded-[12px] ${
-                                notification.leitura ? "bg-[#FFFFFF]" : ""
-                            }`}
-                            style={{ borderLeftColor: notification.leitura === "lida" ? "#E9E9E9" : "#20C06B" }}
-                        >
-                            <div className="space-y-1 flex flex-col pt-3 pl-3 pb-4">
-                                <span className="notificationText">{notification.descricao_notificado}</span>
-                                <span className=".notificationDate">
-                                    {format(new Date(notification.data_notificada), 'dd/MM/yyyy HH:mm:ss')}
-                                </span>
-                            </div>
-                            <div className="pt-3">
-                                {notification.leitura === "lida" ? (
-                                    <Button 
-                                        className="messageIsRead hover:bg-[rgba(240, 143, 62, 0.15)]"
-                                        onClick={() => markNotificationsAsUnread(notification.id_notficacao_entidade)}
-                                        >
-                                        <Image src={MessageIsRead} alt="icon" />
-                                        marcar como não lida
-                                    </Button>
-                                ) : (
-                                    <Button
-                                        className="unReadMessagebutton hover:bg-[rgba(240, 143, 62, 0.15)]"
-                                        onClick={() => markNotificationsAsRead(notification.id_notficacao_entidade)}
-                                    >
-                                        <Image src={UnreadMessage} alt="icon" />
-                                        Marcar como lida
-                                    </Button>
-                                )}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            )}
-            <PaginationNotification page={page} pages={pages} onPageChange={changePage} />
+  const getPriorityColor = (priority: string) => {
+    switch (priority) {
+      case 'high': return 'border-l-red-500';
+      case 'medium': return 'border-l-orange-500';
+      default: return 'border-l-blue-500';
+    }
+  };
+
+  const markAllAsRead = () => {
+    setNotifications(prev => prev.map(n => ({ ...n, isRead: true })));
+    toast({
+      description: (
+        <div className="flex items-center gap-3">
+          <CheckCheck className="w-5 h-5 text-green-500" />
+          <span>Todas as notificações foram marcadas como lidas</span>
         </div>
+      ),
+      className: "border-l-4 border-l-green-500"
+    });
+  };
+
+  const toggleReadStatus = (id: number) => {
+    setNotifications(prev => 
+      prev.map(n => 
+        n.id === id ? { ...n, isRead: !n.isRead } : n
+      )
     );
+    
+    const notification = notifications.find(n => n.id === id);
+    toast({
+      description: (
+        <div className="flex items-center gap-3">
+          {notification?.isRead ? (
+            <>
+              <Bell className="w-5 h-5 text-orange-500" />
+              <span>Notificação marcada como não lida</span>
+            </>
+          ) : (
+            <>
+              <Check className="w-5 h-5 text-green-500" />
+              <span>Notificação marcada como lida</span>
+            </>
+          )}
+        </div>
+      ),
+      className: `border-l-4 ${notification?.isRead ? 'border-l-orange-500' : 'border-l-green-500'}`
+    });
+  };
+
+  if (isLoading) {
+    return (
+      <div className="p-6 space-y-4 max-w-4xl mx-auto">
+        <div className="flex justify-center items-center h-64">
+          <div className="relative">
+            <div className="w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
+            <Bell className="w-6 h-6 text-blue-600 absolute top-3 left-3" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="p-6 space-y-6 max-w-4xl mx-auto">
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white p-6 rounded-lg shadow-sm border">
+        <div className="flex items-center gap-3">
+          <div className="relative">
+            <Bell className="w-8 h-8 text-blue-600" />
+            {unreadCount > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
+                {unreadCount}
+              </span>
+            )}
+          </div>
+          <div>
+            <h1 className="text-2xl font-bold text-gray-800">Notificações</h1>
+            <p className="text-gray-600">{unreadCount} não lidas de {notifications.length} total</p>
+          </div>
+        </div>
+        
+        {unreadCount > 0 && (
+          <Button
+            onClick={markAllAsRead}
+            className="bg-green-600 hover:bg-green-700 text-white transition-all duration-200 transform hover:scale-105"
+          >
+            <CheckCheck className="w-4 h-4 mr-2" />
+            Marcar todas como lidas
+          </Button>
+        )}
+      </div>
+
+      {/* Notifications List */}
+      {notifications.length === 0 ? (
+        <div className="text-center py-12 bg-white rounded-lg shadow-sm border">
+          <Bell className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+          <p className="text-gray-500 text-lg">Nenhuma notificação disponível</p>
+        </div>
+      ) : (
+        <div className="space-y-4">
+          {paginatedNotifications.map((notification, index) => (
+            <div
+              key={notification.id}
+              className={`
+                bg-white border-l-4 ${getPriorityColor(notification.priority)} 
+                rounded-lg shadow-sm hover:shadow-md transition-all duration-300 
+                transform hover:-translate-y-1 animate-fade-in
+                ${notification.isRead ? 'opacity-75' : 'border-r-2 border-r-blue-200'}
+              `}
+              style={{
+                animationDelay: `${index * 100}ms`
+              }}
+            >
+              <div className="p-4 flex justify-between items-start gap-4">
+                <div className="flex gap-3 flex-1">
+                  <div className="flex-shrink-0 mt-1">
+                    {getTypeIcon(notification.type)}
+                  </div>
+                  <div className="flex-1 space-y-2">
+                    <div className="flex items-center gap-2">
+                      <h3 className={`font-semibold ${notification.isRead ? 'text-gray-600' : 'text-gray-800'}`}>
+                        {notification.title}
+                      </h3>
+                      {!notification.isRead && (
+                        <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+                      )}
+                    </div>
+                    <p className={`text-sm ${notification.isRead ? 'text-gray-500' : 'text-gray-700'}`}>
+                      {notification.description}
+                    </p>
+                    <div className="flex items-center gap-2 text-xs text-gray-500">
+                      <Calendar className="w-3 h-3" />
+                      {formatDate(notification.date)}
+                    </div>
+                  </div>
+                </div>
+                
+                <Button
+                  onClick={() => toggleReadStatus(notification.id)}
+                  variant="ghost"
+                  size="sm"
+                  className={`
+                    transition-all duration-200 hover:scale-105
+                    ${notification.isRead 
+                      ? 'text-orange-600 hover:bg-orange-50' 
+                      : 'text-green-600 hover:bg-green-50'
+                    }
+                  `}
+                >
+                  {notification.isRead ? (
+                    <>
+                      <Bell className="w-4 h-4 mr-2" />
+                      Marcar como não lida
+                    </>
+                  ) : (
+                    <>
+                      <Check className="w-4 h-4 mr-2" />
+                      Marcar como lida
+                    </>
+                  )}
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="flex justify-center">
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious 
+                  onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                  className={currentPage === 1 ? 'pointer-events-none opacity-50' : 'cursor-pointer'}
+                />
+              </PaginationItem>
+              
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <PaginationItem key={page}>
+                  <PaginationLink 
+                    onClick={() => setCurrentPage(page)}
+                    isActive={currentPage === page}
+                    className="cursor-pointer"
+                  >
+                    {page}
+                  </PaginationLink>
+                </PaginationItem>
+              ))}
+              
+              <PaginationItem>
+                <PaginationNext 
+                  onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                  className={currentPage === totalPages ? 'pointer-events-none opacity-50' : 'cursor-pointer'}
+                />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
+        </div>
+      )}
+    </div>
+  );
 }

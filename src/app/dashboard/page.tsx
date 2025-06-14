@@ -1,14 +1,8 @@
 "use client";
-import { Aside } from "./_components/aside";
-import { Chard } from "./_components/chards";
+import {DashboardLayout} from "./_components/dashboardLayout";
 
 export default function Dashboard(){
     return(
-        <section className="flex h-screen min-h-screen flex-col items-center py-10">
-           <div className="">
-                <Chard/>
-           </div>
-           <Aside/>
-        </section>
+        <DashboardLayout />
     )
 }
