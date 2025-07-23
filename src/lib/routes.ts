@@ -70,15 +70,9 @@ export const routes = [
     icon: UserCircle,
  },
   {
-    id: 11,
-    title: "Parente",
-    url: "/parent",
-    icon: UserCircle,
- },
-  {
     id: 12,
     title: "Regulamento",
-    url: "/parent",
+    url: "/schoolRules",
     icon: UserCircle,
  },
   {
