@@ -65,14 +65,26 @@ export const routes = [
  },
    {
     id: 11,
-    title: "Gestão",
+    title: "Relatórios",
     url: "/manage",
     icon: UserCircle,
  },
-    {
+  {
     id: 11,
     title: "Parente",
     url: "/parent",
+    icon: UserCircle,
+ },
+  {
+    id: 12,
+    title: "Regulamento",
+    url: "/parent",
+    icon: UserCircle,
+ },
+  {
+    id: 13,
+    title: "Permissões",
+    url: "/permission",
     icon: UserCircle,
  },
 ]

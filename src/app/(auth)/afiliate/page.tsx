@@ -22,7 +22,7 @@ import Image from 'next/image'
 import axiosInstance from "@/service/api";
 
 //Icons e imagens
-import EyesOpened from "../../../assetseye-open.svg";
+import EyesOpened from "../../../assets/eye-open.svg";
 import EyesOff from "../../../assets/eye-off.svg"; 
 import { Loader2 } from "lucide-react";
 import { AiOutlineClose } from "@/lib/icons";

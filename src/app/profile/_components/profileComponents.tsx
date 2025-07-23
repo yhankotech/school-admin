@@ -18,32 +18,10 @@ const messages = [
   { name: 'Nabila Adja', message: 'Lorem ipsum dolor sit amet...', time: '12:45 PM' },
 ];
 
-const latestActivity = [
-  { user: 'Karen Hope', action: 'used "User Research" from "Process to Done"', date: '2 March 2023, 11:45 PM' },
-  { user: 'Samantha William', action: 'added 4 attached files to task "Photo Assets"', date: '2 March 2023, 12:16 PM' },
-  { user: 'Tony Soop', action: 'invite you to task "Wireframing" and "Reilly"', date: '2 March 2023, 11:45 PM' },
-  { user: 'Samantha William', action: 'created new Task', date: '2 March 2023, 11:45 PM' },
-];
-
 export function UserDashboard() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800 font-sans antialiased">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <header className="flex flex-col sm:flex-row items-center justify-between py-6 sticky top-0 bg-gray-50 z-30 border-b border-gray-200">
-          <h1 className="text-2xl font-bold">User</h1>
-          <div className="relative mt-4 sm:mt-0 w-full sm:w-1/3">
-            <input
-              type="search"
-              placeholder="Search here..."
-              className="w-full rounded-full bg-white border border-gray-300 py-2 px-4 pr-10 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-              aria-label="Search"
-            />
-            <span className="absolute right-3 top-2.5 text-gray-400 material-icons select-none pointer-events-none">
-              search
-            </span>
-          </div>
-        </header>
-
         <main className="mt-8 grid gap-8 grid-cols-1 md:grid-cols-[2fr_1fr] lg:grid-cols-[3fr_1.5fr_1fr]">
           {/* Left Content  */}
           <section className="space-y-8">
@@ -162,52 +140,6 @@ export function UserDashboard() {
               <button className="mt-4 px-4 py-2 text-purple-600 bg-purple-100 rounded-full w-full font-semibold hover:bg-purple-200 transition">
                 View More
               </button>
-            </article>
-          </section>
-
-          {/* Middle Right - Plan Card */}
-          <section className="space-y-6">
-            <article className="bg-purple-700 rounded-xl text-white p-6 relative overflow-hidden">
-              <h4 className="text-lg font-semibold mb-4">Your Plan</h4>
-              <p className="text-3xl font-bold mb-3">Free</p>
-              <ul className="mb-6 space-y-2 text-purple-100 text-sm">
-                <li className="flex items-center gap-2">
-                  <span className="material-icons text-yellow-400">check_circle</span>
-                  50 GB Storage
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="material-icons text-yellow-400">check_circle</span>
-                  Limited Features
-                </li>
-              </ul>
-              <p className="mb-8 text-sm text-purple-300">
-                Upgrade to Premium Plan to get more features & storage memory
-              </p>
-              <button className="bg-yellow-400 text-purple-900 px-5 py-2 rounded-full font-semibold hover:bg-yellow-500 transition">
-                Upgrade Plan
-              </button>
-              <div aria-hidden="true" className="absolute -right-12 -bottom-16 w-32 h-32 rounded-full bg-yellow-400 opacity-80 mix-blend-multiply"></div>
-              <div aria-hidden="true" className="absolute -right-20 -top-12 w-40 h-40 rounded-full bg-orange-400 opacity-80 mix-blend-multiply"></div>
-            </article>
-
-            {/* Latest Activity */}
-            <article className="bg-white rounded-xl shadow p-6 max-h-[460px] overflow-y-auto">
-              <h4 className="text-lg font-semibold mb-6">Lastest Activity</h4>
-              <ul className="space-y-6 text-gray-600 text-sm">
-                {latestActivity.map(({ user, action, date }, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div className="mt-1">
-                      <span className="material-icons rounded-full bg-purple-200 text-purple-700 p-1.5">radio_button_checked</span>
-                    </div>
-                    <div>
-                      <p>
-                        <strong className="text-gray-800">{user}</strong> {action}
-                      </p>
-                      <p className="text-gray-400 text-xs mt-1">{date}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
             </article>
           </section>
         </main>

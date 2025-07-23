@@ -1,7 +1,9 @@
 "use client"
 
-import { Users, GraduationCap, DollarSign } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Users, GraduationCap, DollarSign, TrendingUp, } from "lucide-react";
+import { useState } from "react";
+import { FinancialReport } from "@/types/school-system";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface MetricCardProps {
   title: string;
@@ -31,7 +33,22 @@ const MetricCard = ({ title, value, change, changeType, icon, iconBg }: MetricCa
   </Card>
 );
 
+
+
 export function DashboardMetrics () {
+    const [financialReport] = useState<FinancialReport>({
+    id: "fr1",
+    period: "Janeiro 2024",
+    income: 450000,
+    expenses: 320000,
+    balance: 130000,
+    details: [
+      { category: "Mensalidades", amount: 400000, type: "income" },
+      { category: "Matrículas", amount: 50000, type: "income" },
+      { category: "Salários", amount: 200000, type: "expense" },
+      { category: "Infraestrutura", amount: 120000, type: "expense" }
+    ]
+  })
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
       <MetricCard
@@ -58,6 +75,31 @@ export function DashboardMetrics () {
         icon={<DollarSign className="w-6 h-6 text-white" />}
         iconBg="bg-[#f59e0b]"
       />
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <TrendingUp className="h-5 w-5" />
+              Resumo Financeiro
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg">
+            <span className="text-sm font-medium">Receitas</span>
+            <span className="text-lg font-bold text-green-600">
+              {financialReport.income.toLocaleString()} Kz</span>
+          </div>
+          <div className="flex justify-between items-center p-3 bg-red-50 rounded-lg">
+            <span className="text-sm font-medium">Despesas</span>
+            <span className="text-lg font-bold text-red-600">{financialReport.expenses.toLocaleString()} Kz</span>
+          </div>
+          <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
+            <span className="text-sm font-medium">Saldo</span>
+            <span className="text-lg font-bold text-blue-600">
+                {financialReport.balance.toLocaleString()} Kz</span>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 };

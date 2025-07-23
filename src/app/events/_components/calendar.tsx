@@ -4,6 +4,7 @@ import { Calendar as CalendarIcon, Plus, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
 
 interface ScheduleItem {
   id: string;
@@ -109,10 +110,12 @@ export function  CalendarSchedule () {
                   </DropdownMenu>
 
                   {/* New Student Button */}
-                  <Button className="bg-[#6366f1] hover:bg-[#5856eb] text-white rounded-full px-4 py-2">
-                    <Plus className="mr-2 h-4 w-4" />
-                    New Student
-                  </Button>
+                  <Link href="/newEvent">
+                    <Button className="bg-[#6366f1] hover:bg-[#5856eb] text-white rounded-full px-4 py-2">
+                      <Plus className="mr-2 h-4 w-4" />
+                      New Student
+                    </Button>
+                  </Link>
                 </div>
               </CardHeader>
               <CardContent>

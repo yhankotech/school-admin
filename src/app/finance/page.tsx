@@ -4,6 +4,7 @@ import {DashboardMetrics} from "./_components/dashboardMetrics";
 import {BalanceAnalytics} from "./_components/balanceAnalitcs";
 import {StudentTable} from "./_components/studentTable";
 import {ExpenseTable} from "./_components/expensive";
+import {Payments} from "./_components/payments";
 
 const Finance = () => {
   return (
@@ -19,6 +20,9 @@ const Finance = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <StudentTable />
             <ExpenseTable />
+          </div>
+          <div>
+              <Payments />
           </div>
         </div>
       </div>
