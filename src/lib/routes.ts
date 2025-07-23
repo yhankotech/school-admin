@@ -1,6 +1,8 @@
 
 import { Home, List, HandCoins,  MessagesSquare, CalendarDays, UsersThree, Student, SuitcaseSimple, University, UserCircle } from "@/lib/icons";
-
+import { FaRegFileAlt } from "react-icons/fa";
+import { PiFilesLight } from "react-icons/pi";
+import { LuUserCog } from "react-icons/lu";
 
 export const routes = [
   {
@@ -67,18 +69,18 @@ export const routes = [
     id: 11,
     title: "Relatórios",
     url: "/manage",
-    icon: UserCircle,
+    icon: FaRegFileAlt,
  },
   {
     id: 12,
     title: "Regulamento",
     url: "/schoolRules",
-    icon: UserCircle,
+    icon: PiFilesLight,
  },
   {
     id: 13,
     title: "Permissões",
     url: "/permission",
-    icon: UserCircle,
+    icon: LuUserCog,
  },
 ]
