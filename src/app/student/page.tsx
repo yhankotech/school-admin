@@ -6,8 +6,8 @@ import {SearchBar} from "./_components/searchBar";
 const Student = () => {
   return (
     <section className="flex flex-col items-center justify-center mt-[]">
-         <SearchBar/>
-        <StudentTable />
+      <SearchBar/>
+      <StudentTable />
     </section>
   );
 };

@@ -18,7 +18,7 @@ interface ScheduleItem {
 const scheduleItems: ScheduleItem[] = [
   {
     id: "1",
-    title: "Basic Algorithm",
+    title: "Visita no museu",
     subject: "Algorithm",
     date: "March 20, 2020",
     time: "09:00 - 10:00 AM",
@@ -26,7 +26,7 @@ const scheduleItems: ScheduleItem[] = [
   },
   {
     id: "2",
-    title: "Basic Art",
+    title: "Dia de África",
     subject: "Art",
     date: "March 20, 2020",
     time: "09:00 - 10:00 AM",
@@ -34,20 +34,12 @@ const scheduleItems: ScheduleItem[] = [
   },
   {
     id: "3",
-    title: "HTML & CSS Class",
+    title: "Prova do primeiro Trimestre",
     subject: "Programming",
     date: "March 20, 2020",
     time: "09:00 - 10:00 AM",
     color: "yellow"
   },
-  {
-    id: "4",
-    title: "Simple Past Tense",
-    subject: "English",
-    date: "March 20, 2020",
-    time: "09:00 - 10:00 AM",
-    color: "blue"
-  }
 ];
 
 const getColorClasses = (color: string) => {
@@ -68,12 +60,11 @@ const getColorClasses = (color: string) => {
 export function  CalendarSchedule () {
 
   return (
-    <div className="min-h-screen bg-[#1B191F] p-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div className="h-screen p-2 w-[70rem]">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center justify-between">
           {/* Calendar Section */}
           <div className="lg:col-span-2">
-            <Card className="bg-white">
+            <Card className="bg-white border border-[#5856eb]">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
                 <CardTitle className="text-2xl font-bold text-gray-900">Calendar</CardTitle>
                 <div className="flex items-center gap-3">
@@ -113,7 +104,7 @@ export function  CalendarSchedule () {
                   <Link href="/newEvent">
                     <Button className="bg-[#6366f1] hover:bg-[#5856eb] text-white rounded-full px-4 py-2">
                       <Plus className="mr-2 h-4 w-4" />
-                      New Student
+                      New events
                     </Button>
                   </Link>
                 </div>
@@ -142,7 +133,7 @@ export function  CalendarSchedule () {
                         <div
                           key={i}
                           className={`
-                            h-16 border border-gray-200 rounded-lg p-2 text-sm
+                            h-16 border border-[#FF5777] rounded-lg p-2 text-sm
                             ${isCurrentMonth ? 'bg-white text-gray-900' : 'bg-gray-50 text-gray-400'}
                             ${isToday ? 'bg-[#FF5777] text-white' : ''}
                             ${isSpecialDay ? 'bg-[#6366f1] text-white' : ''}
@@ -192,9 +183,9 @@ export function  CalendarSchedule () {
 
           {/* Schedule Details Section */}
           <div className="lg:col-span-1">
-            <Card className="bg-white">
+            <Card className="bg-white border border-[#5856eb]">
               <CardHeader>
-                <CardTitle className="text-xl font-bold text-gray-900">Schedule Details</CardTitle>
+                <CardTitle className="text-xl font-bold text-gray-900">Events Details</CardTitle>
                 <p className="text-sm text-gray-500">Thursday, 10th April, 2020</p>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -233,7 +224,6 @@ export function  CalendarSchedule () {
             </Card>
           </div>
         </div>
-      </div>
     </div>
   );
 };

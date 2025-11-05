@@ -89,7 +89,7 @@ export function ScheduleCard () {
 
       {/* View More Button */}
       <Card>
-        <CardContent className="p-4">
+        <CardContent className="p-2">
           <Button variant="secondary" className="w-full">
             View More
           </Button>

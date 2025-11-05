@@ -120,3 +120,51 @@ export type AfiliatesIdentificadosPorps = {
   entidade_tipo: string,
   nome_identificacao: string
 }
+
+export type StudentStatus = 'ativo' | 'inativo' | 'suspenso' | 'transferido';
+
+export interface Subject {
+  id: string;
+  name: string;
+  grade: number;
+  professor: string;
+}
+
+export interface Payment {
+  id: string;
+  description: string;
+  amount: number;
+  date: string;
+  status: 'pago' | 'pendente' | 'atrasado';
+}
+
+export interface Guardian {
+  name: string;
+  relationship: string;
+  phone: string;
+  email?: string;
+}
+
+export interface Classroom {
+  number: string;
+  floor: string;
+  capacity: number;
+}
+
+export interface Student {
+  id: string;
+  fullName: string;
+  studentNumber: string;
+  academicYear: string;
+  class: string;
+  course: string;
+  classGroup: string;
+  status: StudentStatus;
+  subjects: Subject[];
+  payments: Payment[];
+  teachers: string[];
+  guardian: Guardian;
+  classroom: Classroom;
+  enrollmentDate: string;
+  dateOfBirth?: string;
+}

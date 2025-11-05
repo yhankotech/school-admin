@@ -62,7 +62,7 @@ export const routes = [
   {
     id: 10,
     title: "Perfil",
-    url: "/settings",
+    url: "/profile",
     icon: UserCircle,
  },
    {

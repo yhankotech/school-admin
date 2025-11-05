@@ -1,46 +1,7 @@
 "use client"
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
-interface ScheduleItem {
-  id: string;
-  subject: string;
-  class: string;
-  time: string;
-  color: string;
-}
-
-const scheduleItems: ScheduleItem[] = [
-  {
-    id: "1",
-    subject: "World History",
-    class: "Class 5A",
-    time: "09:00 - 10:00 AM",
-    color: "bg-blue-500"
-  },
-  {
-    id: "2",
-    subject: "Ancient History",
-    class: "Class 5B",
-    time: "10:15 - 11:15 AM", 
-    color: "bg-orange-500"
-  },
-  {
-    id: "3",
-    subject: "Culture",
-    class: "Class 4A",
-    time: "11:30 - 12:30 PM",
-    color: "bg-yellow-500"
-  },
-  {
-    id: "4",
-    subject: "World History",
-    class: "Class 5A",
-    time: "01:00 - 02:00 PM",
-    color: "bg-blue-500"
-  }
-];
 
 export function TeacherProfile () {
   return (
@@ -127,36 +88,6 @@ export function TeacherProfile () {
                     World History, Philosophy, Prehistoric, Culture, Ancient
                   </p>
                 </div>
-              </CardContent>
-            </Card>
-          </div>
-          
-          {/* Schedule Details Section */}
-          <div className="lg:col-span-1">
-            <Card className="bg-white">
-              <CardHeader>
-                <h2 className="text-xl font-semibold text-gray-900">Schedule Details</h2>
-                <p className="text-sm text-gray-500">Today, March 13th, 2020</p>
-              </CardHeader>
-              
-              <CardContent className="space-y-4">
-                {scheduleItems.map((item) => (
-                  <div key={item.id} className="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
-                    <div className={`w-4 h-4 rounded-full ${item.color}`}></div>
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-gray-900 text-sm">{item.subject}</h3>
-                      <p className="text-xs text-gray-500">{item.class}</p>
-                      <div className="flex items-center gap-1 mt-1">
-                        <Clock className="w-3 h-3 text-gray-400" />
-                        <span className="text-xs text-gray-500">{item.time}</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-                
-                <Button variant="ghost" className="w-full mt-6 text-purple-600 hover:bg-purple-50">
-                  View More
-                </Button>
               </CardContent>
             </Card>
           </div>

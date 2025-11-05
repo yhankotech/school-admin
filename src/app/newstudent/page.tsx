@@ -3,10 +3,10 @@ import React from 'react';
 
 const StudentParentForm: React.FC = () => {
   return (
-    <div className="container mx-auto p-6">
+    <div className="container p-2 ml-48">
       {/* Student Details */}
       <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-        <h2 className="text-2xl font-bold text-purple-600">Student Details</h2>
+        <h2 className="text-2xl font-bold text-purple-600">New Student</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           <div className="flex flex-col">

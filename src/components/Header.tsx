@@ -8,56 +8,12 @@ import Image from "next/image";
 import { LogOut } from "@/lib/icons";
 import YhankoIMG from "../assets/yhankoIMG.svg";
 //hooks
-//import getCookie from "@/hooks/Hooks/Login/useGetTokenLogin";
 import { NotificationsHover } from "./NotificationHover";
-//import { useNotificationStore } from "@/hooks/useNotifications";
-//import { useEffect, useState, useCallback } from "react";
-//import { userData } from "@/service/userDataAPI";
-//Tipagens
-//import { UserDataType } from "@/types/types";
-//Configuração
-//import axiosInstance from "@/service/api";
-//import { AxiosError } from "axios";
 
 export function Header() {
-   /* const [user, setUser] = useState<UserDataType |  null>(null);
-    const [userPhoto, setUserLogo] = useState<string | null>(null);
-    const { unreadNotificationsCount, setNotifications } = useNotificationStore();
-
-    const { entidade, master } = getCookie();
-
-    const fetchUser = useCallback(async () => {
-        try {
-            const { user, userLogo } =  (await userData()) || { user: null, userLogo: '' };
-            
-            setUser(user);
-            setUserLogo(userLogo)
-        } catch (error) {
-            console.error( `Erro ao buscar dados do usuário: ${error}`)
-        }
-    }, []);
-
-    const getNotifications = useCallback(async () => {
-        try {
-            const response = await axiosInstance.get(`notificacoes/entidade/${entidade}`);
-            setNotifications(response.data.mensagem);
-        } catch (error) {
-            if(error instanceof AxiosError) return error?.response?.data.mensagem
-        }
-    }, [entidade, setNotifications]);
-
-
-    useEffect(() => {
-       fetchUser();
-    }, [fetchUser]);
-
-    useEffect(() => {
-        getNotifications()
-    }, [entidade, getNotifications]);
-    */
     return (
         <header 
-        className="flex h-[5rem] w-[12rem] items-center bg-[#000] ml-[70rem] border-b border-[#E5E5E5] top-0 z-50">    
+        className="flex h-[5rem] w-[12rem] items-center bg-[#000] border-b border-[#E5E5E5] top-0 z-50">    
             <nav className="flex items-center justify-center space-x- w-[12rem] h-20">
                 <div className="flex space-x-4 max-w-24">
                     <div className="static">

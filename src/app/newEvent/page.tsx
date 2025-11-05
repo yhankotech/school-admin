@@ -24,50 +24,49 @@ export default function NewEvent(){
 
     return (
     <div>
-        <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Calendar className="h-5 w-5" />
-                  Gestão de Atividades e Eventos
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-3">
-                    <h4 className="font-medium">Criar Nova Atividade</h4>
-                    <div className="space-y-2">
-                      <Label htmlFor="title">Título</Label>
-                      <Input id="title" placeholder="Nome da atividade" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="description">Descrição</Label>
-                      <Textarea id="description" placeholder="Descrição da atividade" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="date">Data</Label>
-                      <Input id="date" type="date" />
-                    </div>
-                    <Button className="w-full">Criar Atividade</Button>
-                  </div>
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Calendar className="h-5 w-5" />
+              Gestão de Atividades e Eventos
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-8 flex items-center justify-center w-[70rem]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-3">
+              <h4 className="font-medium">Criar Nova Atividade</h4>
+              <div className="space-y-2">
+                <Label htmlFor="title">Título</Label>
+                <Input id="title" placeholder="Nome da atividade" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="description">Descrição</Label>
+                <Textarea id="description" placeholder="Descrição da atividade" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="date">Data</Label>
+                <Input id="date" type="date" />
+              </div>
+              <Button className="w-full bg-[#6366f1] hover:bg-[#5856eb] text-white">Create ativity</Button>
+            </div>
                   
-                  <div className="space-y-3">
-                    <h4 className="font-medium">Atividades Programadas</h4>
-                    {activities.map((activity) => (
-                      <div key={activity.id} className="border rounded-lg p-3">
-                        <h5 className="font-medium">{activity.title}</h5>
-                        <p className="text-sm text-gray-600">{activity.description}</p>
-                        <div className="flex items-center justify-between mt-2">
-                          <span className="text-xs text-gray-500">
-                            {activity.date.toLocaleDateString()}
-                          </span>
-                          <Badge variant="outline">{activity.type}</Badge>
-                        </div>
-                      </div>
-                    ))}
+            <div className="space-y-3">
+              <h4 className="font-medium">Atividades Programadas</h4>
+              {activities.map((activity) => (
+                <div key={activity.id} className="border rounded-lg p-3">
+                  <h5 className="font-medium">{activity.title}</h5>
+                  <p className="text-sm text-gray-600">{activity.description}</p>
+                  <div className="flex items-center justify-between mt-2">
+                    <span className="text-xs text-gray-500">
+                      {activity.date.toLocaleDateString()}
+                    </span>
+                    <Badge variant="outline">{activity.type}</Badge>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              ))}
+            </div>
+          </div>
+        </CardContent>
+      </Card>
     </div>
-)
-}
+)}
