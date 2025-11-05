@@ -5,14 +5,14 @@ import {
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
+  //SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import Image from 'next/image';
+//import Image from 'next/image';
 import { routes } from "@/lib/routes"
-import LogoTipo from "../assets/yhankoIMG.png";
+//import LogoTipo from "../assets/yhankoIMG.png";
 import { usePathname } from 'next/navigation';
 import Link from "next/link";
 
@@ -23,11 +23,12 @@ export function AppSidebar() {
     className={`h-screen border-none`}>
       <SidebarContent className="bg-[#4D44B5] h-full overflow-hidden">
         <SidebarGroup>
-             {/* Logo Section */}
-          <SidebarGroupLabel className="flex justify-center items-center mb-8 mt-4 p-2"> 
-            <Image src={LogoTipo} alt="Logo" className="h-8 w-8 mr-2" /> 
-            <h1 className="font-extrabold text-[1rem] text-[#FFFFFF]">Yhanko</h1>
-          </SidebarGroupLabel>
+          {/* Logo Section 
+            <SidebarGroupLabel className="flex justify-center items-center mb-8 mt-4 p-2"> 
+              <Image src={LogoTipo} alt="Logo" className="h-8 w-8 mr-2" /> 
+              <h1 className="font-extrabold text-[1rem] text-[#FFFFFF]">Yhanko</h1>
+            </SidebarGroupLabel>
+          */}
                 {/* Dynamic Menu Sections */}
           <SidebarGroupContent>
             <SidebarMenu>

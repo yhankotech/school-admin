@@ -4,7 +4,7 @@ import {ChatArea} from "./_components/chatArea";
 
 export default function Chat () {
   return (
-     <section className="h-screen flex bg-gray-100">
+     <section className="h-screen flex w-[70rem]">
       <ChatSidebar />
       <ChatArea />
     </section>

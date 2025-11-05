@@ -1,3 +1,4 @@
+"use client"
 //componentes
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
@@ -37,11 +38,11 @@ export function UserProfileInformations(){
     }, [])
 
     return(
-        <section className="space-y-6 flex flex-col items-center h-[40rem] w-[34rem] pt-l14">
+        <section className="space-y-6 flex flex-col items-center h-[40rem] w-[70rem] pt-14">
             <div className="flex flex-col space-y-4 items-center pt-4">
                 <div className="flex items-start relative">
                     {/* Container da Imagem */}
-                    <div className="border-[2px] border-[#E8F2FF] rounded-full w-[12rem] h-[12rem] flex justify-center items-center">
+                    <div className="border-[2px] border-[#80848a] rounded-full w-[12rem] h-[12rem] flex justify-center items-center">
                         <Image
                         src={userPhoto ? userPhoto : ""}
                         alt="Avatar"
@@ -56,9 +57,9 @@ export function UserProfileInformations(){
                     
                 </div>
                 <span className="text-[#2D3339] font-semibold text-lg">
-                 {user ? user.nome_empresa: "Sua empresa"}
+                 {user ? user.nome_empresa: "Sua instituição"}
                 </span>
-            <Separator className="w-[33rem] bg-[#F1F5F7]"/>
+            <Separator className="w-[33rem] bg-[#80848a]"/>
 
             <div className="flex space-x-36">
                 <div className="flex flex-col space-y-2 text-left">
@@ -80,11 +81,11 @@ export function UserProfileInformations(){
                 )}
             </div>
 
-            <Separator className="w-[33rem] bg-[#F1F5F7]"/>
+            <Separator className="w-[33rem] bg-[#80848a]"/>
 
             <div className="flex space-x-4 h-[5rem]">
                 <Link href="/perfil/redefinir-senha">
-                    <Button className="w-[16rem] cursor-pointer h-12 bg-[#F08F3E] hover:bg-[#F08F3E] mt-7 text-white hover:text-white">
+                    <Button className="w-[16rem] cursor-pointer h-12 bg-[#6366f1] hover:bg-[#5856eb] mt-7 text-white hover:text-white">
                         <svg>
                             <image xlinkHref={RedefinirIcon} className="size-4" />
                         </svg>

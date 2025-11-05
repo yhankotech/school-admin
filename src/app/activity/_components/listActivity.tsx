@@ -82,11 +82,11 @@ const yesterdayActivities = [
 export function TimelineActivity () {
   return (
     <Card className="h-full">
-      <CardContent className="p-6">
+      <CardContent>
         <div className="space-y-6">
           {/* Today Section */}
           <div>
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">Today</h2>
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">All activitys</h2>
             <div className="space-y-4">
               {activities.map((activity) => (
                 <div key={activity.id} className="flex items-start gap-3">

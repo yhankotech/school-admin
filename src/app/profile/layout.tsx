@@ -1,6 +1,5 @@
 import { AppSidebar } from "@/components/AppSidebarMenu";
 import { SidebarProvider } from "@/components/ui/sidebar";
-import { Header } from "@/components/Header";
 
 export default function RootLayout({
   children,
@@ -13,7 +12,6 @@ export default function RootLayout({
         <SidebarProvider>
           <AppSidebar  />
           <main className={`flex flex-col h-screen `}>
-            <Header />
             {children}
           </main>
         </SidebarProvider>

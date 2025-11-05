@@ -134,13 +134,6 @@ export function StaffGrid () {
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      {/* Header */}
-      <div className="mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Funcionários da Instituição</h2>
-        <p className="text-gray-600">Gerencie todos os funcionários e suas informações</p>
-      </div>
-
-      {/* Grid of Staff */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
         {staffMembers.map((staff) => (
           <div key={staff.id} className="bg-gray-50 rounded-lg p-6 relative hover:shadow-md transition-shadow">
