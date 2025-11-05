@@ -14,7 +14,7 @@ const montserratAlternates = Montserrat({
   variable: "--font-montserrat-alternates",
   display: "swap",
   style: ["normal"],
-  weight: ["100", "200", "300","400", "500","600", "700"], // escolha os pesos que deseja
+  weight: ["100", "200", "300","400", "500","600", "700"],
 });
 
 

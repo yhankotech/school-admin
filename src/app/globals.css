@@ -165,23 +165,8 @@ to {
 
 /* Smooth scrolling */
 
-
-/* Custom scrollbar for webkit browsers */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
 ::-webkit-scrollbar-track {
   background: #1B191F;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #FF5777;
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-   background: #FF5777;
 }
 
 /* Prevent body scroll when mobile menu is open */

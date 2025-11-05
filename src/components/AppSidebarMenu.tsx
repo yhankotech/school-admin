@@ -16,7 +16,7 @@ import LogoTipo from "../assets/yhankoIMG.png";
 import { usePathname } from 'next/navigation';
 import Link from "next/link";
 
-export function AppSidebarMenu() {
+export function AppSidebar() {
    const pathname = usePathname();
   return(
     <Sidebar
