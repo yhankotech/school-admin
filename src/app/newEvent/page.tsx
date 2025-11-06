@@ -75,7 +75,7 @@ export default function NewEvent() {
           <CardHeader className="border-b bg-gradient-to-r from-card to-muted/30">
             <CardTitle className="flex items-center gap-3 text-2xl">
               <div className="p-2 rounded-lg bg-primary/10">
-                <Calendar className="h-6 w-6 text-primary" />
+                <Calendar className="h-6 w-6 text-[#646cffaa]" />
               </div>
               Gestão de Atividades
             </CardTitle>
@@ -85,14 +85,14 @@ export default function NewEvent() {
               {/* Form Section */}
               <div className="space-y-6">
                 <div className="flex items-center gap-2 pb-2 border-b">
-                  <Plus className="h-5 w-5 text-primary" />
+                  <Plus className="h-5 w-5 text-[#646cffaa]" />
                   <h4 className="font-semibold text-lg">Criar Nova Atividade</h4>
                 </div>
                 
                 <div className="space-y-5">
                   <div className="space-y-2 group">
                     <Label htmlFor="title" className="text-sm font-medium flex items-center gap-2">
-                      <Sparkles className="h-3.5 w-3.5 text-primary" />
+                      <Sparkles className="h-3.5 w-3.5 text-[#646cffaa]" />
                       Título da Atividade
                     </Label>
                     <Input 
@@ -104,7 +104,7 @@ export default function NewEvent() {
 
                   <div className="space-y-2">
                     <Label htmlFor="description" className="text-sm font-medium flex items-center gap-2">
-                      <Sparkles className="h-3.5 w-3.5 text-primary" />
+                      <Sparkles className="h-3.5 w-3.5 text-[#646cffaa]" />
                       Descrição
                     </Label>
                     <Textarea 
@@ -118,7 +118,7 @@ export default function NewEvent() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="date" className="text-sm font-medium flex items-center gap-2">
-                        <Calendar className="h-3.5 w-3.5 text-primary" />
+                        <Calendar className="h-3.5 w-3.5 text-[#646cffaa]" />
                         Data
                       </Label>
                       <Input 
@@ -130,7 +130,7 @@ export default function NewEvent() {
 
                     <div className="space-y-2">
                       <Label htmlFor="location" className="text-sm font-medium flex items-center gap-2">
-                        <MapPin className="h-3.5 w-3.5 text-primary" />
+                        <MapPin className="h-3.5 w-3.5 text-[#646cffaa]" />
                         Local
                       </Label>
                       <Input 
@@ -142,7 +142,7 @@ export default function NewEvent() {
                   </div>
 
                   <Button 
-                    className="w-full h-12 bg-gradient-to-r from-primary to-primary-glow hover:shadow-lg hover:scale-[1.02] transition-all duration-300 font-semibold group"
+                    className="w-full h-12 bg-[#2d36e9aa] hover:bg-[#646cffaa] hover:shadow-lg hover:scale-[1.02] transition-all duration-300 font-semibold group"
                   >
                     <Plus className="h-5 w-5 mr-2 group-hover:rotate-90 transition-transform duration-300" />
                     Criar Atividade
@@ -154,10 +154,10 @@ export default function NewEvent() {
               <div className="space-y-6">
                 <div className="flex items-center justify-between pb-2 border-b">
                   <div className="flex items-center gap-2">
-                    <Clock className="h-5 w-5 text-primary" />
+                    <Clock className="h-5 w-5 text-[#646cffaa]" />
                     <h4 className="font-semibold text-lg">Atividades Programadas</h4>
                   </div>
-                  <Badge variant="secondary" className="font-semibold">
+                  <Badge variant="secondary" className="font-semibold text-[rgba(39,82,94,0.67)]">
                     {activities.length} eventos
                   </Badge>
                 </div>
@@ -175,7 +175,7 @@ export default function NewEvent() {
                         </h5>
                         <Badge 
                           variant="outline" 
-                          className={`${typeColors[activity.type]} font-medium shrink-0`}
+                          className={`${typeColors[activity.type]} font-medium shrink-0 text-green-600`}
                         >
                           {typeLabels[activity.type]}
                         </Badge>
@@ -187,7 +187,7 @@ export default function NewEvent() {
                       
                       <div className="space-y-2">
                         <div className="flex items-center gap-2 text-sm">
-                          <Calendar className="h-4 w-4 text-primary" />
+                          <Calendar className="h-4 w-4 text-[#646cffaa]" />
                           <span className="font-medium text-foreground">
                             {activity.date.toLocaleDateString('pt-BR', { 
                               day: '2-digit', 
@@ -199,14 +199,14 @@ export default function NewEvent() {
                         
                         {activity.location && (
                           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <MapPin className="h-4 w-4" />
+                            <MapPin className="h-4 w-4 text-[#646cffaa]" />
                             <span>{activity.location}</span>
                           </div>
                         )}
                         
                         <div className="flex items-center justify-between pt-2 border-t">
                           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <Users className="h-4 w-4" />
+                            <Users className="h-4 w-4 text-[#646cffaa]" />
                             <span>{activity.participants} participantes</span>
                           </div>
                           <span className="text-xs px-2 py-1 rounded-md bg-muted text-muted-foreground">
