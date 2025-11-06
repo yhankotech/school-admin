@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
-
+import Link from "next/link";
 interface Staff {
   id: string;
   name: string;
@@ -141,14 +141,16 @@ export function StaffGrid () {
             <div className="absolute top-4 right-4">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon" className="h-6 w-6 text-gray-400 hover:text-gray-600">
+                  <Button variant="ghost" size="icon" className="h-6 w-6 text-gray-400 hover:text-gray-600 hover:cursor-pointer">
                     <MoreHorizontal className="h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="bg-white border border-gray-200 shadow-lg z-50">
-                  <DropdownMenuItem className="hover:bg-gray-50">Ver Detalhes</DropdownMenuItem>
-                  <DropdownMenuItem className="hover:bg-gray-50">Editar</DropdownMenuItem>
-                  <DropdownMenuItem className="hover:bg-gray-50 text-red-600">Remover</DropdownMenuItem>
+                  <Link href="/employee-details">
+                    <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">Ver Detalhes</DropdownMenuItem>
+                  </Link>
+                  <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">Editar</DropdownMenuItem>
+                  <DropdownMenuItem className="hover:bg-gray-50 text-red-600 hover:cursor-pointer">Remover</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>

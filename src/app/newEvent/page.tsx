@@ -62,7 +62,7 @@ export default function NewEvent() {
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Header */}
         <div className="text-center space-y-3 animate-fade-in">
-          <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#646cffaa] via-[#3b44e4aa] to-[#646cffaa] bg-clip-text text-transparent">
             Atividades e Eventos
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

@@ -178,3 +178,68 @@ export interface Activity {
   location?: string;
   participants?: number;
 }
+
+
+export interface Class {
+  id: string;
+  name: string;
+  level: number;
+  created_at: string;
+}
+
+export interface Student {
+  id: string;
+  name: string;
+  email?: string;
+  phone?: string;
+  class_id?: string;
+  created_at: string;
+}
+
+export interface TuitionFee {
+  id: string;
+  class_id: string;
+  amount: number;
+  enrollment_fee: number;
+  activity_fee: number;
+  valid_from: string;
+  created_at: string;
+}
+
+export type PaymentType = 'enrollment' | 'tuition' | 'activity';
+export type PaymentStatus = 'pending' | 'confirmed' | 'cancelled';
+
+export interface Payment {
+  id: string;
+  student_id: string;
+  type: PaymentType;
+  amount: number;
+  status: PaymentStatus;
+  payment_date?: string;
+  confirmed_by?: string;
+  notes?: string;
+  created_at: string;
+}
+
+export interface Receipt {
+  id: string;
+  payment_id: string;
+  receipt_number: string;
+  issued_date: string;
+  issued_by: string;
+  student_name: string;
+  amount: number;
+  description: string;
+}
+
+export interface PaymentWithStudent extends Payment {
+  students: Student | null;
+}
+
+export interface CashFlowSummary {
+  total_confirmed: number;
+  total_pending: number;
+  enrollment_total: number;
+  tuition_total: number;
+  activity_total: number;
+}
