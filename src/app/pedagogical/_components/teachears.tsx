@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
-import { useRouter } from 'next/navigation'
+import Link from "next/link";
 
 interface Teachear {
   id: string;
@@ -80,12 +80,6 @@ export function Teachears (){
     return name.split(' ').map(n => n[0]).join('').toUpperCase();
   };
 
-  const router = useRouter();
-
-  function goTo(link:string){
-    router.push(link)
-  }
-
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
       {/* Grid of Students */}
@@ -96,20 +90,22 @@ export function Teachears (){
             <div className="absolute top-4 right-4">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon" className="h-6 w-6 text-gray-400 hover:text-gray-600">
+                  <Button variant="ghost" size="icon" className="h-6 w-6 text-gray-400 hover:text-gray-600 hover:cursor-pointer">
                     <MoreHorizontal className="h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="bg-white border border-gray-200 shadow-lg z-50">
-                  <DropdownMenuItem className="hover:bg-gray-50">View Details</DropdownMenuItem>
-                  <DropdownMenuItem className="hover:bg-gray-50">Edit</DropdownMenuItem>
-                  <DropdownMenuItem className="hover:bg-gray-50 text-red-600">Delete</DropdownMenuItem>
+                  <Link href={"/teachear-deatils"}>
+                    <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">View Details</DropdownMenuItem>
+                  </Link>
+                  <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">Edit</DropdownMenuItem>
+                  <DropdownMenuItem className="hover:bg-gray-50 text-red-600 hover:cursor-pointer">Delete</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
 
             {/* Avatar */}
-            <div className="mb-4 cursor-pointer" onClick={()=>goTo("/teachear-deatils")}>
+            <div className="mb-4 cursor-pointer">
               <Avatar className="h-16 w-16 mx-auto">
                 <AvatarFallback className="bg-purple-200 text-purple-700 text-lg font-medium">
                   {getInitials(student.name)}

@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
-
+import Link from "next/link";
 interface Teachear {
   id: string;
   name: string;
@@ -89,14 +89,16 @@ const AssotiationCards = () => {
             <div className="absolute top-4 right-4">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon" className="h-6 w-6 text-gray-400 hover:text-gray-600">
+                  <Button variant="ghost" size="icon" className="h-6 w-6 text-gray-400 hover:text-gray-600 hover:cursor-pointer">
                     <MoreHorizontal className="h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="bg-white border border-gray-200 shadow-lg z-50">
-                  <DropdownMenuItem className="hover:bg-gray-50">View Details</DropdownMenuItem>
-                  <DropdownMenuItem className="hover:bg-gray-50">Edit</DropdownMenuItem>
-                  <DropdownMenuItem className="hover:bg-gray-50 text-red-600">Delete</DropdownMenuItem>
+                  <Link href="/association-details">
+                    <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">View Details</DropdownMenuItem>
+                  </Link>
+                  <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">Edit</DropdownMenuItem>
+                  <DropdownMenuItem className="hover:bg-gray-50 text-red-600 hover:cursor-pointer">Delete</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>

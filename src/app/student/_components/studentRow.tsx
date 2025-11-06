@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Phone, Mail, MoreHorizontal } from "lucide-react";
-import { useRouter } from 'next/navigation'
+import Link from "next/link";
 
 interface Student {
   id: string;
@@ -29,12 +29,6 @@ export function StudentRow ({ student }: StudentRowProps) {
     return name.split(' ').map(n => n[0]).join('').toUpperCase();
   };
 
-  const router = useRouter();
-  
-  function goTo(link:string){
-    router.push(link)
-  }
-
   return (
     <TableRow className="hover:bg-gray-50 border-b border-gray-100">
       <TableCell className="px-6 py-4">
@@ -42,7 +36,7 @@ export function StudentRow ({ student }: StudentRowProps) {
       </TableCell>
       
       <TableCell className="px-6 py-4">
-        <div className="flex items-center space-x-3 cursor-pointer" onClick={()=>goTo("/students-details")}>
+        <div className="flex items-center space-x-3 cursor-pointer">
           <Avatar className="h-10 w-10">
             <AvatarFallback className="bg-purple-200 text-purple-700 text-sm font-medium">
               {getInitials(student.name)}
@@ -90,14 +84,16 @@ export function StudentRow ({ student }: StudentRowProps) {
       <TableCell className="px-6 py-4">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="icon" className="h-8 w-8 text-gray-400 hover:text-gray-600">
+            <Button variant="ghost" size="icon" className="h-8 w-8 text-gray-400 hover:text-gray-600 hover:cursor-pointer">
               <MoreHorizontal className="h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="bg-white border border-gray-200 shadow-lg">
-            <DropdownMenuItem className="hover:bg-gray-50">View Details</DropdownMenuItem>
-            <DropdownMenuItem className="hover:bg-gray-50">Edit</DropdownMenuItem>
-            <DropdownMenuItem className="hover:bg-gray-50 text-red-600">Delete</DropdownMenuItem>
+            <Link href={"/students-details"}>
+              <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">View Details</DropdownMenuItem>
+            </Link>
+            <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">Edit</DropdownMenuItem>
+            <DropdownMenuItem className="hover:bg-gray-50 text-red-600 hover:cursor-pointer">Delete</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </TableCell>

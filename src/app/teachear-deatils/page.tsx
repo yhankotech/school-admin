@@ -8,11 +8,11 @@ import React from "react";
 const TeacherDetails = () => {
 
 return (
-    <div className="min-h-screen bg-background p-6">
+    <div className="min-h-screen p-6">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row gap-6 max-w-6xl mx-auto">
+        <div className="flex flex-col lg:flex-row gap-6 ">
           {/* Profile Section */}
-          <div className="flex-1">
+          <div className="flex-1 w-[55rem]">
             <TeacherProfile />
           </div>
           

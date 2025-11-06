@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { Calendar, Clock } from "lucide-react"
 
 export function ScheduleCard () {
@@ -86,15 +85,6 @@ export function ScheduleCard () {
           </Card>
         ))}
       </div>
-
-      {/* View More Button */}
-      <Card>
-        <CardContent className="p-2">
-          <Button variant="secondary" className="w-full">
-            View More
-          </Button>
-        </CardContent>
-      </Card>
     </div>
   )
 }

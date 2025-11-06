@@ -3,14 +3,12 @@ import { MapPin, Phone, Mail } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 
-export function TeacherProfile () {
+export default function AssociationProfile () {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div className="min-h-screen bg-gray-50 p-6">
           {/* Profile Section */}
           <div className="lg:col-span-2">
-            <Card className="bg-white w-[40rem]">
+            <Card className="bg-white">
               <CardHeader className="relative">
                 {/* Background with gradient circles */}
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-800 rounded-t-lg overflow-hidden">
@@ -20,13 +18,13 @@ export function TeacherProfile () {
                 </div>
                 
                 {/* Profile content */}
-                <div className="relative z-10 flex items-center gap-6 pt-8 pb-6">
+                <div className="relative z-10 flex items-center gap-6 pt-2 pb-6">
                   <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center">
                     <div className="w-20 h-20 bg-gray-200 rounded-full"></div>
                   </div>
                   <div className="text-white">
                     <h1 className="text-3xl font-bold mb-2">Maria Historia</h1>
-                    <p className="text-purple-100">History Teacher</p>
+                    <p className="text-purple-100">Student association</p>
                   </div>
                 </div>
               </CardHeader>
@@ -92,7 +90,5 @@ export function TeacherProfile () {
             </Card>
           </div>
         </div>
-      </div>
-    </div>
   );
 };

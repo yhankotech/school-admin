@@ -10,9 +10,11 @@ export default function RootLayout({
     <div
       >
         <SidebarProvider>
-          <AppSidebar  />
-          <main className={`flex flex-col h-screen `}>
-            {children}
+          <AppSidebar />
+          <main className={`flex flex-col h-screen flex-1 sm:w-full md:w-full xl:w-[1100px] 2xl:w-[1100px]`}>
+            <div className="flex-1">
+              {children}
+            </div>
           </main>
         </SidebarProvider>
     </div>
