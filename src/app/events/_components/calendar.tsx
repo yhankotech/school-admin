@@ -102,7 +102,7 @@ export function  CalendarSchedule () {
 
                   {/* New Student Button */}
                   <Link href="/newEvent">
-                    <Button className="bg-[#6366f1] hover:bg-[#5856eb] text-white rounded-full px-4 py-2">
+                    <Button className="bg-[#6366f1] hover:bg-[#5856eb] text-white rounded-full px-4 py-2 hover:cursor-pointer">
                       <Plus className="mr-2 h-4 w-4" />
                       New events
                     </Button>

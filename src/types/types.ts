@@ -168,3 +168,13 @@ export interface Student {
   enrollmentDate: string;
   dateOfBirth?: string;
 }
+export interface Activity {
+  id: string;
+  title: string;
+  description: string;
+  date: Date;
+  type: "event" | "activity" | "meeting" | "holiday";
+  organizer: string;
+  location?: string;
+  participants?: number;
+}
