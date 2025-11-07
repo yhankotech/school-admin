@@ -12,7 +12,6 @@ export default function RootLayout({
         <SidebarProvider>
           <AppSidebar  />
           <main className={`flex flex-col h-screen `}>
-            
             {children}
           </main>
         </SidebarProvider>

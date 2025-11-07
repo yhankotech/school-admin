@@ -22,27 +22,27 @@ export function Financial() {
 
         <Tabs defaultValue="cashflow" className="space-y-6">
           <TabsList className="grid w-full grid-cols-2 lg:grid-cols-5 gap-2 h-auto p-2">
-            <TabsTrigger value="cashflow" className="flex items-center gap-2 hover:cursor-pointer">
+            <TabsTrigger value="cashflow" className="flex items-center gap-2 hover:cursor-pointer bg-[#5856eb] text-white hover:bg-[#4441eb] hover:text-white">
               <DollarSign className="h-4 w-4" />
               <span className="hidden sm:inline">Fluxo de Caixa</span>
               <span className="sm:hidden">Caixa</span>
             </TabsTrigger>
-            <TabsTrigger value="process" className="flex items-center gap-2 hover:cursor-pointer">
+            <TabsTrigger value="process" className="flex items-center gap-2 hover:cursor-pointer bg-[#5856eb] text-white hover:bg-[#4441eb] hover:text-white">
               <FileText className="h-4 w-4" />
               <span className="hidden sm:inline">Processar Pagamento</span>
               <span className="sm:hidden">Pagar</span>
             </TabsTrigger>
-            <TabsTrigger value="confirm" className="flex items-center gap-2 hover:cursor-pointer">
+            <TabsTrigger value="confirm" className="flex items-center gap-2 hover:cursor-pointer bg-[#5856eb] text-white hover:bg-[#4441eb] hover:text-white">
               <Receipt className="h-4 w-4" />
               <span className="hidden sm:inline">Confirmar Pagamentos</span>
               <span className="sm:hidden">Confirmar</span>
             </TabsTrigger>
-            <TabsTrigger value="receipts" className="flex items-center gap-2 hover:cursor-pointer">
+            <TabsTrigger value="receipts" className="flex items-center gap-2 hover:cursor-pointer bg-[#5856eb] text-white hover:bg-[#4441eb] hover:text-white">
               <Receipt className="h-4 w-4" />
               <span className="hidden sm:inline">Emitir Recibo</span>
               <span className="sm:hidden">Recibos</span>
             </TabsTrigger>
-            <TabsTrigger value="config" className="flex items-center gap-2 hover:cursor-pointer">
+            <TabsTrigger value="config" className="flex items-center gap-2 hover:cursor-pointer bg-[#5856eb] text-white hover:bg-[#4441eb] hover:text-white">
               <Settings className="h-4 w-4" />
               <span className="hidden sm:inline">Configurar Propinas</span>
               <span className="sm:hidden">Config</span>

@@ -12,7 +12,7 @@ export default function NotFoundPage() {
           fpsLimit: 60,
           particles: {
             number: { value: 80, density: { enable: true, area: 800 } },
-            color: { value: ["#F08F3E", "#1D5298", "#FFFFFF"] },
+            color: { value: ["#FF5777", "#171718", "#FFFFFF"] },
             shape: { type: "circle" },
             opacity: { value: 0.5 },
             size: { value: { min: 1, max: 5 } },
@@ -52,7 +52,7 @@ export default function NotFoundPage() {
         </div>
 
         {/* Mensagem de erro */}
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold text-[#F08F3E]">
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold text-[#a550f5]">
           404
         </h1>
         <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mt-4">
@@ -63,7 +63,7 @@ export default function NotFoundPage() {
         {/* Link para voltar */}
         <Link
           href="/dashboard"
-          className="mt-6 text-[#1D5298] cursor-pointer hover:text-blue-500 text-base md:text-lg lg:text-xl"
+          className="mt-6 text-[#171718] cursor-pointer hover:text-blue-500 text-base md:text-lg lg:text-xl"
         >
           Voltar para a página inicial
         </Link>

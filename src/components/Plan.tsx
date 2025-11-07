@@ -1,5 +1,5 @@
+"use client"
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation'
 
 // Tipos TypeScript
 interface Plan {
@@ -24,11 +24,6 @@ interface PriceCalculation {
 }
 
 const Plane: React.FC = () => {
-  const router = useRouter();
-  
-  function goToPayment(){
-    router.push("/payment")
-  }
 
   // Estados do componente
   const [selectedPlan, setSelectedPlan] = useState<string>('annual');
@@ -162,7 +157,7 @@ const Plane: React.FC = () => {
     const featureClasses = `text-sm ${plan.popular ? 'text-[#1B191F] font-semibold' : 'text-gray-700'}`;
 
     const buttonClasses = `
-      w-full py-4 px-6 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg
+      w-full py-4 px-6 hover:cursor-pointer rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg
       ${plan.popular 
         ? 'bg-gradient-to-r from-[#FF5777] to-[#FF5777]/90 hover:from-[#FF5777]/90 hover:to-[#FF5777] text-white shadow-[#FF5777]/30 hover:shadow-[#FF5777]/50' 
         : plan.discount > 0 
@@ -241,7 +236,7 @@ const Plane: React.FC = () => {
           </div>
           
           {/* Botão */}
-          <button onClick={goToPayment} className={buttonClasses}>
+          <button className={buttonClasses}>
             {plan.discount > 0 ? `💸 Economiza ${plan.discount}%` : '🚀 Começar Agora'}
           </button>
         </div>

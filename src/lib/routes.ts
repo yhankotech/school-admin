@@ -68,7 +68,7 @@ export const routes = [
    {
     id: 11,
     title: "Relatórios",
-    url: "/manage",
+    url: "/report",
     icon: FaRegFileAlt,
  },
   {

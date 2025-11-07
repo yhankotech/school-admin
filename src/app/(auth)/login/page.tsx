@@ -133,11 +133,11 @@ const toggleCheck = () => {
           <div className="flex flex-col w-[40rem] h-60 space-y-6 2xl:space-y-16 justify-center items-center xl:-mt-28">
             <div className="flex justify-center items-center space-x-3">
                 <Image src={YhankoIMG} alt="logo" className="h-12 w-12 xl:h-12 2xl:h-14"/>
-                <h1 className="text-black font-bold">Yhanko Akademi</h1>
+                <h1 className="text-black font-bold">Yhanko</h1>
             </div>
           
             <div className="text-center">
-              <h1 className="text-[#1D5298] font-semibold text-lg lg:text-xl mb-3">Director Geral</h1>
+              <h1 className="text-[#171718] font-semibold text-lg lg:text-xl mb-3">Director Geral</h1>
               <span className="text-[#717F96] text-sm lg:text-base">
                 Seja bem-vindo a melhor gestão escolar!<br/>
                 A melhor gestão para a tua instituição de ensino
@@ -221,12 +221,12 @@ const toggleCheck = () => {
               <Button
                 onClick={goTo}
                 //type="submit"
-                className="bg-[#327FE4] shadow-none hover:bg-[#1D5298] hover:cursor-pointer text-white w-full h-12 lg:h-14 mb-10 rounded-md">
+                className="bg-[#FF5777] shadow-none hover:bg-[#fc4667] hover:cursor-pointer text-white w-full h-12 lg:h-14 mb-10 rounded-md">
                 {isLoading ? <Loader2  className="animate-spin" /> : "Entrar"}
               </Button>
             
               <Link href="/afiliate">
-                <Button className="bg-[#E2E5F1] hover:bg-[#F08F3E] text-[#717F96] hover:text-white hover:cursor-pointer w-full h-12 lg:h-14 rounded-md shadow-none">
+                <Button className="bg-[#a550f5] text-white hover:bg-[#823ef0] hover:text-white hover:cursor-pointer w-full h-12 lg:h-14 rounded-md shadow-none">
                   Entrar como Secretário/a
                 </Button>
               </Link>

@@ -3,9 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Search, UserPlus } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import {StaffGrid} from "./_components/stafGrid";
+import { useRouter } from "next/navigation";
 
 
 export default function Staff () {
+  const route = useRouter()
+
   return (
     <div className="flex h-screen bg-gray-50">
       
@@ -22,7 +25,9 @@ export default function Staff () {
             </div>
             
             <div className="flex items-center gap-4">
-              <Button className="bg-[#6366f1] hover:bg-[#5856eb] text-white">
+              <Button
+                onClick={() => route.push("/newteacher")}
+                className="bg-[#6366f1] hover:bg-[#5856eb] text-white hover:cursor-pointer">
                 <UserPlus className="w-4 h-4 mr-2" />
                 Adicionar Funcionário
               </Button>

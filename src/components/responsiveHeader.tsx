@@ -14,7 +14,6 @@ interface ResponsiveHeaderProps {
 
 const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({ 
   goTo = () => {}, 
-  goToPayment = () => {}, 
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -99,15 +98,9 @@ const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({
         <div className="hidden lg:flex items-center space-x-3 ml-auto">
           <Button
             onClick={goTo} 
-            className="px-6 py-2 cursor-pointer bg-transparent text-sm font-medium text-[#FF5777] border border-[#FF5777] rounded-lg hover:bg-[#FF5777] hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#FF5777]/25"
+            className="px-6 py-2 w-56 cursor-pointer bg-[#FF5777] text-sm font-medium text-white border border-[#FF5777] rounded-lg hover:bg-[#FF5777] hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#FF5777]/25"
           >
             Login
-          </Button>
-          <Button 
-            onClick={goToPayment} 
-            className="px-8 py-2 cursor-pointer text-sm font-medium text-white bg-[#FF5777] border border-[#FF5777] rounded-lg hover:bg-[#FF5777]/90 hover:shadow-lg hover:shadow-[#FF5777]/25 transition-all duration-300 transform hover:scale-105"
-          >
-            Cadastre-se
           </Button>
         </div>
 
@@ -202,15 +195,6 @@ const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({
               className="w-full py-3 bg-transparent text-lg font-medium text-[#FF5777] border-2 border-[#FF5777] rounded-lg hover:bg-[#FF5777] hover:text-white transition-all duration-300 transform hover:scale-105"
             >
               Login
-            </button>
-            <button 
-              onClick={() => {
-                goToPayment();
-                handleMobileMenuClick();
-              }}
-              className="w-full py-3 text-lg font-medium text-white bg-[#FF5777] border-2 border-[#FF5777] rounded-lg hover:bg-[#FF5777]/90 transition-all duration-300 transform hover:scale-105"
-            >
-              Cadastre-se
             </button>
           </div>
 

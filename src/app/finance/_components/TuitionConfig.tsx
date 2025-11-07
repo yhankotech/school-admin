@@ -80,7 +80,7 @@ export function TuitionConfig() {
               />
             </div>
 
-            <Button type="submit" className="w-full" disabled={loading}>
+            <Button type="submit" className="w-full bg-[#FF5777] text-white hover:bg-[#f84868] hover:text-white" disabled={loading}>
               {loading ? "Salvando..." : "Salvar Configuração"}
             </Button>
           </form>

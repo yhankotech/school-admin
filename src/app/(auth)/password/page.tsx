@@ -107,10 +107,10 @@ export default function ResetPassword() {
                 <div className="flex flex-col w-[40rem] h-60 space-y-4 2xl:space-y-16 lg:space-y-12 xl:mt-4 items-center">
                     <div className="flex justify-center items-center space-x-3">
                       <Image src={Logo} alt="logo" className="h-12 w-12 xl:h-12 2xl:h-14"/>
-                      <h1 className="text-black font-bold">Yhanko Akademi</h1>
+                      <h1 className="text-black font-bold">Yhanko</h1>
                     </div>
                     <div className="text-center space-y-4">
-                        <h1 className="text-[#1D5298] font-semibold text-lg lg:text-xl mb-2">Redefina a sua senha</h1>
+                        <h1 className="text-[#171718] font-semibold text-lg lg:text-xl mb-2">Redefina a sua senha</h1>
                         <span className="text-[#717F96] text-sm lg:text-base">
                             Preencha o campo abaixo para<br /> recuperar a sua senha.
                         </span>
@@ -179,14 +179,14 @@ export default function ResetPassword() {
                           onClick={goTo} 
                           //type="submit" 
                           disabled={isLoading} 
-                          className={`bg-[#327FE4] shadow-none hover:bg-[#1D5298] hover:cursor-pointer text-white w-full mb-10 h-12 lg:h-14 rounded-md 2xl:mt-9 xl:mt-4 ${
+                          className={`bg-[#FF5777] shadow-none hover:bg-[#fc4667] text-white hover:cursor-pointer w-full mb-10 h-12 lg:h-14 rounded-md 2xl:mt-9 xl:mt-4 ${
                             isLoading ? "cursor-not-allowed" : ""
                           }`}>
                           {isLoading ? <Loader2 className="animate-spin" /> : "Enviar"}
                         </Button>
 
                         <Link href="/login">
-                          <Button className="bg-white hover:bg-[#E2E5F1] hover:cursor-pointer shadow-none text-[#717F96] w-full h-12 lg:h-14 rounded-md border-[1.5px] border-[#E2E5F1] 2xl:mt-2 xl:mt-1 mb-6">
+                          <Button className="bg-[#a550f5] text-white hover:bg-[#823ef0] hover:cursor-pointer shadow-none w-full h-12 lg:h-14 rounded-md border-[1.5px] border-[#E2E5F1] 2xl:mt-2 xl:mt-1 mb-6">
                           Voltar
                           </Button>
                         </Link>

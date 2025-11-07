@@ -36,17 +36,17 @@ export default function Home() {
           <p className="max-w-xl mx-auto text-white"> Imagine um futuro onde a tecnologia serve como um poderoso aliado na educação, conectando professores, alunos e pais numa experiência única e transformadora. Apresentamos uma plataforma inovadora, dedicada exclusivamente ao universo da educação. Uma plataforma que impulsionará a inclusão tecnológica e revolucionará a maneira como aprendemos e ensinamos.</p>
 
           <Button className="px-10 py-5 text-sm font-medium animate-pulse text-white bg-[#FF5777] hover:bg-[#FF5777]  cursor-pointer">
-              Cadastre-se
+            Contactar
           </Button>
         </section>
       </AnimatedSection>
 
       {/* SOBRE O PRODUTO */}
-        <AnimatedSection className="py-16 px-32" delay={0.2}>
-          <section className="px-32" id="sobre">
-            <AboutSection/>
-          </section>
-       </AnimatedSection>
+      <AnimatedSection className="py-16 px-32" delay={0.2}>
+        <section className="px-32" id="sobre">
+          <AboutSection/>
+        </section>
+      </AnimatedSection>
 
       <AnimatedSection className="py-20 px-4 md:px-8 lg:px-32 relative overflow-hidden" delay={0.2}>
         {/* Efeitos de fundo */}

@@ -240,7 +240,7 @@ export function AdvantageSection(){
               
               <div className="text-center group">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-[#FF5777]/20 rounded-full mb-4 group-hover:bg-[#FF5777]/30 transition-colors duration-300">
-                  <span className="text-3xl font-bold text-[#FF5777]">99.9%</span>
+                  <span className="text-3xl font-bold text-[#FF5777]">99%</span>
                 </div>
                 <h4 className="text-white font-semibold mb-2">Uptime</h4>
                 <p className="text-gray-400 text-sm">Disponibilidade garantida</p>
@@ -250,8 +250,8 @@ export function AdvantageSection(){
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-[#FF5777]/20 rounded-full mb-4 group-hover:bg-[#FF5777]/30 transition-colors duration-300">
                   <span className="text-3xl font-bold text-[#FF5777]">256</span>
                 </div>
-                <h4 className="text-white font-semibold mb-2">Criptografia</h4>
-                <p className="text-gray-400 text-sm">Bits de segurança</p>
+                <h4 className="text-white font-semibold mb-2">Segurança</h4>
+                <p className="text-gray-400 text-sm">Dados criptografados</p>
               </div>
             </div>
         </>

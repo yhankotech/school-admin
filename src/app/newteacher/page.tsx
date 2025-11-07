@@ -7,7 +7,7 @@ const AddNewTeacher: React.FC = () => {
 
   return (
     <div className="min-h-screen p-10 w-[70rem]">
-      <h1 className="text-2xl font-semibold text-center text-gray-800 p-5">Add New Teacher</h1>
+      <h1 className="text-2xl font-semibold text-center text-gray-800 p-5">Add New employee</h1>
       <div className="mx-auto shadow-lg rounded-lg flex space-x-20">
         <div>
           <div className="bg-indigo-600 text-white p-5 rounded-t-lg">
@@ -90,6 +90,14 @@ const AddNewTeacher: React.FC = () => {
               <div>
                 <label className="block text-gray-700">City *</label>
                 <input type="text" className="mt-1 p-2 border rounded w-full" placeholder="City Name" />
+              </div>
+              <div>
+                <label className="block text-gray-700">CV</label>
+                <input type="file" className="mt-1 p-2 border rounded w-full" placeholder="City Name" />
+              </div>
+              <div>
+                <label className="block text-gray-700">BI</label>
+                <input type="file" className="mt-1 p-2 border rounded w-full" placeholder="City Name" />
               </div>
             </div>
             <div className="flex justify-between mt-5 p-5">

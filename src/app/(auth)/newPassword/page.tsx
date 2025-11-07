@@ -108,10 +108,10 @@ export default function NewPassword() {
         <div className="flex flex-col w-[40rem] h-60 space-y-6 lg:space-y-12 2xl:space-y-16 justify-center items-center">
           <div className="flex justify-center items-center space-x-3">
             <Image src={YhankoIMG} alt="logo" className="h-12 w-12 xl:h-12 2xl:h-14"/>
-            <h1 className="text-black font-bold">Yhanko Akademi</h1>
+            <h1 className="text-black font-bold">Yhanko</h1>
           </div>
           <div className="flex flex-col justify-center items-center space-y-2 lg:space-y-4">
-            <h1 className="text-[#1D5298] font-semibold text-lg 2xl:text-lg lg:text-2xl text-center">
+            <h1 className="text-[#171718] font-semibold text-lg 2xl:text-lg lg:text-2xl text-center">
               Defina uma nova senha
             </h1>
             <span className="text-[#717F96] text-center text-sm lg:text-base">
@@ -181,7 +181,7 @@ export default function NewPassword() {
               onClick={goTo} 
               //type="submit"
               disabled={isLoading} 
-              className="bg-[#327FE4]  hover:bg-[#1D5298] hover:cursor-pointer text-[#ffffff] w-full rounded-[6px] h-12 lg:h-14 mt-12 shadow-none">
+              className="bg-[#FF5777] hover:bg-[#fc4667] hover:cursor-pointer text-white w-full rounded-[6px] h-12 lg:h-14 mt-12 shadow-none">
               {isLoading ? <Loader2  className="animate-spin" /> : "Redefinir"}
             </Button>
         </form>
