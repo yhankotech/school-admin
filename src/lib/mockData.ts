@@ -1,0 +1,108 @@
+import { Student } from '@/types/types';
+
+export const mockStudent: Student = {
+  id: '1',
+  fullName: 'João Silva Santos',
+  studentNumber: 'EST-2024-001',
+  academicYear: '2024/2025',
+  class: '10º Ano',
+  course: 'Ciências e Tecnologias',
+  classGroup: 'A',
+  status: 'ativo',
+  enrollmentDate: '2024-09-01',
+  dateOfBirth: '2008-05-15',
+  subjects: [
+    {
+      id: '1',
+      name: 'Matemática A',
+      grade: 18,
+      professor: 'Dr. Carlos Mendes',
+    },
+    {
+      id: '2',
+      name: 'Física e Química A',
+      grade: 16,
+      professor: 'Dra. Maria Oliveira',
+    },
+    {
+      id: '3',
+      name: 'Biologia e Geologia',
+      grade: 17,
+      professor: 'Dr. Pedro Costa',
+    },
+    {
+      id: '4',
+      name: 'Português',
+      grade: 15,
+      professor: 'Dra. Ana Ferreira',
+    },
+    {
+      id: '5',
+      name: 'História A',
+      grade: 14,
+      professor: 'Dr. Nuno Ribeiro',
+    },
+    {
+      id: '6',
+      name: 'Educação Física',
+      grade: 19,
+      professor: 'Dr. Roberto Alves',
+    },
+  ],
+  payments: [
+    {
+      id: '1',
+      description: 'Propina - Setembro 2024',
+      amount: 150.00,
+      date: '2024-09-05',
+      status: 'pago',
+    },
+    {
+      id: '2',
+      description: 'Propina - Outubro 2024',
+      amount: 150.00,
+      date: '2024-10-05',
+      status: 'pago',
+    },
+    {
+      id: '3',
+      description: 'Propina - Novembro 2024',
+      amount: 150.00,
+      date: '2024-11-05',
+      status: 'pago',
+    },
+    {
+      id: '4',
+      description: 'Material Escolar',
+      amount: 75.50,
+      date: '2024-09-10',
+      status: 'pago',
+    },
+    {
+      id: '5',
+      description: 'Atividades Extracurriculares',
+      amount: 50.00,
+      date: '2024-10-15',
+      status: 'pendente',
+    },
+  ],
+  teachers: [
+    'Dr. Carlos Mendes',
+    'Dra. Maria Oliveira',
+    'Dr. Pedro Costa',
+    'Dra. Ana Ferreira',
+    'Dr. Nuno Ribeiro',
+    'Dr. Roberto Alves',
+  ],
+  guardian: {
+    name: 'Maria Santos Silva',
+    relationship: 'Mãe',
+    phone: '+351 912 345 678',
+    email: 'maria.santos@email.com',
+  },
+  classroom: {
+    number: '10A',
+    floor: '1º Andar',
+    capacity: 30,
+  },
+};

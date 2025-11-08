@@ -1,60 +1,119 @@
 
-import { Home, List, HandCoins,  MessagesSquare, CalendarDays, UsersThree, Student, SuitcaseSimple, University } from "@/lib/icons";
+import { 
+  Home, 
+  List, 
+  HandCoins,  
+  MessagesSquare, 
+  CalendarDays, 
+  UsersThree, 
+  Student, 
+  SuitcaseSimple, 
+  University, 
+  UserCircle,
+  SiGoogleclassroom,
+  FaRegFileAlt,
+  PiFilesLight,
+  LuUserCog,
+  BsExclamationCircle,
+  BsCashCoin
+} from "@/lib/icons";
 
 
 export const routes = [
   {
     id: 1,
     title: "Dashboard",
-    url: "dashboard",
+    url: "/dashboard",
     icon: Home,
   },
   {
     id: 2,
     title: "Estudantes",
-    url: "students",
+    url: "/student",
     icon: Student,
   },
   {
     id: 3,
     title: "Area pedagógica",
-    url: "pedagogical-area",
+    url: "/pedagogical",
     icon: University,
   },
    {
     id: 4,
     title: "Associação",
-    url: "students-association",
+    url: "/association",
     icon: UsersThree,
  },
-  {
+    {
     id: 5,
+    title: "Turmas",
+    url: "/turma",
+    icon: SiGoogleclassroom,
+ },
+  {
+    id: 6,
     title: "Eventos",
-    url: "events",
+    url: "/events",
     icon: CalendarDays,
   },
   {
-    id: 6,
+    id: 7,
     title: "Finanças",
-    url: "finance",
+    url: "/finance",
     icon: HandCoins,
   },
+    {
+    id: 8,
+    title: "Pagamentos",
+    url: "/payments",
+    icon: BsCashCoin,
+  },
  {
-  id: 7,
+  id: 9,
     title: "Funcionários",
-    url: "employees",
+    url: "/employees",
     icon: SuitcaseSimple,
  },
   {
-    id: 8,
+    id: 10,
     title: "Chat",
-    url: "chat",
+    url: "/chat",
     icon:  MessagesSquare,
  },
   {
-    id: 9,
+    id: 11,
     title: "Atividades",
-    url: "activity",
+    url: "/activity",
     icon: List,
+ },
+  {
+    id: 12,
+    title: "Perfil",
+    url: "/profile",
+    icon: UserCircle,
+ },
+   {
+    id: 13,
+    title: "Relatórios",
+    url: "/report",
+    icon: FaRegFileAlt,
+ },
+  {
+    id: 14,
+    title: "Regulamento",
+    url: "/schoolRules",
+    icon: PiFilesLight,
+ },
+  {
+    id: 15,
+    title: "Disciplinar",
+    url: "/disciplinar",
+    icon: BsExclamationCircle,
+ },
+  {
+    id: 16,
+    title: "Permissões",
+    url: "/permission",
+    icon: LuUserCog,
  },
 ]

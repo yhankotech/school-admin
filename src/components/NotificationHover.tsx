@@ -27,7 +27,7 @@ export function NotificationsHover() {
                     <h2 className="text-[#474747] font-semibold text-base">
                         Notificações ({unreadNotificationsCount})
                     </h2>
-                    <Link href="/notificações" className="text-[#009DFF] cursor-pointer">
+                    <Link href="/notifications" className="text-[#009DFF] cursor-pointer">
                         Ver Mais
                     </Link>
                 </div>

@@ -1,4 +1,4 @@
-import { AppSidebar } from "@/components/AppSidBar";
+import { AppSidebar } from "@/components/AppSidebarMenu";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { Header } from "@/components/Header";
 
@@ -11,10 +11,12 @@ export default function RootLayout({
     <div
       >
         <SidebarProvider>
-          <AppSidebar  />
-          <main className={`flex flex-col h-screen `}>
+          <AppSidebar />
+          <main className={`flex flex-col h-screen flex-1 sm:w-full md:w-full xl:w-[1100px] 2xl:w-[1100px]`}>
             <Header />
-            {children}
+            <div className="flex-1 p-4 mt-10">
+              {children}
+            </div>
           </main>
         </SidebarProvider>
     </div>

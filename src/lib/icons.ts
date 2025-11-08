@@ -28,7 +28,8 @@ import {
   HandCoins,  
   MessagesSquare, 
   CalendarDays,
-  Mail 
+  Mail,
+  UserCircle
 } from "lucide-react";
 import { IoIosAlert } from "react-icons/io";
 import { TbFileText, TbPigOff, TbFileArrowRight } from "react-icons/tb";
@@ -36,7 +37,7 @@ import { LiaCoinsSolid, LiaPiggyBankSolid } from "react-icons/lia";
 import { AiOutlineApi,  AiOutlineForm, AiOutlineClose, AiOutlineCheck } from "react-icons/ai";
 import { PiWebhooksLogoLight, PiBookOpenThin } from "react-icons/pi";
 import { FaCommentSms } from "react-icons/fa6";
-import { BsBank } from "react-icons/bs";
+import { BsBank, BsCashCoin } from "react-icons/bs";
 import { MdOutlineUploadFile, MdFileDownload, MdOutlineFileDownload } from "react-icons/md";
 import { IoMdArrowDropdown, IoMdArrowForward, IoIosClose } from "react-icons/io";
 import { GrFormCheckmark } from "react-icons/gr";
@@ -44,9 +45,20 @@ import { IoBookOutline } from "react-icons/io5";
 import { GoQuestion } from "react-icons/go";
 import { MdArrowBack } from "react-icons/md";
 import { HiOutlineTrash } from "react-icons/hi2";
-import {UsersThree, Student, SuitcaseSimple} from "phosphor-react"
+import {UsersThree, Student, SuitcaseSimple} from "phosphor-react";
+import { SiGoogleclassroom } from "react-icons/si";
+import { FaRegFileAlt } from "react-icons/fa";
+import { PiFilesLight } from "react-icons/pi";
+import { LuUserCog } from "react-icons/lu";
+import { BsExclamationCircle } from "react-icons/bs";
 
 export {
+    SiGoogleclassroom,
+    BsExclamationCircle,
+    BsCashCoin,
+    FaRegFileAlt,
+    PiFilesLight,
+    LuUserCog,
     IoIosClose,
     IoMdArrowForward,
     HiOutlineTrash,
@@ -104,5 +116,6 @@ export {
     SuitcaseSimple,
     DownloadIcon,
     UserRoundPenIcon,
-    University
+    University,
+    UserCircle
 }

@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 //configurações
 import axiosInstance from "@/service/api";
