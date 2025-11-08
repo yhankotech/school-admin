@@ -27,7 +27,7 @@ export default function Staff () {
             <div className="flex items-center gap-4">
               <Button
                 onClick={() => route.push("/newteacher")}
-                className="bg-[#6366f1] hover:bg-[#5856eb] text-white hover:cursor-pointer">
+                className="bg-[#6366f1] hover:bg-[#5856eb] text-white hover:cursor-pointer rounded-full">
                 <UserPlus className="w-4 h-4 mr-2" />
                 Adicionar Funcionário
               </Button>

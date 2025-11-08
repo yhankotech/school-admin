@@ -3,11 +3,11 @@
 import React from 'react';
 
 // Componente AddNewTeacher
-const AddNewTeacher: React.FC = () => {
+const ChangeEmployee: React.FC = () => {
 
   return (
     <div className="min-h-screen p-10 w-[70rem]">
-      <h1 className="text-2xl font-semibold text-center text-gray-800 p-5">Add New employee</h1>
+      <h1 className="text-2xl font-semibold text-center text-gray-800 p-5">Edit employee</h1>
       <div className="mx-auto shadow-lg rounded-lg flex space-x-20">
         <div>
           <div className="bg-indigo-600 text-white p-5 rounded-t-lg">
@@ -55,7 +55,7 @@ const AddNewTeacher: React.FC = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-gray-700">Role</label>
-                  <input type="text" className="mt-1 p-2 border rounded w-full" placeholder="City, Country" />
+                  <input type="text" className="mt-1 p-2 border rounded w-full" placeholder="Teacher..." />
                 </div>
               </div>
             </div>
@@ -106,4 +106,4 @@ const AddNewTeacher: React.FC = () => {
   );
 };
 
-export default AddNewTeacher;
+export default ChangeEmployee;

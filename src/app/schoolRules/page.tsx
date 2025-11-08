@@ -1,32 +1,31 @@
-"use client"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { 
-  FileText, 
-  Settings,
-} from "lucide-react";
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Plus } from 'lucide-react';
+import { RegulationsClient } from './_components/client';
 
-export default function Permission () {
+export default function RegulationsPage() {
   return (
-    <main className="flex h-screen bg-gray-50">
-        <Card>
-            <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Settings className="h-5 w-5" />
-                   Gestão de regulamentos internos
-                </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-3">
-                    <Button variant="outline" className="w-full justify-start">
-                      <FileText className="h-4 w-4 mr-2" />
-                      Adicionar regulamentos
-                    </Button>
-                  </div>
-                </div>
-            </CardContent>
-        </Card>
-    </main>
+    <div className="p-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h1 className="text-3xl font-bold text-slate-900 mb-2">
+              Regulamentos Internos
+            </h1>
+            <p className="text-slate-600">
+              Crie, gerencie e compartilhe os regulamentos da sua instituição
+            </p>
+          </div>
+          <Link href="/new-rule">
+            <Button className="gap-2 bg-[#6366f1] hover:bg-[#4043f8] hover:cursor-pointer">
+              <Plus className="h-4 w-4" />
+              Novo Regulamento
+            </Button>
+          </Link>
+        </div>
+
+        <RegulationsClient />
+      </div>
+    </div>
   );
-};
+}

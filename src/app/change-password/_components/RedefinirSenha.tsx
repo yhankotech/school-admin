@@ -66,6 +66,7 @@ export function RedefinirSenha({nextStep }: {  nextStep: () => void}){
   const onSubmit = async (data: FormData) => {
     try {
       setIsLoading(true);
+      nextStep();
       const response = await axiosInstance.patch(`/clientes//verificar-senha-actual`, data);
   
       if (response.status === 202) {
@@ -91,7 +92,12 @@ export function RedefinirSenha({nextStep }: {  nextStep: () => void}){
           nextStep();
           reset(); 
         }, 4000); 
-      } 
+      }
+      setTimeout(async () => {
+        setIsLoading(false);
+        nextStep();
+        reset(); 
+      }, 4000); 
     } catch (error: unknown) {
       setIsLoading(false); 
       // Verificando se o erro é um AxiosError
@@ -113,57 +119,56 @@ export function RedefinirSenha({nextStep }: {  nextStep: () => void}){
     } 
   };
     return(
-        <section className="space-y-8 flex flex-col items-center h-[48rem] w-[34rem] pt-14">
+        <section className="space-y-8 flex flex-col items-center h-[40rem] w-[68rem] pt-4">
             <div className="flex flex-col space-y-4 items-center pt-4">
-                <div className="border-[2px] border-[#E8F2FF] rounded-full w-[9rem] h-[9rem] flex justify-center items-center">
-                        <Image
-                            src={userPhoto ? userPhoto : ""}
-                            alt="Avatar"
-                            className="size-[7.5rem] rounded-full"
-                        />
-                    
+                <div className="border-[2px] border-[#80848a] rounded-full w-[9rem] h-[9rem] flex justify-center items-center">
+                  <Image
+                    src={userPhoto ? userPhoto : ""}
+                    alt="Avatar"
+                    className="size-[7.5rem] rounded-full"
+                  />
                 </div>
                 <span className="text-[#2D3339] font-semibold text-[1rem]">{user ? user.nome_empresa: "Nome da empresa"}</span>
             </div>
 
-            <div className="flex flex-col w-[40rem] space-y-6 2xl:space-y-16 lg:space-y-12 items-center">
-                    <div className="text-center space-y-4">
-                        <h1 className="text-[#1D5298] font-semibold text-lg lg:text-xl mb-2">Redefinição de Senha</h1>
+            <div className="flex flex-col w-[40rem] space-y-2 2xl:space-y-16 lg:space-y-12 items-center">
+                    <div className="text-center space-y-2">
+                        <h1 className="text-[#171718] font-semibold text-lg lg:text-xl mb-2">Redefinição de Senha</h1>
                         <span className="text-[#717F96] text-sm">
                             Insira a sua senha actual para<br /> continuar.
                         </span>
                     </div>
                 </div>
 
-            <form className="flex flex-col w-full max-w-md space-y-4 xl:space-y-6" onSubmit={handleSubmit(onSubmit)}>
-            <div className="relative w-full mt-6">
-            <Input
-              id="floating-input"
-              type={ isVisible ? "text" : "password"}
-              className={`peer w-full h-12 lg:h-14 pl-6 pt-4 pb-2 border-[2px] border-[#E2E5F1] focus:border-[#E2E5F1] focus-visible:border-[#E2E5F1] focus-visible:text-[#717F96] placeholder-transparent focus:outline-none ${errors.senha_actual &&   'border-[#D03816]'}`}
-              placeholder=" "
-              {...register("senha_actual")} 
-            />
-            <label
-              htmlFor="floating-input"
-              className="absolute left-6 text-sm font-medium text-[#B7BFDE] bg-white px-1 transition-all duration-300 transform origin-top-left
-              top-0 -translate-y-1/2 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-[#B7BFDE]
-              peer-focus:top-0 peer-focus:text-[#717F96]"
-            >
-              Senha actual
-            </label>
-            <div className="absolute top-4 right-4" onClick={() => setIsVisible(!isVisible)}>
-                <Image src={isVisible ? EyesOff : EyesOpened } alt="eys" className="w-6 h-6 cursor-pointer"/> 
-            </div>
-            </div>            
-                <div>
-                    <Button 
-                        type="submit" 
-                        disabled={isLoading} 
-                        className="bg-[#327FE4] shadow-none cursor-pointer hover:bg-[#327FE4] text-white w-full mb-10 h-12 lg:h-14 rounded-md xl:mt-9">
-                        {isLoading ? <Loader2  className="animate-spin" /> : "Seguinte"}
-                    </Button>
+            <form className="flex flex-col w-full max-w-md space-y-2 xl:space-y-6" onSubmit={handleSubmit(onSubmit)}>
+              <div className="relative w-full mt-6">
+                <Input
+                  id="floating-input"
+                  type={ isVisible ? "text" : "password"}
+                  className={`peer w-full h-12 lg:h-14 pl-6 pt-4 pb-2 border-[2px] border-[#E2E5F1] focus:border-[#E2E5F1] focus-visible:border-[#E2E5F1] focus-visible:text-[#717F96] placeholder-transparent focus:outline-none ${errors.senha_actual &&   'border-[#D03816]'}`}
+                  placeholder=" "
+                  {...register("senha_actual")} 
+                />
+                <label
+                  htmlFor="floating-input"
+                  className="absolute left-6 text-sm font-medium text-[#B7BFDE] bg-white px-1 transition-all duration-300 transform origin-top-left
+                  top-0 -translate-y-1/2 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-[#B7BFDE]
+                  peer-focus:top-0 peer-focus:text-[#717F96]"
+                >
+                  Senha actual
+                </label>
+                <div className="absolute top-4 right-4" onClick={() => setIsVisible(!isVisible)}>
+                    <Image src={isVisible ? EyesOff : EyesOpened } alt="eys" className="w-6 h-6 cursor-pointer"/> 
                 </div>
+              </div>            
+              <div>
+                <Button 
+                  type="submit" 
+                  disabled={isLoading} 
+                  className="bg-[#5856eb] shadow-none cursor-pointer hover:bg-[#4240ec] text-white w-full mb-10 h-12 lg:h-14 rounded-md xl:mt-9">
+                  {isLoading ? <Loader2  className="animate-spin" /> : "Seguinte"}
+                </Button>
+              </div>
             </form>
         </section>
     )

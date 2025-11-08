@@ -19,7 +19,7 @@ const montserratAlternates = Montserrat({
 
 
 export const metadata: Metadata = {
-  title: "Yhanko Akademi",
+  title: "Yhanko",
   description: "A melhor gestão para a tua instituição de ensino",
 };
 

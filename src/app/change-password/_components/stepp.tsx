@@ -15,7 +15,7 @@ export default function Stepper() {
   };
 
   return (
-    <div className="xl:h-[115vh] w-[200rem] 2xl:h-[60rem] flex flex-col items-center">
+    <div className="xl:h-[115vh] w-[68rem] 2xl:h-[68rem] flex flex-col items-center">
       {/* 🔹 Conteúdo dos Steps com Animação */}
       <div className="2xl:bg-transparent w-[50rem] 2xl:h-[50rem] xl:h-[45rem] flex justify-center">
         <AnimatePresence mode="wait">
@@ -79,7 +79,7 @@ export default function Stepper() {
             <div
               className={`w-6 h-6 flex items-center justify-center text-xs rounded-full ${
                 index <= currentStep
-                  ? "bg-[#F08F3E] text-white"
+                  ? "bg-[#5856eb] text-white"
                   : "border-2 border-[#F1F5F7] text-[#717F96]"
               }`}
             >
@@ -90,7 +90,7 @@ export default function Stepper() {
             {index < steps.length - 1 && (
               <div
                 className={`w-[2.5rem] h-[2px] transition-colors duration-300 ${
-                  index < currentStep ? "bg-[#F08F3E]" : "bg-[#F1F5F7]"
+                  index < currentStep ? "bg-[#5856eb]" : "bg-[#F1F5F7]"
                 }`}
               />
             )}

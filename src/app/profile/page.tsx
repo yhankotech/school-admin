@@ -1,10 +1,10 @@
 "use client";
-import { UserProfileInformations } from "./_components/UserProfileInformations";
+import { ProfilePage } from "./_components/UserProfile";
 
 export default function Settings(){
     return (
       <>
-        <UserProfileInformations/>
+        <ProfilePage/>
       </>
     )
 }

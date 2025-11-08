@@ -92,7 +92,9 @@ export function StudentRow ({ student }: StudentRowProps) {
             <Link href={"/students-details"}>
               <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">View Details</DropdownMenuItem>
             </Link>
-            <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">Edit</DropdownMenuItem>
+            <Link href={"/change-student"}>
+              <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">Edit</DropdownMenuItem>
+            </Link>
             <DropdownMenuItem className="hover:bg-gray-50 text-red-600 hover:cursor-pointer">Delete</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

@@ -149,7 +149,9 @@ export function StaffGrid () {
                   <Link href="/employee-details">
                     <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">Ver Detalhes</DropdownMenuItem>
                   </Link>
-                  <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">Editar</DropdownMenuItem>
+                  <Link href="/change-employee">
+                    <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">Editar</DropdownMenuItem>
+                  </Link>
                   <DropdownMenuItem className="hover:bg-gray-50 text-red-600 hover:cursor-pointer">Remover</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>

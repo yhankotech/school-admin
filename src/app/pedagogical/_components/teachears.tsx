@@ -98,7 +98,9 @@ export function Teachears (){
                   <Link href={"/teachear-deatils"}>
                     <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">View Details</DropdownMenuItem>
                   </Link>
-                  <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">Edit</DropdownMenuItem>
+                  <Link href="/change-employee">
+                    <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">Editar</DropdownMenuItem>
+                  </Link>
                   <DropdownMenuItem className="hover:bg-gray-50 text-red-600 hover:cursor-pointer">Delete</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>

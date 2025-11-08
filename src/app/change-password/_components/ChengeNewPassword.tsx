@@ -85,6 +85,7 @@ export function ChangeNewPassword({nextStep }: {  nextStep: () => void}){
 
     try {
       setIsLoading(true);
+      nextStep();
       const response = await axiosInstance.patch(`/clientes/redifinir-senha`, data);
   
       if (response.status === 202) {
@@ -109,7 +110,7 @@ export function ChangeNewPassword({nextStep }: {  nextStep: () => void}){
         setIsLoading(false);
         nextStep();
         reset(); 
-      } 
+      }
     } catch (error: unknown) {
       setIsLoading(false); 
       // Verificando se o erro é um AxiosError
@@ -132,21 +133,21 @@ export function ChangeNewPassword({nextStep }: {  nextStep: () => void}){
   };
 
     return(
-        <section className="space-y-8 flex flex-col items-center h-[55rem] w-[34rem] pt-14">
-            <div className="flex flex-col space-y-4 items-center pt-4">
-                <div className="border-[2px] border-[#E8F2FF] rounded-full w-[9rem] h-[9rem] flex justify-center items-center">
-                        <Image
-                            src={userPhoto ? userPhoto : ""}
-                            alt="Avatar"
-                            className="size-[7.5rem] rounded-full"
-                        />
+      <section className="space-y-8 flex flex-col items-center h-[55rem] w-[34rem] pt-4">
+        <div className="flex flex-col space-y-4 items-center pt-4">
+          <div className="border-[2px] border-[#80848a] rounded-full w-[9rem] h-[9rem] flex justify-center items-center">
+                  <Image
+                    src={userPhoto ? userPhoto : ""}
+                    alt="Avatar"
+                    className="size-[7.5rem] rounded-full"
+                  />
                 </div>
                 <span className="text-[#2D3339] font-semibold text-[1rem]">{user ? user.nome_empresa: "Nome da empresa"}</span>
             </div>
 
             <div className="flex flex-col w-[40rem] space-y-6 2xl:space-y-16 lg:space-y-12 items-center">
                     <div className="text-center space-y-4">
-                        <h1 className="text-[#1D5298] font-semibold text-lg lg:text-xl mb-2">Redefinição de Senha</h1>
+                        <h1 className="text-[#171718] font-semibold text-lg lg:text-xl mb-2">Redefinição de Senha</h1>
                         <span className="text-[#717F96] text-sm">
                             Defina uma nova senha para<br />  acessar a sua conta.
                         </span>
@@ -172,7 +173,7 @@ export function ChangeNewPassword({nextStep }: {  nextStep: () => void}){
             </label>
 
             <div className="absolute top-4 right-4" onClick={() => setVisible(!visible)}>
-                <Image src={visible ? EyesOff : EyesOpened } alt="eys" className="w-6 h-6 cursor-pointer"/> 
+              <Image src={visible ? EyesOff : EyesOpened } alt="eys" className="w-6 h-6 cursor-pointer"/> 
             </div>
           </div>
 
@@ -205,12 +206,12 @@ export function ChangeNewPassword({nextStep }: {  nextStep: () => void}){
                  <span className="text-red-500 text-sm mt-2">{errors.confirmar_senha.message}</span>
               )}
             <div>
-                <Button 
-                    type="submit" 
-                    disabled={isLoading}
-                    className="bg-[#327FE4] cursor-pointer shadow-none hover:bg-[#327FE4] text-white w-full mb-10 h-12 lg:h-14 rounded-md xl:mt-9">
-                    {isLoading ? <Loader2  className="animate-spin" /> : "Redefinir"}
-                </Button>
+              <Button 
+                type="submit" 
+                disabled={isLoading}
+                className="bg-[#5856eb] cursor-pointer shadow-none hover:bg-[#3f3cf1] text-white w-full mb-10 h-12 lg:h-14 rounded-md xl:mt-9">
+                {isLoading ? <Loader2  className="animate-spin" /> : "Redefinir"}
+              </Button>
             </div>
             </form>
         </section>

@@ -7,28 +7,13 @@ import TeachersSection from './_components/TeachersSection';
 import PaymentsSection from './_components/PaymentsSection';
 import GuardianInfo from './_components/GuardianInfo';
 import ClassroomInfo from './_components/ClassroomInfo';
-import { ArrowLeft } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { Card, CardHeader } from "@/components/ui/card";
-import { useRouter } from "next/navigation";
 
 export default function StudentDetails() {
-    const router = useRouter();
 
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Header com botão voltar */}
-      <div className="bg-white border-b border-gray-200 sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <Button
-            variant="ghost"
-            onClick={() => router.push("/student")}
-            className="flex items-center gap-2 text-gray-700 hover:text-gray-900 hover:cursor-pointer"
-          >
-            <ArrowLeft className="w-4 h-4" />
-          </Button>
-        </div>
-      </div>
 
       <div className="lg:col-span-2 pl-4 pr-4">
         <Card className="bg-white w-[67rem]">
