@@ -88,7 +88,7 @@ export default function VerifyCode() {
   };
       
   return (
-    <main className="2xl:h-screen xl:h-[130vh] w-screen flex flex-col bg-[#ffffff]">
+    <main className="2xl:h-screen xl:h-[130vh] flex flex-col bg-[#ffffff]">
 
       <section className="flex flex-col justify-center items-center mt-12 md:mt-20 sm:mt-8 lg:mt-40 xl:mt-16 px-4 2xl:mt-48">
         <div className="flex flex-col w-[40rem] h-60 space-y-6 lg:space-y-12 justify-center items-center">

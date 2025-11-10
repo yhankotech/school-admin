@@ -199,12 +199,12 @@ const Plane: React.FC = () => {
           <div className="mb-8">
             {plan.discount > 0 && (
               <div className="text-sm text-gray-500 line-through mb-1">
-                R$ {prices.originalTotal.toFixed(2)}
+                {prices.originalTotal.toFixed(2)} KZ
               </div>
             )}
             
             <div className={priceClasses}>
-              R$ {prices.finalTotal.toFixed(2)}
+              {prices.finalTotal.toFixed(2)} KZ
             </div>
             
             <div className={periodClasses}>
@@ -214,11 +214,11 @@ const Plane: React.FC = () => {
             {plan.period > 1 && (
               <>
                 <div className="text-[#FF5777] font-semibold text-sm mt-1">
-                  R$ {prices.monthlyEquivalent.toFixed(2)}/mês
+                  {prices.monthlyEquivalent.toFixed(2)}/mês KZ
                 </div>
                 {plan.discount > 0 && (
                   <div className="text-[#FF5777] font-bold text-sm bg-[#FF5777]/10 px-3 py-1 rounded-full inline-block mt-2">
-                    💰 Economize R$ {prices.savings.toFixed(2)}!
+                    💰 Economize {prices.savings.toFixed(2)} KZ!
                   </div>
                 )}
               </>
@@ -266,87 +266,20 @@ const Plane: React.FC = () => {
             
             <div className="bg-gradient-to-r from-[#FF5777]/10 to-[#FF5777]/5 p-6 rounded-xl border border-[#FF5777]/20">
               <h3 className="font-bold text-[#FF5777] mb-2">Valor Total</h3>
-              <p className="text-2xl font-bold text-[#1B191F]">R$ {prices.finalTotal.toFixed(2)}</p>
-              <p className="text-[#FF5777]/80">R$ {prices.monthlyEquivalent.toFixed(2)}/mês</p>
+              <p className="text-2xl font-bold text-[#1B191F]">{prices.finalTotal.toFixed(2)} KZ</p>
+              <p className="text-[#FF5777]/80">{prices.monthlyEquivalent.toFixed(2)}/mês KZ</p>
             </div>
             
             <div className="bg-gradient-to-r from-[#FF5777]/10 to-[#FF5777]/5 p-6 rounded-xl border border-[#FF5777]/20">
               <h3 className="font-bold text-[#FF5777] mb-2">Economia</h3>
               <p className="text-2xl font-bold text-[#1B191F]">{plan.discount}%</p>
-              <p className="text-[#FF5777]/80">R$ {prices.annualSavings.toFixed(2)}/ano</p>
+              <p className="text-[#FF5777]/80">{prices.annualSavings.toFixed(2)}/ano KZ</p>
             </div>
           </div>
         </div>
       </div>
     );
   };
-
-  // Componente da Tabela de Comparação
-  const ComparisonTable: React.FC = () => (
-    <div className="max-w-6xl mx-auto mt-16 px-6">
-      <div className="bg-white backdrop-blur-md rounded-2xl p-8 shadow-2xl border border-[#FF5777]/20">
-        <h2 className="text-3xl font-bold text-center text-[#1B191F] mb-8">
-          📊 Comparação de Economia
-        </h2>
-        
-        <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead>
-              <tr className="border-b-2 border-[#FF5777]/20">
-                <th className="text-left py-4 px-4 font-bold text-[#1B191F]">Plano</th>
-                <th className="text-center py-4 px-4 font-bold text-[#1B191F]">Período</th>
-                <th className="text-center py-4 px-4 font-bold text-[#1B191F]">Preço Total</th>
-                <th className="text-center py-4 px-4 font-bold text-[#1B191F]">Preço/Mês</th>
-                <th className="text-center py-4 px-4 font-bold text-[#1B191F]">Desconto</th>
-                <th className="text-center py-4 px-4 font-bold text-[#1B191F]">Economia Anual</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filteredPlans.map((plan) => {
-                const prices = calculatePrices(plan);
-                const rowClasses = `border-b border-gray-100 hover:bg-[#FF5777]/5 transition-colors ${selectedPlan === plan.id ? 'bg-[#FF5777]/20' : ''}`;
-                
-                return (
-                  <tr key={plan.id} className={rowClasses}>
-                    <td className="py-4 px-4">
-                      <div className={`font-semibold ${plan.popular ? 'text-[#FF5777]' : 'text-[#1B191F]'}`}>
-                        {plan.name}
-                      </div>
-                      <div className="text-sm text-gray-600">{plan.description}</div>
-                    </td>
-                    <td className="text-center py-4 px-4">
-                      <div className="font-semibold text-[#1B191F]">{plan.period} {plan.period === 1 ? 'mês' : 'meses'}</div>
-                    </td>
-                    <td className="text-center py-4 px-4">
-                      <div className="font-semibold text-[#1B191F]">R$ {prices.finalTotal.toFixed(2)}</div>
-                      {plan.discount > 0 && (
-                        <div className="text-sm text-gray-500 line-through">R$ {prices.originalTotal.toFixed(2)}</div>
-                      )}
-                    </td>
-                    <td className="text-center py-4 px-4">
-                      <div className="font-semibold text-[#1B191F]">R$ {prices.monthlyEquivalent.toFixed(2)}</div>
-                    </td>
-                    <td className="text-center py-4 px-4">
-                      {plan.discount > 0 ? (
-                        <div className="text-[#FF5777] font-semibold bg-[#FF5777]/10 px-2 py-1 rounded">{plan.discount}% OFF</div>
-                      ) : (
-                        <div className="text-gray-500">-</div>
-                      )}
-                    </td>
-                    <td className="text-center py-4 px-4">
-                      <div className={`font-semibold ${prices.annualSavings > 0 ? 'text-[#FF5777]' : 'text-gray-500'}`}>
-                        {prices.annualSavings > 0 ? `R$ ${prices.annualSavings.toFixed(2)}` : '-'}
-                      </div>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  );
 
   // Componente FAQ
   const FAQ: React.FC = () => {
@@ -479,9 +412,6 @@ const Plane: React.FC = () => {
       
       {/* Resumo do Plano Selecionado */}
       <PlanSummary />
-      
-      {/* Seção de Comparação */}
-      <ComparisonTable />
       
       {/* FAQ */}
       <FAQ />

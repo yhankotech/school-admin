@@ -277,7 +277,7 @@ export default function Payments() {
             <p className="text-sm text-muted-foreground mb-4">
               Existem 2 alunos com pagamentos atrasados. Recomenda-se entrar em contato com os responsáveis.
             </p>
-            <Button variant="outline" className="text-red-600 border-red-600 hover:bg-red-50 dark:hover:bg-red-950">
+            <Button variant="outline" className="text-red-600 hover:cursor-pointer border-red-600 hover:bg-red-50 dark:hover:bg-red-950">
               Enviar Notificações
             </Button>
           </CardContent>

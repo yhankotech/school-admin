@@ -80,13 +80,6 @@ const toggleCheck = () => {
         saveCookie(dataResponse, remember);
         setLoginHash(dataResponse)
 
-        const senhaPadrao = response.data.mensagem.senha_padrao; 
-          
-        if( senhaPadrao === "1"){
-          router.push("/targetPassword");
-          return
-        }
-
         toast({
           description: (
             <div className="flex items-center gap-4 ">
@@ -126,9 +119,9 @@ const toggleCheck = () => {
   };
   
   return (
-    <main className="flex w-screen 2xl:h-screen xl:h-[130vh] bg-[#FFFFFF]">
+    <main className="flex bg-[#FFFFFF]">
        <div className="hidden lg:block lg:w-[45vw] 2xl:h-screen xl:h-[130vh] backgroundGradient"></div>
-      <div className="w-[55vw] h-screen flex flex-col justify-center">
+        <div className="w-[55vw] flex flex-col justify-center">
           <div className="flex flex-col justify-center items-center mt-12 md:mt-20 sm:mt-8 lg:mt-40 xl:mt-5 2xl:mt-14 lg:h-[100vh] 2xl:h-[70vh] w-[55vw]">
           <div className="flex flex-col w-[40rem] h-60 space-y-6 2xl:space-y-16 justify-center items-center xl:-mt-28">
             <div className="flex justify-center items-center space-x-3">

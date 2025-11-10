@@ -108,18 +108,6 @@ export default function StudentParentForm() {
     setStudentData(prev => ({ ...prev, [name]: value }));
   };
 
-  // Handlers de mudança para os campos do encarregado de educação
-  const handleParentChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setParentData(prev => ({ ...prev, [name]: value }));
-  };
-
-  // Handlers de mudança para os campos de rádio (pagamento)
-  const handlePaymentChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setParentData(prev => ({ ...prev, paymentMethod: e.target.value as ParentData['paymentMethod'] }));
-  };
-
-  // Função de submissão simulada
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Dados do Aluno Submetidos:', studentData);
@@ -133,7 +121,7 @@ export default function StudentParentForm() {
 
       {/* Student Details */}
       <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-        <h2 className="text-2xl font-bold text-purple-600">Editar Dados do Aluno</h2>
+        <h2 className="text-2xl font-bold text-purple-600">Dados do candidato</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           <div className="flex flex-col">
@@ -190,18 +178,6 @@ export default function StudentParentForm() {
             />
           </div>
           <div className="flex flex-col">
-            <label htmlFor="parentName">Nome do Encarregado de Educação *</label>
-            <input
-              id="parentName"
-              name="parentName"
-              type="text"
-              className="border rounded-lg p-2"
-              value={studentData.parentName}
-              onChange={handleStudentChange}
-              required
-            />
-          </div>
-          <div className="flex flex-col">
             <label htmlFor="phone">Telefone *</label>
             <input
               id="phone"
@@ -241,90 +217,8 @@ export default function StudentParentForm() {
         </div>
       </div>
 
-      {/* Parent Details */}
-      <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-        <h2 className="text-2xl font-bold text-purple-600">Detalhes do Encarregado de Educação</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-          <div className="flex flex-col">
-            <label htmlFor="parentFirstName">Primeiro Nome *</label>
-            <input
-              id="parentFirstName"
-              name="firstName"
-              type="text"
-              className="border rounded-lg p-2"
-              value={parentData.firstName}
-              onChange={handleParentChange}
-              required
-            />
-          </div>
-          <div className="flex flex-col">
-            <label htmlFor="parentLastName">Último Nome *</label>
-            <input
-              id="parentLastName"
-              name="lastName"
-              type="text"
-              className="border rounded-lg p-2"
-              value={parentData.lastName}
-              onChange={handleParentChange}
-              required
-            />
-          </div>
-          <div className="flex flex-col">
-            <label htmlFor="parentEmail">Email *</label>
-            <input
-              id="parentEmail"
-              name="email"
-              type="email"
-              className="border rounded-lg p-2"
-              value={parentData.email}
-              onChange={handleParentChange}
-              required
-            />
-          </div>
-          <div className="flex flex-col">
-            <label htmlFor="parentPhone">Telefone *</label>
-            <input
-              id="parentPhone"
-              name="phone"
-              type="text"
-              className="border rounded-lg p-2"
-              value={parentData.phone}
-              onChange={handleParentChange}
-              required
-            />
-          </div>
-          <div className="flex flex-col">
-            <label htmlFor="parentAddress">Morada *</label>
-            <input
-              id="parentAddress"
-              name="address"
-              className="border rounded-lg p-2"
-              value={parentData.address}
-              onChange={handleParentChange}
-              required
-            />
-          </div>
-          <div className="flex flex-col">
-            <label>Método de Pagamento *</label>
-            <div className="flex items-center mt-2">
-              <input
-                type="file"
-                id="paymentCash"
-                name="paymentMethod"
-                className="mr-2"
-                checked={parentData.paymentMethod === 'cash'}
-                onChange={handlePaymentChange}
-              />
-              <label htmlFor="paymentCash" className="mr-4">Dinheiro</label>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="flex justify-between">
-        <button type="button" className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition duration-150">Guardar como Rascunho</button>
-        <button type="submit" className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-150">Submeter Atualização</button>
+        <button type="submit" className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-150">Submeter</button>
       </div>
     </form>
   );

@@ -1,8 +1,12 @@
 "use client"
 import AssotiationCards from "./_components/assotiationPepleo";
+import { SearchBar } from "./_components/search"
 
 export default function Assotioantio(){
     return(
-        <AssotiationCards />
+        <section>
+            <SearchBar />
+            <AssotiationCards />
+        </section>
     )
 }

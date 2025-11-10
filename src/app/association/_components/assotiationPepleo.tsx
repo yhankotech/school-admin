@@ -97,7 +97,9 @@ const AssotiationCards = () => {
                   <Link href="/association-details">
                     <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">View Details</DropdownMenuItem>
                   </Link>
-                  <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">Edit</DropdownMenuItem>
+                  <Link href="/change-associantion">
+                    <DropdownMenuItem className="hover:bg-gray-50 hover:cursor-pointer">Edit</DropdownMenuItem>
+                  </Link>
                   <DropdownMenuItem className="hover:bg-gray-50 text-red-600 hover:cursor-pointer">Delete</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
