@@ -9,7 +9,6 @@ import Image from "next/image";
 import RedefinirIcon from "@/assets/redifinirPlavraPass.svg";
 //bibliotecas
 import Link from "next/link";
-import { format } from "date-fns";
 //Hook
 import { useState, useEffect } from "react";
 //configurações
@@ -22,6 +21,7 @@ export function ProfilePage(){
 
     const [user, setUser] = useState<UserDataType | null>(null);
     const [userPhoto, setLogo] = useState<string | null>(null);
+    console.log(userPhoto)
     
     const fetchUser = async () => {
         try {
@@ -44,7 +44,7 @@ export function ProfilePage(){
                     
                     <div className="border-[2px] border-[#80848a] rounded-full w-[12rem] h-[12rem] flex justify-center items-center">
                         <Image
-                        src={userPhoto ? userPhoto : ""}
+                        src={RedefinirIcon}
                         alt="Avatar"
                         className="w-[10rem] h-[10rem] rounded-full"
                         />
@@ -71,11 +71,11 @@ export function ProfilePage(){
                                     
                     {user && (
                         <div className="flex flex-col space-y-2 text-right">
-                            <span className="text-[#2D3339] font-medium">{user ? user.email: "Email da empresa"}</span>
-                            <span className="text-[#2D3339] font-medium">{user ? user.contacto: "Contacto da empresa"}</span>
-                            <span className="text-[#2D3339] font-medium"> {user.cadastrado_em ? format(new Date(user.cadastrado_em), 'dd/MM/yyyy HH:mm:ss') : 'Data de adesão não disponível'}
+                            <span className="text-[#2D3339] font-medium">Email da empresa</span>
+                            <span className="text-[#2D3339] font-medium">Contacto da empresa</span>
+                            <span className="text-[#2D3339] font-medium">Data de adesão não disponível
                             </span>
-                            <span className="text-[#2D3339] font-medium">{user.ultimo_login ? format(new Date(user.ultimo_login), 'dd/MM/yyyy HH:mm:ss') : 'Data de último login não disponível'}
+                            <span className="text-[#2D3339] font-medium">dd/MM/yyyy HH:mm:ss Data de último login não disponível
                             </span>
                         </div>
                     )}

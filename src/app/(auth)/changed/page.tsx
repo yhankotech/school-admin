@@ -9,7 +9,7 @@ import YhankoIMG from "../../../assets/yhankoIMG.svg";
 
 export default function PasswordChangedPage() {
   return (
-    <main className="2xl:h-screen xl:h-[130vh] w-screen flex flex-col bg-[#ffffff]">
+    <main className="2xl:h-screen xl:h-[130vh] flex flex-col bg-[#ffffff]">
 
       <section className="flex flex-col justify-center items-center mt-8 px-4 space-y-8 lg:space-y-12 2xl:mt-40 xl:mt-2">
         <div className="flex flex-col w-[40rem] h-[40rem] space-y-6 2xl:space-y-8 justify-center items-center">
@@ -30,7 +30,7 @@ export default function PasswordChangedPage() {
           </div>
 
           <Link href="login" className="2xl:w-[28rem] lg:w-[28rem] xl:w-[28rem] md:w-[28rem] w-full">
-            <Button className="bg-[#FF5777] shadow-none hover:bg-[#fc4667] hover:cursor-pointer text-white w-full h-12 lg:h-14 rounded-md mt-8">
+            <Button className="bg-[#FF5777] shadow-none hover:bg-[#fc4667] hover:cursor-pointer text-white w-full h-12 lg:h-14 rounded-md mt-4">
               Login
             </Button>
           </Link>

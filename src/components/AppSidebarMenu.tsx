@@ -21,15 +21,9 @@ export function AppSidebar() {
   return(
     <Sidebar
     className={`h-screen border-none`}>
-      <SidebarContent className="bg-[#4D44B5] h-full overflow-hidden">
+      <SidebarContent className="bg-[#4D44B5] h-full overflow-y-auto overflow-none">
         <SidebarGroup>
-          {/* Logo Section 
-            <SidebarGroupLabel className="flex justify-center items-center mb-8 mt-4 p-2"> 
-              <Image src={LogoTipo} alt="Logo" className="h-8 w-8 mr-2" /> 
-              <h1 className="font-extrabold text-[1rem] text-[#FFFFFF]">Yhanko</h1>
-            </SidebarGroupLabel>
-          */}
-                {/* Dynamic Menu Sections */}
+          {/* Dynamic Menu Sections */}
           <SidebarGroupContent>
             <SidebarMenu>
               {routes.map((item) => {

@@ -101,7 +101,7 @@ export default function ResetPassword() {
   };
 
     return (
-        <main className="2xl:h-screen xl:h-[130vh] w-screen flex flex-col bg-[#ffffff] ">
+        <main className="2xl:h-screen xl:h-[130vh] flex flex-col bg-[#ffffff] ">
 
             <section className="flex flex-col items-center flex-1 px-4 lg:px-0 mt-[5rem] 2xl:h-[70vh] xl:h-[80vh]">
                 <div className="flex flex-col w-[40rem] h-60 space-y-4 2xl:space-y-16 lg:space-y-12 xl:mt-4 items-center">

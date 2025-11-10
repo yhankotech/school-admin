@@ -50,7 +50,7 @@ export function ProcessPayment() {
   };
 
   return (
-    <Card className="card-hover animate-scale-in">
+    <Card>
       <CardHeader>
         <CardTitle>Processar Novo Pagamento</CardTitle>
       </CardHeader>
@@ -109,7 +109,7 @@ export function ProcessPayment() {
             />
           </div>
 
-          <Button type="submit" className="w-full" disabled={loading}>
+          <Button type="submit" className="w-full bg-[#5856eb] text-white hover:text-white hover:bg-[#3d3ae7] hover:cursor-pointer" disabled={loading}>
             {loading ? "Processando..." : "Registrar Pagamento"}
           </Button>
         </form>

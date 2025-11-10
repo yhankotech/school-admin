@@ -1,8 +1,8 @@
 "use client"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { NewClass } from "./_components/new-class";
 import { Button } from "@/components/ui/button";
 import {
-  Plus,
   Search,
   Edit,
   Trash2,
@@ -10,7 +10,8 @@ import {
 
 
 export default function Turma(){
-   const classes = [
+
+  const classes = [
     {
       id: 1,
       name: "1A",
@@ -199,10 +200,9 @@ export default function Turma(){
               className="w-full pl-10 pr-4 py-2 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
-          <Button className="gap-2 bg-[#5856eb] text-white hover:bg-[#423ff3] hover:text-white hover:cursor-pointer">
-            <Plus className="w-4 h-4 " />
-            Nova Turma
-          </Button>
+
+          <NewClass/>
+
         </div>
 
         {/* Classes Table */}

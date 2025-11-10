@@ -8,13 +8,13 @@ import { userData } from "@/service/userDataAPI";
 import { Button } from "@/components/ui/button"
 //Tipagens
 import { UserDataType} from "@/types/types";
+import RequestError from "@/assets/background.svg"
 
 export function SenhaAlteradaPage(){
     const router = useRouter()
 
-    const [user, setUser] = useState<UserDataType | null>(null);
-    const [userPhoto, setLogo] = useState<string | null>(null);
-      
+    const [, setUser] = useState<UserDataType | null>(null);
+    const [, setLogo] = useState<string | null>(null);
     const fetchUser = async () => {
         try {
             const { user, userLogo } = (await userData()) || { user: null, userLogo: '' };
@@ -35,12 +35,12 @@ export function SenhaAlteradaPage(){
             <div className="flex flex-col space-y-4 items-center pt-4">
                 <div className="border-[2px] border-[#606264] rounded-full w-[9rem] h-[9rem] flex justify-center items-center">
                     <Image
-                        src={userPhoto? userPhoto: ""}
+                        src={RequestError}
                             alt="Avatar"
                             className="size-[7.5rem] rounded-full"
                         />
                 </div>
-                <span className="text-[#2D3339] font-semibold text-[1rem]">{user ? user.nome_empresa : "Nome da empresa"}</span>
+                <span className="text-[#2D3339] font-semibold text-[1rem]">Nome da empresa</span>
             </div>
             <div className="flex flex-col w-[40rem] space-y-6 2xl:space-y-16 lg:space-y-12 items-center">
                 <div className="text-center space-y-4">

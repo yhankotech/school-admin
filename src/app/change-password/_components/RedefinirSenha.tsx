@@ -40,6 +40,8 @@ export function RedefinirSenha({nextStep }: {  nextStep: () => void}){
   const [isVisible, setIsVisible ] = useState(false);
   const [user, setUser] = useState<UserDataType | null>(null);
   const [userPhoto, setLogo] = useState<string | null>(null)
+
+  console.log(userPhoto)
     const fetchUser = async () => {
       try {
         const { user, userLogo } = (await userData()) || { user: null, userLogo: '' };
@@ -123,7 +125,7 @@ export function RedefinirSenha({nextStep }: {  nextStep: () => void}){
             <div className="flex flex-col space-y-4 items-center pt-4">
                 <div className="border-[2px] border-[#80848a] rounded-full w-[9rem] h-[9rem] flex justify-center items-center">
                   <Image
-                    src={userPhoto ? userPhoto : ""}
+                    src={RequestError}
                     alt="Avatar"
                     className="size-[7.5rem] rounded-full"
                   />

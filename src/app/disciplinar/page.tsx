@@ -2,11 +2,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
-  Edit,
   Trash2
 } from "lucide-react";
 import {
-  Plus,
   Search,
 } from "lucide-react";
 
@@ -88,7 +86,7 @@ export default function Deicipline(){
       <div className="space-y-8">
         <Card>
           <CardHeader>
-            <CardTitle>Histórico Completo de Ocorrências</CardTitle>
+            <CardTitle>Histórico de Ocorrências</CardTitle>
           </CardHeader>
           <div className="flex gap-4 flex-col sm:flex-row p-6">
             <div className="relative flex-1">
@@ -99,10 +97,6 @@ export default function Deicipline(){
                 className="w-full pl-10 pr-4 py-2 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
               </div>
-              <Button className="gap-2 bg-[#5856eb] text-white hover:bg-[#423ff3] hover:text-white hover:cursor-pointer">
-                <Plus className="w-4 h-4 " />
-                Nova Turma
-              </Button>
             </div>
           <CardContent>
             <div className="overflow-x-auto">
@@ -137,9 +131,6 @@ export default function Deicipline(){
                       </td>
                       <td className="py-3 px-4 text-center">
                         <div className="flex gap-2 justify-center">
-                          <Button variant="ghost" size="sm" className="h-8 w-8 p-0 text-green-600">
-                            <Edit className="w-4 h-4" />
-                          </Button>
                           <Button variant="ghost" size="sm" className="h-8 w-8 p-0 text-red-600">
                             <Trash2 className="w-4 h-4" />
                           </Button>
