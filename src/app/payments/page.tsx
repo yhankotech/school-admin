@@ -6,7 +6,6 @@ import {
   AlertCircle,
   Clock,
   Download,
-  Filter,
   Search,
   MoreVertical,
 } from "lucide-react";
@@ -220,7 +219,7 @@ export default function Payments() {
               className="w-full pl-10 pr-4 py-2 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
-          <Button className="gap-2 hover:cursor-pointer hover:bg-[#5856eb] hover:text-white bg-[#4a47f5] text-white">
+          <Button className="gap-2 rounded-full hover:cursor-pointer hover:bg-[#5856eb] hover:text-white bg-[#4a47f5] text-white">
             <Download className="w-4 h-4" />
             Exportar
             </Button>
@@ -236,9 +235,9 @@ export default function Payments() {
           </CardHeader>
           <CardContent>
             <div className="overflow-x-auto">
-              <table className="w-full text-sm border-gray-300 border-2">
+              <table className="w-full text-sm border-gray-200 border-[1px]">
                 <thead>
-                  <tr className="border-b border-gray-300 border-2">
+                  <tr className="border-b border-gray-200 border-[1px]">
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Aluno</th>
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Turma</th>
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Vencimento</th>
@@ -249,7 +248,7 @@ export default function Payments() {
                 </thead>
                 <tbody>
                   {studentPayments.map((payment) => (
-                    <tr key={payment.id} className="border-b hover:bg-muted/50 border-gray-300 border-2">
+                    <tr key={payment.id} className="border-b hover:bg-muted/50 border-gray-200 border-[1px]">
                       <td className="py-3 px-4 font-medium text-foreground">{payment.studentName}</td>
                       <td className="py-3 px-4 text-muted-foreground">{payment.grade}</td>
                       <td className="py-3 px-4 text-muted-foreground">{payment.dueDate}</td>
@@ -277,7 +276,7 @@ export default function Payments() {
             <p className="text-sm text-muted-foreground mb-4">
               Existem 2 alunos com pagamentos atrasados. Recomenda-se entrar em contato com os responsáveis.
             </p>
-            <Button variant="outline" className="text-red-600 hover:cursor-pointer border-red-600 hover:bg-red-50 dark:hover:bg-red-950">
+            <Button variant="outline" className="text-red-600 hover:text-red-600 hover:cursor-pointer border-red-600 hover:bg-red-50 dark:hover:bg-red-950 rounded-full">
               Enviar Notificações
             </Button>
           </CardContent>

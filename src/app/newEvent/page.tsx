@@ -142,7 +142,7 @@ export default function NewEvent() {
                   </div>
 
                   <Button 
-                    className="w-full h-12 bg-[#2d36e9aa] hover:bg-[#646cffaa] hover:shadow-lg hover:scale-[1.02] transition-all duration-300 font-semibold group"
+                    className="w-full h-12 rounded-full hover:cursor-pointer bg-[#2d36e9aa] hover:bg-[#2e38f5aa] hover:shadow-lg hover:scale-[1.02] transition-all duration-300 font-semibold group"
                   >
                     <Plus className="h-5 w-5 mr-2 group-hover:rotate-90 transition-transform duration-300" />
                     Criar Atividade

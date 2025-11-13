@@ -210,7 +210,7 @@ export function ChangeNewPassword({nextStep }: {  nextStep: () => void}){
               <Button 
                 type="submit" 
                 disabled={isLoading}
-                className="bg-[#5856eb] cursor-pointer shadow-none hover:bg-[#3f3cf1] text-white w-full mb-10 h-12 lg:h-14 rounded-md xl:mt-9">
+                className="bg-[#5856eb] rounded-full cursor-pointer shadow-none hover:bg-[#3f3cf1] text-white w-full mb-10 h-12 lg:h-14 xl:mt-9">
                 {isLoading ? <Loader2  className="animate-spin" /> : "Redefinir"}
               </Button>
             </div>

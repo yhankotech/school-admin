@@ -44,9 +44,9 @@ export function StudentTable () {
         <CardTitle className="text-xl font-bold text-gray-900">Unpaid Student Intuition</CardTitle>
       </CardHeader>
       <CardContent>
-        <Table>
+        <Table className="border-[1px] border-gray-200">
           <TableHeader>
-            <TableRow className="border-b-0">
+            <TableRow className="border-[1px] border-gray-200">
               <TableHead className="text-gray-500 font-medium">Name</TableHead>
               <TableHead className="text-gray-500 font-medium">ID</TableHead>
               <TableHead className="text-gray-500 font-medium">Class</TableHead>
@@ -56,7 +56,7 @@ export function StudentTable () {
           </TableHeader>
           <TableBody>
             {students.map((student, index) => (
-              <TableRow key={index} className="border-b border-gray-100">
+              <TableRow key={index} className="border-[1px] border-gray-200">
                 <TableCell className="py-4">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-purple-200 rounded-full flex items-center justify-center">

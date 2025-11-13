@@ -5,9 +5,7 @@ import { Button } from "@/components/ui/button";
 import {
   Lock,
   Unlock,
-  Plus,
   Search,
-  Filter,
   Download,
   Edit,
   Trash2,
@@ -16,6 +14,7 @@ import {
   CheckCircle,
   XCircle,
 } from "lucide-react";
+import { AddNewUserPermission } from "./_components/add_permission";
 
 export default function Permission(){
   const [users, setUsers] = useState([
@@ -174,7 +173,7 @@ export default function Permission(){
   };
 
   return(
-    <div className="space-y-8">
+    <div className="space-y-8 p-8">
         {/* Header */}
         <div className="flex justify-between items-start">
           <div>
@@ -182,14 +181,11 @@ export default function Permission(){
             <p className="text-muted-foreground">Controle de acesso e permissões de usuários</p>
           </div>
           <div className="flex gap-2">
-            <Button variant="outline" className="gap-2">
+            <Button variant="outline" className="gap-2 rounded-full hover:cursor-pointer bg-[#5856eb] text-white hover:text-white hover:bg-[#2d2add]">
               <Download className="w-4 h-4" />
               Exportar
             </Button>
-            <Button className="gap-2">
-              <Plus className="w-4 h-4" />
-              Novo Usuário
-            </Button>
+            < AddNewUserPermission/>
           </div>
         </div>
 
@@ -242,13 +238,9 @@ export default function Permission(){
             <input
               type="text"
               placeholder="Pesquisar por nome ou email..."
-              className="w-full pl-10 pr-4 py-2 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full pl-10 pr-4 py-2 bg-card border border-border rounded-full focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
-          <Button variant="outline" className="gap-2">
-            <Filter className="w-4 h-4" />
-            Filtrar
-          </Button>
         </div>
 
         {/* Users Table */}
@@ -258,9 +250,9 @@ export default function Permission(){
           </CardHeader>
           <CardContent>
             <div className="overflow-x-auto">
-              <table className="w-full text-sm">
+              <table className="w-full text-sm rounded-2xl border-[1px] border-gray-300">
                 <thead>
-                  <tr className="border-b border-border">
+                  <tr className="border-[1px] rounded-2xl border-gray-300">
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Usuário</th>
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Email</th>
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Função</th>
@@ -271,7 +263,7 @@ export default function Permission(){
                 </thead>
                 <tbody>
                   {users.map((user) => (
-                    <tr key={user.id} className="border-b border-border hover:bg-muted/50">
+                    <tr key={user.id} className="border-[1px] border-gray-200 hover:bg-muted/50">
                       <td className="py-3 px-4 font-medium text-foreground">{user.name}</td>
                       <td className="py-3 px-4 text-muted-foreground text-xs">{user.email}</td>
                       <td className="py-3 px-4">
@@ -390,17 +382,6 @@ export default function Permission(){
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <div className="border border-border rounded-lg p-4">
-                <h3 className="font-semibold text-foreground mb-3">Administrador</h3>
-                <p className="text-sm text-muted-foreground mb-3">Acesso total a todas as funcionalidades</p>
-                <div className="space-y-1 text-xs text-muted-foreground">
-                  <p>✓ Dashboard</p>
-                  <p>✓ Gestão Completa</p>
-                  <p>✓ Relatórios</p>
-                  <p>✓ Permissões</p>
-                </div>
-              </div>
-
-              <div className="border border-border rounded-lg p-4">
                 <h3 className="font-semibold text-foreground mb-3">Diretor</h3>
                 <p className="text-sm text-muted-foreground mb-3">Acesso a gestão e relatórios</p>
                 <div className="space-y-1 text-xs text-muted-foreground">
@@ -408,6 +389,17 @@ export default function Permission(){
                   <p>✓ Gestão Completa</p>
                   <p>✓ Relatórios</p>
                   <p>✗ Permissões</p>
+                </div>
+              </div>
+
+              <div className="border border-border rounded-lg p-4">
+                <h3 className="font-semibold text-foreground mb-3">Director pedagógico</h3>
+                <p className="text-sm text-muted-foreground mb-3">Acesso total a todas as funcionalidades</p>
+                <div className="space-y-1 text-xs text-muted-foreground">
+                  <p>✓ Dashboard</p>
+                  <p>✓ Gestão Completa</p>
+                  <p>✓ Relatórios</p>
+                  <p>✓ Permissões</p>
                 </div>
               </div>
 

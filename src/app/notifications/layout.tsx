@@ -12,7 +12,7 @@ export default function RootLayout({
       >
         <SidebarProvider>
           <AppSidebar  />
-          <main className={`flex flex-col h-screen `}>
+          <main className={`flex flex-col h-screen flex-1 sm:w-full md:w-full xl:w-[1100px] 2xl:w-[1100px]`}>
             <Header />
             {children}
           </main>

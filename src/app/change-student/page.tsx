@@ -129,7 +129,7 @@ export default function StudentParentForm() {
 
 
   return (
-    <form onSubmit={handleSubmit} className="container p-2 ml-16">
+    <form onSubmit={handleSubmit} className="container p-2">
 
       {/* Student Details */}
       <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
@@ -323,8 +323,8 @@ export default function StudentParentForm() {
       </div>
 
       <div className="flex justify-between">
-        <button type="button" className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition duration-150">Guardar como Rascunho</button>
-        <button type="submit" className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-150">Submeter Atualização</button>
+        <button type="button" className="bg-gray-500 text-white px-4 py-2 rounded-full hover:bg-gray-600 transition duration-150">Guardar como Rascunho</button>
+        <button type="submit" className="bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition duration-150">Submeter Atualização</button>
       </div>
     </form>
   );

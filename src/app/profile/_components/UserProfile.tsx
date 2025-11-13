@@ -132,7 +132,7 @@ export function ProfilePage(){
                 <Separator className="w-[33rem] bg-[#80848a]"/>
                 <div className="flex space-x-4 h-[5rem]">
                     <Link href="/change-password">
-                        <Button className="w-[16rem] cursor-pointer h-12 bg-[#6366f1] hover:bg-[#5856eb] mt-7 text-white hover:text-white">
+                        <Button className="w-[16rem] rounded-full cursor-pointer h-12 bg-[#6366f1] hover:bg-[#5856eb] mt-7 text-white hover:text-white">
                             <svg>
                                 <image xlinkHref={RedefinirIcon} className="size-4" />
                             </svg>

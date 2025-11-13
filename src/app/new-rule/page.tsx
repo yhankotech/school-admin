@@ -179,12 +179,12 @@ export default function NovoRegulamentoPage() {
 
             <div className="flex gap-4 justify-center">
               <Link href="/schoolRules">
-                <Button variant="outline" className='hover:cursor-pointer bg-red-800 hover:bg-red-70 text-white hover:text-white'>Cancelar</Button>
+                <Button variant="outline" className='hover:cursor-pointer rounded-full bg-red-800 hover:bg-red-70 text-white hover:text-white'>Cancelar</Button>
               </Link>
-              <Button variant="outline" onClick={handleSave} className='hover:cursor-pointer bg-blue-800 text-white hover:bg-[#1b5edb] hover:text-white'>
+              <Button variant="outline" onClick={handleSave} className='hover:cursor-pointer rounded-full bg-blue-800 text-white hover:bg-[#1b5edb] hover:text-white'>
                 Guardar como Rascunho
               </Button>
-              <Button onClick={handlePublish} className="gap-2 hover:cursor-pointer bg-green-700 hover:bg-green-600 hover:text-white">
+              <Button onClick={handlePublish} className="gap-2 rounded-full hover:cursor-pointer bg-green-700 hover:bg-green-600 hover:text-white">
                 <FileText className="h-4 w-4" />
                 Publicar Regulamento
               </Button>

@@ -4,9 +4,9 @@ import { NewClass } from "./_components/new-class";
 import { Button } from "@/components/ui/button";
 import {
   Search,
-  Edit,
   Trash2,
 } from "lucide-react";
+import { EditClass } from "./_components/edit-class"
 
 
 export default function Turma(){
@@ -212,9 +212,9 @@ export default function Turma(){
           </CardHeader>
           <CardContent>
             <div className="overflow-x-auto">
-              <table className="w-full text-sm border-gray-300 border-2">
+              <table className="w-full text-sm border-gray-200 border-[1px]">
                 <thead>
-                  <tr className="border-b border-gray-300 border-2">
+                  <tr className="border-b border-gray-200 border-[1px]">
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Turma</th>
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Nível</th>
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Professor</th>
@@ -228,7 +228,7 @@ export default function Turma(){
                   {classes.map((cls) => {
                     const occupancy = getOccupancyPercentage(cls.students, cls.capacity);
                     return (
-                      <tr key={cls.id} className="border-b border-gray-300 border-2 hover:bg-muted/50">
+                      <tr key={cls.id} className="border-b border-gray-200 border-[1px] hover:bg-muted/50">
                         <td className="py-3 px-4 font-bold text-foreground text-lg">{cls.name}</td>
                         <td className="py-3 px-4 text-muted-foreground">{cls.level}</td>
                         <td className="py-3 px-4 text-muted-foreground text-xs">{cls.teacher}</td>
@@ -243,9 +243,7 @@ export default function Turma(){
                         <td className="py-3 px-4 text-muted-foreground text-xs">{cls.schedule}</td>
                         <td className="py-3 px-4 text-center">
                           <div className="flex gap-2 justify-center">
-                            <Button variant="ghost" size="sm" className="h-8 w-8 p-0 text-green-600">
-                              <Edit className="w-4 h-4" />
-                            </Button>
+                            <EditClass/>
                             <Button variant="ghost" size="sm" className="h-8 w-8 p-0 text-red-600">
                               <Trash2 className="w-4 h-4" />
                             </Button>

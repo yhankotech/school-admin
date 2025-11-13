@@ -18,7 +18,7 @@ export function NotificationsHover() {
     return (
         <HoverCard>
             <HoverCardTrigger>
-                <Button className="size-8 md:size-10 cursor-pointer lg:size-10 xl:size-10 2xl:size-10 bg-transparent text-[#013479] border border-[#013479] hover:bg-[#013479] hover:text-white shadow-none">
+                <Button className="border-[1px] border-gray-300 size-8 md:size-12 bg-transparent hover:bg-transparent cursor-pointer lg:size-12 xl:size-10 2xl:size-10 text-[#013479] hover:text-[#013479] shadow-none">
                     <Bell />
                 </Button>
             </HoverCardTrigger>

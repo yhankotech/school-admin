@@ -35,7 +35,7 @@ export function RelatoriosPage() {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-8">
           <h1 className="text-3xl font-bold text-slate-900">Relatórios</h1>
-          <Button className="gap-2 bg-[#5856eb] hover:bg-[#4947f7] hover:cursor-pointer">
+          <Button className="gap-2 rounded-full bg-[#5856eb] hover:bg-[#4947f7] hover:cursor-pointer">
             <FileText className="h-4 w-4" />
             Gerar Novo Relatório
           </Button>
@@ -63,7 +63,7 @@ export function RelatoriosPage() {
                     <Calendar className="h-4 w-4" />
                     <span>{report.date}</span>
                   </div>
-                  <Button size="sm" variant="outline" className="gap-2 hover:cursor-pointer bg-[#4D44B5] text-white hover:bg-[#4D44B5] hover:text-white">
+                  <Button size="sm" variant="outline" className="gap-2 rounded-full hover:cursor-pointer bg-[#4D44B5] text-white hover:bg-[#4D44B5] hover:text-white">
                     <Download className="h-4 w-4" />
                     Download
                   </Button>

@@ -97,7 +97,7 @@ const ChangeEmployee: React.FC = () => {
               </div>
             </div>
             <div className="flex justify-between mt-5 p-5">
-              <button className="bg-indigo-600 text-white p-2 rounded">Submit</button>
+              <button className="bg-indigo-600 rounded-full text-white p-2 w-36 hover:cursor-pointer">Submit</button>
             </div>
           </form>
         </div>
