@@ -53,7 +53,7 @@ export function SenhaAlteradaPage(){
                 <Button 
                     type="button"
                     onClick={()=> router.push("/profile")} 
-                    className="bg-[#5856eb] cursor-pointer shadow-none hover:bg-[#3f3cf1] text-white w-full mb-10 h-12 lg:h-14 rounded-md xl:mt-9">
+                    className="bg-[#5856eb] rounded-full cursor-pointer shadow-none hover:bg-[#3f3cf1] text-white w-full mb-10 h-12 lg:h-14 xl:mt-9">
                     Voltar ao perfil
                 </Button>
             </div>

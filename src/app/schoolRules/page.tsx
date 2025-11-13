@@ -17,7 +17,7 @@ export default function RegulationsPage() {
             </p>
           </div>
           <Link href="/new-rule">
-            <Button className="gap-2 bg-[#6366f1] hover:bg-[#4043f8] hover:cursor-pointer">
+            <Button className="gap-2 bg-[#6366f1] rounded-full hover:bg-[#4043f8] hover:cursor-pointer">
               <Plus className="h-4 w-4" />
               Novo Regulamento
             </Button>

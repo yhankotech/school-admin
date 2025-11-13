@@ -18,7 +18,7 @@ export function TuitionConfig() {
   const [loading,] = useState(false);
 
   return (
-    <div className="grid gap-6 lg:grid-cols-2 animate-fade-in">
+    <div className="grid gap-6 lg:grid-cols-2">
       <Card className="card-hover">
         <CardHeader>
           <CardTitle>Configurar Valores</CardTitle>
@@ -80,7 +80,7 @@ export function TuitionConfig() {
               />
             </div>
 
-            <Button type="submit" className="w-full bg-[#FF5777] text-white hover:bg-[#f84868] hover:text-white" disabled={loading}>
+            <Button type="submit" className="w-full rounded-full hover:cursor-pointer bg-[#FF5777] text-white hover:bg-[#f84868] hover:text-white" disabled={loading}>
               {loading ? "Salvando..." : "Salvar Configuração"}
             </Button>
           </form>
@@ -93,9 +93,9 @@ export function TuitionConfig() {
         </CardHeader>
         <CardContent>
           <div className="rounded-lg border overflow-hidden">
-            <Table>
-              <TableHeader>
-                <TableRow>
+            <Table className="border-[1px] border-gray-200">
+              <TableHeader className="border-[1px] border-gray-200">
+                <TableRow className="border-[1px] border-gray-200">
                   <TableHead>Classe</TableHead>
                   <TableHead>Propina</TableHead>
                   <TableHead>Matrícula</TableHead>
@@ -104,7 +104,7 @@ export function TuitionConfig() {
               </TableHeader>
               <TableBody>
                 {tuitionFees.map((fee) => (
-                  <TableRow key={fee.id}>
+                  <TableRow key={fee.id} className="border-[1px] border-gray-200">
                     <TableCell className="font-medium">123</TableCell>
                     <TableCell>54556666</TableCell>
                     <TableCell>99332</TableCell>

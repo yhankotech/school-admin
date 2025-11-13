@@ -56,9 +56,9 @@ export function ExpenseTable () {
         <CardTitle className="text-xl font-bold text-gray-900">School Expense</CardTitle>
       </CardHeader>
       <CardContent>
-        <Table>
+        <Table className="border-[1px] border-gray-200">
           <TableHeader>
-            <TableRow className="border-b-0">
+            <TableRow className="border-[1px] border-gray-200">
               <TableHead className="text-gray-500 font-medium">ID</TableHead>
               <TableHead className="text-gray-500 font-medium">Date</TableHead>
               <TableHead className="text-gray-500 font-medium">Amount</TableHead>
@@ -67,7 +67,7 @@ export function ExpenseTable () {
           </TableHeader>
           <TableBody>
             {expenses.map((expense, index) => (
-              <TableRow key={index} className="border-b border-gray-100">
+              <TableRow key={index} className="border-[1px] border-gray-200">
                 <TableCell className="py-4">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">

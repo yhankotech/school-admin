@@ -19,8 +19,8 @@ export function StudentTable () {
       </CardHeader>
       <CardContent>
         <div className="overflow-x-auto">
-          <table className="min-w-full">
-            <tbody className="divide-y divide-border">
+          <table className="min-w-full boder-[1px] boder-gray-200">
+            <tbody className="divide-y divide-border border-[1px] border-gray-200">
               {students.map((student, index) => (
                 <tr key={index} className="hover:bg-muted/50 transition-colors duration-200">
                   <td className="px-6 py-4">

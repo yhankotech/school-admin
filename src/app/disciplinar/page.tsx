@@ -94,15 +94,15 @@ export default function Deicipline(){
               <input
                 type="text"
                 placeholder="Pesquisar por ocorrencia"
-                className="w-full pl-10 pr-4 py-2 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full rounded-full pl-10 pr-4 py-2 bg-card border border-border focus:outline-none focus:ring-2 focus:ring-primary"
               />
               </div>
             </div>
           <CardContent>
             <div className="overflow-x-auto">
-              <table className="w-full text-sm border-gray-300 border-2">
-                <thead>
-                  <tr className="border-b border-gray-300 border-2">
+              <table className="w-full text-sm border-gray-200 border-[1px]">
+                <thead className="border-[1px] border-gray-200">
+                  <tr className="border-b border-gray-200 border-[1px]">
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Aluno</th>
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Tipo</th>
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Descrição</th>
@@ -112,9 +112,9 @@ export default function Deicipline(){
                     <th className="text-center py-3 px-4 font-semibold text-foreground">Ações</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="border-[1px] border-gray-200">
                   {incidents.map((incident) => (
-                    <tr key={incident.id} className="border-b border-gray-300 border-2 hover:bg-muted/50">
+                    <tr key={incident.id} className="border-gray-200 border-[1px] hover:bg-muted/50">
                       <td className="py-3 px-4 font-medium text-foreground">{incident.studentName}</td>
                       <td className="py-3 px-4 text-muted-foreground">{incident.type}</td>
                       <td className="py-3 px-4 text-muted-foreground text-xs">{incident.description}</td>

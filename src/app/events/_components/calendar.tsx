@@ -61,7 +61,11 @@ export function  CalendarSchedule () {
 
   return (
     <div className="h-screen p-2 w-[70rem]">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center justify-between">
+      <div>
+        <h1 className="text-3xl font-bold text-foreground mb-2">Eventos da instituição</h1>
+        <p className="text-muted-foreground">Eventos realizados pela instituição a nível geral</p>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center justify-between">
           {/* Calendar Section */}
           <div className="lg:col-span-2">
             <Card className="bg-white border border-[#5856eb]">

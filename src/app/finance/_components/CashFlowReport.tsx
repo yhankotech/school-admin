@@ -9,7 +9,7 @@ export function CashFlowReport() {
 
 
   return (
-    <div className="space-y-6 animate-slide-up">
+    <div className="space-y-6 ">
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <Card className="card-gradient border-primary/20">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -69,7 +69,7 @@ export function CashFlowReport() {
             {recentPayments.map((payment) => (
               <div
                 key={payment.id}
-                className="flex items-center justify-between p-4 border rounded-lg hover:bg-accent/5 transition-smooth"
+                className="flex items-center justify-between p-4 border rounded-lg hover:bg-accent/5"
               >
                 <div className="space-y-1">
                   <p className="font-medium">{payment.students?.name || 'N/A'}</p>

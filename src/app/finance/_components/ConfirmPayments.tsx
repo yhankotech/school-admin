@@ -13,7 +13,7 @@ export function ConfirmPayments() {
 
 
   return (
-    <Card className="card-hover animate-slide-up">
+    <Card className="card-hover">
       <CardHeader>
         <CardTitle>Confirmar Pagamentos Pendentes</CardTitle>
       </CardHeader>

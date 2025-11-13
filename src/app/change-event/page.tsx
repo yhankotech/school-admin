@@ -23,15 +23,15 @@ export default function NewEvent() {
 
         {/* Main Content */}
         <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 animate-scale-in">
-          <CardHeader className="border-b bg-gradient-to-r from-card to-muted/30">
+          <CardHeader className="border-b bg-gradient-to-r from-card to-muted/30 ">
             <CardTitle className="flex items-center gap-3 text-2xl">
               <div className="p-2 rounded-lg bg-primary/10">
                 <Calendar className="h-6 w-6 text-[#646cffaa]" />
               </div>
-              Gestão de Atividades
+              Atualização da Atividade
             </CardTitle>
           </CardHeader>
-          <CardContent className="p-6 sm:p-8">
+          <CardContent className="p-6 sm:p-8 flex justify-center">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Form Section */}
               <div className="space-y-6">
@@ -40,7 +40,7 @@ export default function NewEvent() {
                   <h4 className="font-semibold text-lg">Editar Atividade</h4>
                 </div>
                 
-                <div className="space-y-5">
+                <div className="space-y-5 w-[60rem]">
                   <div className="space-y-2 group">
                     <Label htmlFor="title" className="text-sm font-medium flex items-center gap-2">
                       <Sparkles className="h-3.5 w-3.5 text-[#646cffaa]" />
@@ -93,10 +93,10 @@ export default function NewEvent() {
                   </div>
 
                   <Button 
-                    className="w-full h-12 bg-[#2d36e9aa] hover:bg-[#646cffaa] hover:shadow-lg hover:scale-[1.02] transition-all duration-300 font-semibold group"
+                    className="w-full h-12 rounded-full hover:cursor-pointer bg-[#2d36e9aa] hover:bg-[#3942ebaa] hover:shadow-lg hover:scale-[1.02] transition-all duration-300 font-semibold group"
                   >
                     <Plus className="h-5 w-5 mr-2 group-hover:rotate-90 transition-transform duration-300" />
-                    Criar Atividade
+                    Atualizar atividade
                   </Button>
                 </div>
               </div>

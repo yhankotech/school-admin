@@ -13,32 +13,30 @@ import { NotificationsHover } from "./NotificationHover";
 export function Header() {
     return (
         <header 
-        className="flex h-[5rem] w-[12rem] items-center bg-[#000] border-b border-[#E5E5E5] top-0 z-50">    
-            <nav className="flex items-center justify-center space-x- w-[12rem] h-20">
+        className="flex h-[5rem] w-full items-center justify-end border-b-[1px] border-[#a39e9e] top-0 z-50">    
+            <nav className="flex items-center w-[12rem] h-16">
+             <Link href="profile" className="flex justify-center items-center mr-2 border-[1px] border-gray-300 rounded-full">
+                <Image
+                    src={YhankoIMG}
+                    alt="Avatar"
+                    className="w-12 h-12 md:w-12 p-2 lg:w-12 xl:w-12 2xl:w-12 md:h-12 lg:h-12 xl:h-12 2xl:h-12 rounded-3xl"
+                />
+                </Link>
                 <div className="flex space-x-4 max-w-24">
                     <div className="static">
                         <span
-                            className="absolute text-center ml-[27px] bg-[#1FC16B] text-[#ffffff] rounded-sm h-4 w-4 text-xs text-[10px] pt-[2px] -mt-1"
+                            className="absolute text-center ml-[20px] bg-[#1FC16B] text-[#ffffff] rounded-sm h-[4px] w-[4px] text-xs text-[10px] pt-[2px] mt-[12px]"
                         >
-                        {/* master ? unreadNotificationsCount : 0 */}
-                        <span>11</span>
                         </span>
                         <NotificationsHover />
                     </div>
 
                     <LogOutModal>
-                        <Button className="size-8 md:size-10 lg:size-10 xl:size-10 2xl:size-10 bg-transparent hover:cursor-pointer border border-[#303972] text-[#303972] hover:bg-[#F08F3E] hover:text-white shadow-none">
+                        <Button className="border-[1px] border-gray-300 hover:text-[#013479] w-12 h-12 md:size-10 lg:size-10 xl:size-10 2xl:size-10 bg-transparent hover:bg-transparent hover:cursor-pointer text-[#303972] shadow-none">
                             <LogOut />
                         </Button>
                     </LogOutModal>
-             </div>
-             <Link href="profile" className="border-[1.5px] border-[#a8abaf] rounded-3xl w-12 h-12 flex justify-center items-center ml-2">
-                <Image
-                    src={YhankoIMG}
-                    alt="Avatar"
-                    className="w-10 h-10 md:w-10 lg:w-10 xl:w-10 2xl:w-10 md:h-10 lg:h-10 xl:h-10 2xl:h-10 rounded-3xl"
-                />
-                </Link>
+                </div>
             </nav>
         </header>
     );

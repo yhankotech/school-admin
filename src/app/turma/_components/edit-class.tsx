@@ -11,7 +11,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import {
-  Plus,
+  Edit
 } from "lucide-react";
 
 const PERIODS = ['Manhã', 'Tarde', 'Noite', 'Integral'];
@@ -41,7 +41,7 @@ export interface ClassFormData {
   subject_ids: string[];
 }
 
-export function NewClass() {
+export function EditClass() {
     const [formData, setFormData] = useState<ClassFormData>({
         name: '',
         period: 'Manhã',
@@ -56,17 +56,15 @@ export function NewClass() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button
-            className="gap-2 bg-[#5856eb] rounded-full text-white hover:bg-[#423ff3] hover:text-white hover:cursor-pointer">
-            <Plus className="w-4 h-4 " />
-            Nova Turma
+        <Button variant="ghost" size="sm" className="h-8 w-8 p-0 text-green-700 hover:cursor-pointer hover:text-green-900">
+            <Edit className="w-4 h-4" />
         </Button>
       </SheetTrigger>
       <SheetContent style={{minWidth:600}} className="w-[70rem] overflow-y-auto scrollbar-none p-8">
         <SheetHeader>
           <SheetTitle>Turma</SheetTitle>
           <SheetDescription>
-            Adicione uma nova turma
+            Ataulizar nova turma
           </SheetDescription>
         </SheetHeader>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

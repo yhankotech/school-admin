@@ -14,21 +14,17 @@ import {
   Plus,
 } from "lucide-react";
 
-const PERIODS = ['Manhã', 'Tarde', 'Noite', 'Integral'];
 const ACADEMIC_LEVELS = [
-  'Educação Infantil',
-  '1º Ano',
-  '2º Ano',
-  '3º Ano',
-  '4º Ano',
-  '5º Ano',
-  '6º Ano',
-  '7º Ano',
-  '8º Ano',
-  '9º Ano',
-  '1º Ano - Ensino Médio',
-  '2º Ano - Ensino Médio',
-  '3º Ano - Ensino Médio',
+  'Dashboar',
+  'Pagamentos',
+  'Perfil',
+  'Regulamentos',
+  'Disciplinar',
+  'Turmas',
+  'Funcionários',
+  'Alunos',
+  'Professores',
+  'Tudo'
 ];
 
 export interface ClassFormData {
@@ -41,7 +37,7 @@ export interface ClassFormData {
   subject_ids: string[];
 }
 
-export function NewClass() {
+export function AddNewUserPermission() {
     const [formData, setFormData] = useState<ClassFormData>({
         name: '',
         period: 'Manhã',
@@ -56,23 +52,22 @@ export function NewClass() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button
-            className="gap-2 bg-[#5856eb] rounded-full text-white hover:bg-[#423ff3] hover:text-white hover:cursor-pointer">
-            <Plus className="w-4 h-4 " />
-            Nova Turma
+        <Button className="gap-2 rounded-full hover:cursor-pointer bg-[#5856eb] text-white hover:text-white hover:bg-[#2d2add]">
+            <Plus className="w-4 h-4" />
+            Novo usuário
         </Button>
       </SheetTrigger>
       <SheetContent style={{minWidth:600}} className="w-[70rem] overflow-y-auto scrollbar-none p-8">
         <SheetHeader>
-          <SheetTitle>Turma</SheetTitle>
+          <SheetTitle>Permissão</SheetTitle>
           <SheetDescription>
-            Adicione uma nova turma
+            Adicione novo usuário e permissões
           </SheetDescription>
         </SheetHeader>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Nome da Turma
+                Nome
               </label>
               <input
                 type="text"
@@ -80,45 +75,27 @@ export function NewClass() {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Ex: Turma A"
+                placeholder="Romeu Cajamba"
               />
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Classe 
+                E-mail 
               </label>
               <input
-                type="text"
+                type="email"
                 required
                 value={formData.room}
                 onChange={(e) => setFormData({ ...formData, room: e.target.value })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Ex: Sala 101"
+                placeholder="romeucajamba@gmail.com"
               />
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Período
-              </label>
-              <select
-                required
-                value={formData.period}
-                onChange={(e) => setFormData({ ...formData, period: e.target.value })}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                {PERIODS.map((period) => (
-                  <option key={period} value={period}>
-                    {period}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Nível Acadêmico *
+                Permissões
               </label>
               <select
                 required
@@ -136,7 +113,7 @@ export function NewClass() {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Sala
+                Função
               </label>
               <input
                 type="text"
@@ -146,25 +123,6 @@ export function NewClass() {
                 }
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
-            </div>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Professores
-            </label>
-            <div className="border border-gray-300 rounded-lg p-4 max-h-48 overflow-y-auto">
-              <div className="space-y-2">
-                <label
-                    className="flex items-center gap-2 cursor-pointer hover:bg-gray-50 p-2 rounded"
-                >
-                    <input
-                        type="checkbox"
-                        className="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
-                    />
-                    <span className="text-sm text-gray-700">Osvaldo Pedro</span>
-                </label>
-              </div>
             </div>
           </div>
         <SheetFooter>

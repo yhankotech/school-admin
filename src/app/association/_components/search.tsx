@@ -11,7 +11,7 @@ export function SearchBar() {
       router.push(link)
     }
   return (
-    <div className="flex items-center justify-between gap-4 mb-4 mt-4 pl-40 pr-20">
+    <div className="flex items-center justify-between gap-4 mb-6 mt-6 ">
       {/* Search Input */}
       <div className="flex-1 max-w-md relative">
         <Input

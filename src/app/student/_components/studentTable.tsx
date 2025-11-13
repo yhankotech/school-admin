@@ -90,8 +90,8 @@ export function StudentTable (){
     <div className="bg-white rounded-lg shadow-lg overflow-hidden">
       <Table>
         <TableHeader>
-          <TableRow className="bg-gray-50 border-b border-gray-200">
-            <TableHead className="w-12 px-6 py-4">
+          <TableRow className="bg-gray-50 border-[1px] border-gray-200">
+            <TableHead className="w-12 px-6 py-4 border-[1px] border-gray-200">
               <Checkbox />
             </TableHead>
             <TableHead className="px-6 py-4 text-gray-700 font-medium">Name</TableHead>
@@ -104,7 +104,7 @@ export function StudentTable (){
             <TableHead className="px-6 py-4 text-gray-700 font-medium">Action</TableHead>
           </TableRow>
         </TableHeader>
-        <TableBody>
+        <TableBody className="border-[1px] border-gray-200">
           {students.map((student) => (
             <StudentRow key={student.id} student={student} />
           ))}

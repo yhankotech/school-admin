@@ -777,7 +777,7 @@ export default function StudentRegistration() {
           </div>
           <Button
             onClick={() => setShowModal(true)}
-            className="gap-2 bg-[#5856eb] text-white hover:cursor-pointer hover:bg-[#5856eb] hover:text-white"
+            className="gap-2 bg-[#5856eb] text-white rounded-full hover:cursor-pointer hover:bg-[#5856eb] hover:text-white"
           >
             <Plus className="w-4 h-4" />
             Novo Aluno
@@ -827,7 +827,7 @@ export default function StudentRegistration() {
                 variant="outline"
                 onClick={handlePrevious}
                 disabled={currentStep === 1}
-                className="bg-blue-600 text-white hover:bg-blue-500 hover:text-white hover:cursor-pointer"
+                className="bg-blue-600 text-white rounded-full hover:bg-blue-500 hover:text-white hover:cursor-pointer"
               >
                 Anterior
               </Button>
@@ -835,7 +835,7 @@ export default function StudentRegistration() {
               {currentStep === getTotalSteps() ? (
                 <Button
                   onClick={handleSubmit}
-                  className="bg-green-600 hover:bg-green-700 gap-2 hover:cursor-pointer"
+                  className="bg-green-600 hover:bg-green-700 gap-2 hover:cursor-pointer rounded-full"
                 >
                   <Check className="w-4 h-4" />
                   Registrar Aluno

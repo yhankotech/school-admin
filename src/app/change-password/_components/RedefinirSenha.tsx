@@ -167,7 +167,7 @@ export function RedefinirSenha({nextStep }: {  nextStep: () => void}){
                 <Button 
                   type="submit" 
                   disabled={isLoading} 
-                  className="bg-[#5856eb] shadow-none cursor-pointer hover:bg-[#4240ec] text-white w-full mb-10 h-12 lg:h-14 rounded-md xl:mt-9">
+                  className="bg-[#5856eb] rounded-full shadow-none cursor-pointer hover:bg-[#4240ec] text-white w-full mb-10 h-12 lg:h-14 xl:mt-9">
                   {isLoading ? <Loader2  className="animate-spin" /> : "Seguinte"}
                 </Button>
               </div>
