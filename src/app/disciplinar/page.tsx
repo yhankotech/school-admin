@@ -2,11 +2,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
-  Trash2
+  Trash2,
+  Mail
 } from "lucide-react";
 import {
   Search,
 } from "lucide-react";
+import { NewOccurrence } from "./_components/new-ocorrencia";
 
 export default function Deicipline(){
      const incidents = [
@@ -89,14 +91,15 @@ export default function Deicipline(){
             <CardTitle>Histórico de Ocorrências</CardTitle>
           </CardHeader>
           <div className="flex gap-4 flex-col sm:flex-row p-6">
-            <div className="relative flex-1">
+            <div className="relative flex-1 flex-col">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <input
                 type="text"
-                placeholder="Pesquisar por ocorrencia"
+                placeholder="Pesquisar ocorrencia por nome, status, severidade..."
                 className="w-full rounded-full pl-10 pr-4 py-2 bg-card border border-border focus:outline-none focus:ring-2 focus:ring-primary"
               />
               </div>
+              <NewOccurrence />
             </div>
           <CardContent>
             <div className="overflow-x-auto">
@@ -129,10 +132,15 @@ export default function Deicipline(){
                           {incident.status}
                         </span>
                       </td>
-                      <td className="py-3 px-4 text-center">
+                      <td className="py-3 px-4 text-center flex">
                         <div className="flex gap-2 justify-center">
                           <Button variant="ghost" size="sm" className="h-8 w-8 p-0 text-red-600">
                             <Trash2 className="w-4 h-4" />
+                          </Button>
+                        </div>
+                        <div>
+                          <Button variant="ghost" size="sm" className="h-8 w-8 p-0 text-blue-600 hover:text-blue-700 hover:cursor-pointer">
+                            <Mail className="w-4 h-4" />
                           </Button>
                         </div>
                       </td>

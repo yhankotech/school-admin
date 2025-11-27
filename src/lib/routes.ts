@@ -1,7 +1,6 @@
 
 import { 
   Home, 
-  List, 
   HandCoins,  
   MessagesSquare, 
   CalendarDays, 
@@ -82,36 +81,30 @@ export const routes = [
  },
   {
     id: 11,
-    title: "Atividades",
-    url: "/activity",
-    icon: List,
- },
-  {
-    id: 12,
     title: "Perfil",
     url: "/profile",
     icon: UserCircle,
  },
    {
-    id: 13,
+    id: 12,
     title: "Relatórios",
     url: "/report",
     icon: FaRegFileAlt,
  },
   {
-    id: 14,
+    id: 13,
     title: "Regulamento",
     url: "/schoolRules",
     icon: PiFilesLight,
  },
   {
-    id: 15,
+    id: 14,
     title: "Disciplinar",
     url: "/disciplinar",
     icon: BsExclamationCircle,
  },
   {
-    id: 16,
+    id: 15,
     title: "Permissões",
     url: "/permission",
     icon: LuUserCog,

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Plus } from 'lucide-react';
+import { Plus, Upload } from 'lucide-react';
 import { RegulationsClient } from './_components/client';
 
 export default function RegulationsPage() {
@@ -16,12 +16,18 @@ export default function RegulationsPage() {
               Crie, gerencie e compartilhe os regulamentos da sua instituição
             </p>
           </div>
-          <Link href="/new-rule">
+          <div className='flex space-x-4'>
             <Button className="gap-2 bg-[#6366f1] rounded-full hover:bg-[#4043f8] hover:cursor-pointer">
-              <Plus className="h-4 w-4" />
-              Novo Regulamento
+              <Upload className="h-4 w-4" />
+              Importar regulamento
             </Button>
-          </Link>
+            <Link href="/new-rule">
+              <Button className="gap-2 bg-[#6366f1] rounded-full hover:bg-[#4043f8] hover:cursor-pointer">
+                <Plus className="h-4 w-4" />
+                Criar regulamento
+              </Button>
+            </Link>
+          </div>
         </div>
 
         <RegulationsClient />

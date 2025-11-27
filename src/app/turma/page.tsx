@@ -218,6 +218,7 @@ export default function Turma(){
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Turma</th>
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Nível</th>
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Professor</th>
+                    <th className="text-left py-3 px-4 font-semibold text-foreground">Sala</th>
                     <th className="text-center py-3 px-4 font-semibold text-foreground">Alunos</th>
                     <th className="text-center py-3 px-4 font-semibold text-foreground">Ocupação</th>
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Horário</th>
@@ -232,6 +233,7 @@ export default function Turma(){
                         <td className="py-3 px-4 font-bold text-foreground text-lg">{cls.name}</td>
                         <td className="py-3 px-4 text-muted-foreground">{cls.level}</td>
                         <td className="py-3 px-4 text-muted-foreground text-xs">{cls.teacher}</td>
+                        <td className="py-3 px-4 text-muted-foreground text-xs">12</td>
                         <td className="py-3 px-4 text-center font-semibold text-foreground">
                           {cls.students}/{cls.capacity}
                         </td>

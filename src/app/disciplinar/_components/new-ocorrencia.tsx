@@ -14,42 +14,34 @@ import {
   Plus,
 } from "lucide-react";
 
-const PERIODS = ['Manhã', 'Tarde', 'Noite', 'Integral'];
-const ACADEMIC_LEVELS = [
-  'Educação Infantil',
-  '1º Ano',
-  '2º Ano',
-  '3º Ano',
-  '4º Ano',
-  '5º Ano',
-  '6º Ano',
-  '7º Ano',
-  '8º Ano',
-  '9º Ano',
-  '1º Ano - Ensino Médio',
-  '2º Ano - Ensino Médio',
-  '3º Ano - Ensino Médio',
+
+const SEVERITY = [
+  'Baixo',
+  'Médio',
+  'Alto'
+];
+
+const STATUS = [
+  'Resolvido',
+  'Pendente',
+  'Em andamento'
 ];
 
 export interface ClassFormData {
   name: string;
-  period: string;
-  academic_level: string;
-  room: string;
-  student_count: number;
-  teacher_ids: string[];
-  subject_ids: string[];
+  severity: string;
+  description: string;
+  status: string;
+  type: string;
 }
 
-export function NewClass() {
+export function NewOccurrence() {
     const [formData, setFormData] = useState<ClassFormData>({
         name: '',
-        period: 'Manhã',
-        academic_level: 'Educação Infantil',
-        room: '',
-        student_count: 0,
-        teacher_ids: [],
-        subject_ids: [],
+        severity: '',
+        description: '',
+        status: '',
+        type: ""
     });
 
 
@@ -59,20 +51,20 @@ export function NewClass() {
         <Button
             className="gap-2 bg-[#5856eb] rounded-full text-white hover:bg-[#423ff3] hover:text-white hover:cursor-pointer">
             <Plus className="w-4 h-4 " />
-            Nova Turma
+            Nova ocorrência
         </Button>
       </SheetTrigger>
       <SheetContent style={{minWidth:600}} className="w-[70rem] overflow-y-auto scrollbar-none p-8">
         <SheetHeader>
-          <SheetTitle>Turma</SheetTitle>
+          <SheetTitle>Ocorrência</SheetTitle>
           <SheetDescription>
-            Adicione uma nova turma
+            Adicione uma nova ocorrência
           </SheetDescription>
         </SheetHeader>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Nome da Turma
+                Nome do aluno
               </label>
               <input
                 type="text"
@@ -80,53 +72,45 @@ export function NewClass() {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Ex: Turma A"
+                placeholder="Ex: João da Silva"
               />
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Nº de total de alunos 
+                Tipo 
               </label>
               <input
-                type="number"
+                type="text"
                 required
-                value={formData.room}
-                onChange={(e) => setFormData({ ...formData, room: e.target.value })}
+                value={formData.type}
+                onChange={(e) => setFormData({ ...formData, type: e.target.value })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Ex: Sala 101"
+                placeholder="Ex: tipo de ocorrência"
               />
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Período
+                Data
               </label>
-              <select
-                required
-                value={formData.period}
-                onChange={(e) => setFormData({ ...formData, period: e.target.value })}
+              <input
+                type="date"
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                {PERIODS.map((period) => (
-                  <option key={period} value={period}>
-                    {period}
-                  </option>
-                ))}
-              </select>
+              />
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Nível Acadêmico *
+                Severidade
               </label>
               <select
                 required
-                value={formData.academic_level}
-                onChange={(e) => setFormData({ ...formData, academic_level: e.target.value })}
+                value={formData.severity}
+                onChange={(e) => setFormData({ ...formData, severity: e.target.value })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                {ACADEMIC_LEVELS.map((level) => (
+                {SEVERITY.map((level) => (
                   <option key={level} value={level}>
                     {level}
                   </option>
@@ -136,28 +120,14 @@ export function NewClass() {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Sala
+                Descrição
               </label>
               <input
                 type="text"
                 required
+                value={formData.description}
                 onChange={(e) =>
-                  setFormData({ ...formData, student_count: parseInt(e.target.value) || 0 })
-                }
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Classe
-              </label>
-              <input
-                type="text"
-                required
-                onChange={(e) =>
-                  setFormData({ ...formData, student_count: parseInt(e.target.value) || 0 })
-                }
+                   setFormData({ ...formData, description: e.target.value })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
@@ -165,23 +135,23 @@ export function NewClass() {
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Professores
+              Status
             </label>
             <select
                 required
-                value={formData.academic_level}
-                onChange={(e) => setFormData({ ...formData, academic_level: e.target.value })}
+                value={formData.status}
+                onChange={(e) => setFormData({ ...formData, status: e.target.value })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                {ACADEMIC_LEVELS.map((level) => (
+                {STATUS.map((level) => (
                   <option key={level} value={level}>
                     {level}
                   </option>
                 ))}
-              </select>   
+              </select>
           </div>
         <SheetFooter>
-          <Button type="submit" className="bg-[#5856eb] rounded-full text-white hover:cursor-pointer hover:text-white hover:bg-[#3c3ad6]">Save changes</Button>
+          <Button type="submit" className="bg-[#5856eb] rounded-full text-white hover:cursor-pointer hover:text-white hover:bg-[#3c3ad6]">Guardar</Button>
         </SheetFooter>
       </SheetContent>
     </Sheet>
