@@ -86,6 +86,7 @@ const students: Student[] = [
 ];
 
 export function StudentTable (){
+
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden">
       <Table>
