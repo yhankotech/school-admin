@@ -13,7 +13,7 @@ import {
   EyeOff,
   CheckCircle,
   XCircle,
-} from "lucide-react";
+} from "@/lib/icons";
 import { AddNewUserPermission } from "./_components/add_permission";
 
 export default function Permission(){

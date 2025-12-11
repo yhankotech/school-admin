@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/sheet";
 import {
   Edit
-} from "lucide-react";
+} from "@/lib/icons";
 
 const PERIODS = ['Manhã', 'Tarde', 'Noite', 'Integral'];
 const ACADEMIC_LEVELS = [

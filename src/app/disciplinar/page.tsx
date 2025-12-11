@@ -3,11 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
   Trash2,
-  Mail
-} from "lucide-react";
-import {
-  Search,
-} from "lucide-react";
+  Mail,
+  Search
+} from "@/lib/icons";
+
 import { NewOccurrence } from "./_components/new-ocorrencia";
 
 export default function Deicipline(){

@@ -1,6 +1,6 @@
 import { Student } from '@/types/types';
 import { Card } from '@/components/ui/card';
-import { BookOpen, Award } from 'lucide-react';
+import { BookOpen, Award } from '@/lib/icons';
 
 interface AcademicInfoProps {
   student: Student;

@@ -1,6 +1,6 @@
 import { Student } from '@/types/types';
 import { Card } from '@/components/ui/card';
-import { User, IdCard } from 'lucide-react';
+import { User, IdCard } from '@/lib/icons';
 import StatusBadge from './StatusBadge';
 
 interface StudentHeaderProps {

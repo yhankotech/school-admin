@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import { X } from "lucide-react";
+import { X } from "@/lib/icons";
 import { Button } from "@/components/ui/button";
 
 interface ModalProps {

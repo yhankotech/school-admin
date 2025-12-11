@@ -1,6 +1,6 @@
 "use client"
 
-import { Users, GraduationCap, DollarSign } from "lucide-react";
+import { Users, GraduationCap, DollarSign } from "@/lib/icons";
 import { Card, CardContent } from "@/components/ui/card";
 
 interface MetricCardProps {

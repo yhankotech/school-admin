@@ -1,6 +1,6 @@
 "use client"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Receipt, DollarSign, FileText, Settings } from "lucide-react";
+import { Receipt, DollarSign, FileText, Settings } from "@/lib/icons";
 import { ProcessPayment } from "./ProcessPayment";
 import { ConfirmPayments } from "./ConfirmPayments";
 import { TuitionConfig } from "./TuitionConfig";

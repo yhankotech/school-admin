@@ -15,7 +15,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Upload, FileText, Eye } from 'lucide-react';
+import { Upload, FileText, Eye } from '@/lib/icons';
 import Image from 'next/image';
 
 export default function NovoRegulamentoPage() {

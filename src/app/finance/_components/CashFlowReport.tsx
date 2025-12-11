@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {  PaymentWithStudent } from "@/types/types";
-import { DollarSign, TrendingUp, Clock, CheckCircle } from "lucide-react";;
+import { DollarSign, TrendingUp, Clock, CheckCircle } from "@/lib/icons";;
 
 export function CashFlowReport() {
   const [recentPayments, ] = useState<PaymentWithStudent[]>([]);

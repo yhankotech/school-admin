@@ -13,7 +13,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 //images and icons
-import { GrFormCheckmark } from "@/lib/icons";
+import { GrFormCheckmark, AiOutlineClose, Loader2 } from "@/lib/icons";
 //components
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -24,8 +24,6 @@ import axiosInstance from "@/service/api";
 //Icons e imagens
 import EyesOpened from "../../../assets/eye-open.svg";
 import EyesOff from "../../../assets/eye-off.svg"; 
-import { Loader2 } from "lucide-react";
-import { AiOutlineClose } from "@/lib/icons";
 import RequestError from "../../../assets/ErroDeResposta.svg";
 import RoundedIcon from "../../../assets/ErroDeResposta.svg";
 import YhankoIMG from "../../../assets/yhankoIMG.svg";

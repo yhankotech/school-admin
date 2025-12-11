@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Plus, Upload } from 'lucide-react';
+import { Plus, Upload } from '@/lib/icons';
 import { RegulationsClient } from './_components/client';
 
 export default function RegulationsPage() {

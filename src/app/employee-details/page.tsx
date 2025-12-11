@@ -1,5 +1,5 @@
 "use client"
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail } from "@/lib/icons";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 

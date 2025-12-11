@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
+import { Plus } from "@/lib/icons";
 import { useRouter } from 'next/navigation';
 import { Input } from "@/components/ui/input";
 

@@ -1,5 +1,5 @@
 import { StudentStatus } from '@/types/types';
-import { CheckCircle, AlertCircle, XCircle, LogOut } from 'lucide-react';
+import { CheckCircle, AlertCircle, XCircle, LogOut } from '@/lib/icons';
 
 interface StatusBadgeProps {
   status: StudentStatus;

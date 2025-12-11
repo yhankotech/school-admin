@@ -1,6 +1,6 @@
 import { Student } from '@/types/types';
 import { Card } from '@/components/ui/card';
-import { Shield, Phone, Mail, User } from 'lucide-react';
+import { Shield, Phone, Mail, User } from '@/lib/icons';
 
 interface GuardianInfoProps {
   student: Student;

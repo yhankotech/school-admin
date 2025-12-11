@@ -1,6 +1,6 @@
 import { Student } from '@/types/types';
 import { Card } from '@/components/ui/card';
-import { BookMarked } from 'lucide-react';
+import { BookMarked } from '@/lib/icons';
 
 interface SubjectsSectionProps {
   student: Student;
