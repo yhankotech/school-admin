@@ -12,7 +12,7 @@ import {
   Calendar,
   Star,
   Clock
-} from "lucide-react";
+} from "@/lib/icons";
 import { ChatMessage, Assessment, Student } from "@/types/school-system";
 
 interface ParentDashboardProps {

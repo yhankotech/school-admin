@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import {
   Search,
   Trash2,
-} from "lucide-react";
+} from "@/lib/icons";
 import { EditClass } from "./_components/edit-class"
 
 

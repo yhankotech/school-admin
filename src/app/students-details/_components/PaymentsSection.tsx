@@ -1,6 +1,6 @@
 import { Student } from '@/types/types';
 import { Card } from '@/components/ui/card';
-import { CreditCard, CheckCircle, Clock, AlertCircle } from 'lucide-react';
+import { CreditCard, CheckCircle, Clock, AlertCircle } from '@/lib/icons';
 
 interface PaymentsSectionProps {
   student: Student;

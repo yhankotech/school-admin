@@ -20,7 +20,7 @@ import {
   Users,
   GraduationCap,
   Briefcase,
-} from 'lucide-react';
+} from '@/lib/icons';
 import Link from 'next/link';
 
 interface Regulation {

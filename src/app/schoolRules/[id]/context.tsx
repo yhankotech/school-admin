@@ -16,7 +16,7 @@ import {
   Users,
   GraduationCap,
   Briefcase,
-} from 'lucide-react';
+} from '@/lib/icons';
 import Image from 'next/image';
 
 const SAMPLE_CONTENT = `REGULAMENTO GERAL DE FUNCIONAMENTO

@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { FileText, Download, Calendar } from 'lucide-react';
+import { FileText, Download, Calendar } from '@/lib/icons';
 
 export function RelatoriosPage() {
   const reports = [

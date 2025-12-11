@@ -42,7 +42,7 @@ import {
   Mail,
   MapPin,
   ClipboardList,
-} from "lucide-react";
+} from "@/lib/icons";
 import { StudentFullProfile, } from "@/types/academic-history";
 import { toast } from "sonner";
 

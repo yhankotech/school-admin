@@ -8,7 +8,7 @@ import {
   Download,
   Search,
   MoreVertical,
-} from "lucide-react";
+} from "@/lib/icons";
 
 export default function Payments() {
   const paymentStats = [

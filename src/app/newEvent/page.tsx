@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Calendar, Clock, MapPin, Users, Plus, Sparkles } from "lucide-react";
+import { Calendar, Clock, MapPin, Users, Plus, Sparkles } from "@/lib/icons";
 import { Activity } from "@/types/types";
 
 export default function NewEvent() {

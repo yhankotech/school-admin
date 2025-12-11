@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { PaymentWithStudent, Receipt } from "@/types/types";
-import { Printer, FileText } from "lucide-react";
+import { Printer, FileText } from "@/lib/icons";
 
 
 export function ReceiptGenerator() {

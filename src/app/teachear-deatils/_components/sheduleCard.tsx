@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Calendar, Clock } from "lucide-react"
+import { Calendar, Clock } from "@/lib/icons"
 
 export function ScheduleCard () {
   const scheduleItems = [

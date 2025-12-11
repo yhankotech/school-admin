@@ -1,5 +1,5 @@
 "use client"
-import { Phone, Mail, MoreHorizontal } from "lucide-react";
+import { Phone, Mail, MoreHorizontal } from "@/lib/icons";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";

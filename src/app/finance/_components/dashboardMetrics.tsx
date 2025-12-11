@@ -1,6 +1,6 @@
 "use client"
 
-import { Users, GraduationCap, DollarSign, TrendingUp, } from "lucide-react";
+import { Users, GraduationCap, DollarSign, TrendingUp, } from "@/lib/icons";
 import { useState } from "react";
 import { FinancialReport } from "@/types/school-system";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";

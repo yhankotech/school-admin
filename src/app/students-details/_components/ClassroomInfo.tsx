@@ -1,6 +1,6 @@
 import { Student } from '@/types/types';
 import { Card } from '@/components/ui/card';
-import { Building2, Users, MapPin } from 'lucide-react';
+import { Building2, Users, MapPin } from '@/lib/icons';
 
 interface ClassroomInfoProps {
   student: Student;

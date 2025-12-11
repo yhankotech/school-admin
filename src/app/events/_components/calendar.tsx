@@ -1,6 +1,6 @@
 "use client"
 
-import { Calendar as CalendarIcon, Plus, ChevronDown } from "lucide-react";
+import { Calendar as CalendarIcon, Plus, ChevronDown } from "@/lib/icons";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";

@@ -6,7 +6,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { Phone, Mail, MoreHorizontal } from "lucide-react";
+import { Phone, Mail, MoreHorizontal } from "@/lib/icons";
 import Link from "next/link";
 import { mockStudentProfiles } from "@/types/academicHistoryData";
 import { StudentFullProfile } from "@/types/academic-history";

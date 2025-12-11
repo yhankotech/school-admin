@@ -5,9 +5,8 @@ import { Input } from "@/components/ui/input";
 import Image from 'next/image'
 //imagens e icones
 import Logo from "../../../assets/yhankoIMG.svg";
-import { Loader2 } from "lucide-react";
 import RequestError from "../../../assets/ErroDeResposta.svg";
-import { AiOutlineClose } from "@/lib/icons";
+import { AiOutlineClose, Loader2 } from "@/lib/icons";
 //Hooks
 import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";

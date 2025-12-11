@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react';
-import { CreditCard, Lock, CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
+import { CreditCard, Lock, CheckCircle, AlertCircle, Eye, EyeOff } from '@/lib/icons';
 
 // Interfaces TypeScript
 interface FormData {

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { PaymentWithStudent } from "@/types/types";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, XCircle } from "lucide-react";
+import { CheckCircle, XCircle } from "@/lib/icons";
 
 export function ConfirmPayments() {
   const [pendingPayments ] = useState<PaymentWithStudent[]>([]);

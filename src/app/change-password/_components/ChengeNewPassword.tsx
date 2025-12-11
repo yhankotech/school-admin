@@ -23,7 +23,7 @@ import RequestError from "../../../assets/ErroDeResposta.svg";
 import RoundedIcon from "../../../assets/roundedIcon.svg";
 import EyesOpened from "../../../assets/eye-open.svg";
 import EyesOff from "../../../assets/eye-off.svg";
-import { Loader2 } from "lucide-react";
+import { Loader2 } from "@/lib/icons";
 //Tipagens
 import { UserDataType } from "@/types/types";
 

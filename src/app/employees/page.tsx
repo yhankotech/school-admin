@@ -1,6 +1,6 @@
 "use client"
 import { Button } from "@/components/ui/button";
-import { Search, UserPlus } from "lucide-react";
+import { Search, UserPlus } from "@/lib/icons";
 import { Input } from "@/components/ui/input";
 import {StaffGrid} from "./_components/stafGrid";
 import { useRouter } from "next/navigation";

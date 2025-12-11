@@ -11,7 +11,7 @@ import {
   Check,
   AlertCircle,
   ChevronRight,
-} from "lucide-react";
+} from "@/lib/icons";
 
 type AcademicLevel = "1-6" | "7-9" | "10-13" | "transfer" | null;
 

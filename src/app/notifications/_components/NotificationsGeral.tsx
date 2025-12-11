@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { Bell, Check, X, CheckCheck, AlertCircle, Info, Calendar } from "lucide-react";
+import { Bell, Check, X, CheckCheck, AlertCircle, Info, Calendar } from "@/lib/icons";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 
 interface Notification {
